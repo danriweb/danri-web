@@ -4,7 +4,7 @@ import { Menu } from "lucide-react";
 import Link from "next/link";
 import { forwardRef } from "react";
 
-import { StandardSheet } from "@custom-ui";
+import { StandardSheet } from "@constructors";
 import { Button } from "@shadcn";
 import { cn } from "@styles";
 
