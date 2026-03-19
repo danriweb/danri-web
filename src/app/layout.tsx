@@ -2,6 +2,8 @@ import type { Metadata, Viewport } from "next";
 import { Funnel_Display, Inter } from "next/font/google";
 import "react-loading-skeleton/dist/skeleton.css";
 
+import { BackgroundGrid } from "@custom-ui";
+
 import { Header } from "@/widgets/header";
 
 import "./globals.css";
@@ -74,7 +76,11 @@ export default function RootLayout({
       <body className="bg-background text-foreground min-w-80 font-sans antialiased">
         <Providers>
           <Header />
-          <main className="mx-auto max-w-300 px-4 sm:px-6 md:px-8 lg:px-12">{children}</main>
+          <main className="relative">
+            <div className="mx-auto max-w-300 px-4 sm:px-6 md:px-8 lg:px-12">{children}</div>
+            <BackgroundGrid top={0} key={0} index={0} />
+            <BackgroundGrid top={960} className="opacity-80" key={1} index={1} />
+          </main>
         </Providers>
       </body>
     </html>
