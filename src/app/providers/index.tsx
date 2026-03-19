@@ -31,7 +31,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+      <ThemeProvider attribute="class" defaultTheme="theme-danri" enableSystem={false}>
         <TooltipProvider>
           {/* 
             LazyMotion для гидратации без анимаций и сжатия бандла 
