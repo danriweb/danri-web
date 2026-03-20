@@ -9,7 +9,11 @@ import { processes } from "../model/processes";
 
 export const Processes = () => {
   return (
-    <section id="processes" className="flex flex-col items-center gap-16 md:gap-24 md:py-32">
+    <section
+      id="processes"
+      aria-labelledby="processes-title"
+      className="flex flex-col items-center gap-16 md:gap-24 md:py-32"
+    >
       <m.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -20,6 +24,7 @@ export const Processes = () => {
         <SectionTitle
           tag="Процессы"
           title="Процесс без сюрпризов"
+          id="processes-title"
           description={
             <>
               Четыре этапа, которые я прохожу с каждым клиентом.
@@ -30,18 +35,19 @@ export const Processes = () => {
         />
       </m.div>
       {/* Список карточек */}
-      <div className="grid w-full grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      <ol className="grid w-full grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {processes.map((process, index) => (
-          <ProcessCard
-            key={process.id}
-            id={process.id}
-            title={process.title}
-            description={process.description}
-            icon={process.icon}
-            index={index}
-          />
+          <li key={process.id} className="contents">
+            <ProcessCard
+              id={process.id}
+              title={process.title}
+              description={process.description}
+              icon={process.icon}
+              index={index}
+            />
+          </li>
         ))}
-      </div>
+      </ol>
     </section>
   );
 };

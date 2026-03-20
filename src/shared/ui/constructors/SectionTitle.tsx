@@ -8,17 +8,18 @@ interface SectionTitleProps {
   title: ReactNode;
   description?: ReactNode;
   className?: string;
+  id?: string;
 }
 
 /**
  * Составной компонент заголовка секции.
  * Соединяет SectionTag и SectionHeader.
  */
-export const SectionTitle = ({ tag, title, description, className }: SectionTitleProps) => {
+export const SectionTitle = ({ tag, title, description, className, id }: SectionTitleProps) => {
   return (
     <div className={cn("flex flex-col items-center gap-6", className)}>
       <SectionTag>{tag}</SectionTag>
-      <SectionHeader title={title} description={description} />
+      <SectionHeader title={title} description={description} id={id} />
     </div>
   );
 };

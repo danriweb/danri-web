@@ -1,7 +1,7 @@
 import { cn } from "@styles";
 
 export const Metric = ({ unit, label, highlight }: { unit: string; label: string; highlight?: boolean }) => (
-  <div className="flex flex-col items-center gap-1.5">
+  <div role="text" className="flex flex-col items-center gap-1.5">
     <span
       className={cn(
         "font-funnel text-4xl font-extrabold tracking-tighter md:text-6xl",

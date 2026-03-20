@@ -8,7 +8,11 @@ import { Badge, Button } from "@shadcn";
 
 export const Hero = () => {
   return (
-    <section className="relative flex flex-col items-center justify-center overflow-hidden pt-12 pb-20 md:pt-20 md:pb-32">
+    <section
+      id="hero"
+      aria-labelledby="hero-title"
+      className="relative flex flex-col items-center justify-center overflow-hidden pt-12 pb-20 md:pt-20 md:pb-32"
+    >
       <m.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -18,13 +22,20 @@ export const Hero = () => {
         {/*Заголовок*/}
         <div className="flex flex-col items-center gap-10">
           <div className="flex flex-col items-center gap-6 text-center">
-            <Badge variant="outline" className="px-6 py-3 font-bold tracking-[4px] uppercase backdrop-blur-md">
+            <Badge
+              aria-hidden="true"
+              variant="outline"
+              className="px-6 py-3 font-bold tracking-[4px] uppercase backdrop-blur-md"
+            >
               <span className="bg-primary mr-3 h-1.5 w-1.5 rounded-full" />
               Frontend Developer
             </Badge>
 
-            <h1 className="xs:text-5xl text-[40px] leading-[1.05] font-extrabold tracking-tighter text-balance text-white sm:text-6xl md:text-8xl">
-              ПЛАТИТЕ ЗА <i className="text-primary">РЕЗУЛЬТАТ</i>, А НЕ ЗА ОБЕЩАНИЯ
+            <h1
+              id="hero-title"
+              className="xs:text-5xl text-[40px] leading-[1.05] font-extrabold tracking-tighter text-balance text-white uppercase sm:text-6xl md:text-8xl"
+            >
+              Платите за <i className="text-primary">результат</i>, а не за обещания
             </h1>
 
             <p className="text-muted-foreground max-w-2xl text-sm leading-relaxed tracking-wide sm:text-base">
@@ -51,11 +62,17 @@ export const Hero = () => {
         </div>
 
         {/*Метрики*/}
-        <div className="border-border/30 flex w-full flex-wrap items-center justify-center gap-12 border-t md:gap-24">
-          <Metric unit="3+" label="ГОДА ОПЫТА" />
-          <Metric unit="20+" label="ПРОЕКТОВ" />
-          <Metric unit="100%" label="БИЗНЕС-ФОКУС" highlight />
-        </div>
+        <ul className="border-border/30 flex w-full flex-wrap items-center justify-center gap-12 border-t md:gap-24">
+          <li className="flex flex-col items-center">
+            <Metric unit="3+" label="ГОДА ОПЫТА" />
+          </li>
+          <li className="flex flex-col items-center">
+            <Metric unit="20+" label="ПРОЕКТОВ" />
+          </li>
+          <li className="flex flex-col items-center">
+            <Metric unit="100%" label="БИЗНЕС-ФОКУС" highlight />
+          </li>
+        </ul>
       </m.div>
     </section>
   );
