@@ -1,6 +1,9 @@
+"use client";
+
 import Link from "next/link";
 
 import { cn } from "@styles";
+import { useSmoothScroll } from "@viewport";
 
 import { MobileMenu } from "./MobileMenu";
 
@@ -17,14 +20,22 @@ const NavItem = ({
   label,
   isAccent,
   className,
+  onClick,
+  onItemClick,
 }: {
   href: string;
   label: string;
   isAccent?: boolean;
   className?: string;
+  onClick: (e: React.MouseEvent) => void;
+  onItemClick?: () => void;
 }) => (
   <Link
     href={href}
+    onClick={(e) => {
+      onClick(e);
+      onItemClick?.();
+    }}
     className={cn(
       "hover:text-foreground inline-flex items-center justify-center text-xs tracking-[2px] transition-colors",
       isAccent ? "text-primary" : "text-muted-foreground",
@@ -35,13 +46,31 @@ const NavItem = ({
   </Link>
 );
 
-const Navigation = ({ className, itemClassName }: { className?: string; itemClassName?: string }) => (
-  <nav className={className} aria-label="Основное меню">
-    {navItems.map((item) => (
-      <NavItem key={item.href} {...item} className={itemClassName} />
-    ))}
-  </nav>
-);
+const Navigation = ({
+  className,
+  itemClassName,
+  onItemClick,
+}: {
+  className?: string;
+  itemClassName?: string;
+  onItemClick?: () => void;
+}) => {
+  const scrollTo = useSmoothScroll();
+
+  return (
+    <nav className={className} aria-label="Основное меню">
+      {navItems.map((item) => (
+        <NavItem
+          key={item.href}
+          {...item}
+          className={itemClassName}
+          onClick={scrollTo(item.href)}
+          onItemClick={onItemClick}
+        />
+      ))}
+    </nav>
+  );
+};
 
 export const Header = () => {
   return (
@@ -58,7 +87,13 @@ export const Header = () => {
 
         {/* Мобильная навигация */}
         <MobileMenu>
-          <Navigation className="mt-12 flex flex-col items-center gap-4" itemClassName="text-xl py-4 w-full" />
+          {({ close }) => (
+            <Navigation
+              className="mt-12 flex flex-col items-center gap-4"
+              itemClassName="text-xl py-4 w-full"
+              onItemClick={close}
+            />
+          )}
         </MobileMenu>
 
         {/* Десктопная навигация */}

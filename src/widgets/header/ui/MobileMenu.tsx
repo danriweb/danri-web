@@ -1,7 +1,7 @@
 "use client";
 
 import { Menu } from "lucide-react";
-import { forwardRef } from "react";
+import { ReactNode, forwardRef, useState } from "react";
 
 import { StandardSheet } from "@constructors";
 import { useMounted } from "@dom";
@@ -22,12 +22,23 @@ const BurgerButton = forwardRef<HTMLButtonElement, React.ComponentProps<typeof B
 ));
 BurgerButton.displayName = "BurgerButton";
 
-export const MobileMenu = ({ children }: { children: React.ReactNode }) => {
+interface MobileMenuProps {
+  children: (props: { close: () => void }) => ReactNode;
+}
+
+export const MobileMenu = ({ children }: MobileMenuProps) => {
+  const [open, setOpen] = useState(false);
   const mounted = useMounted();
+
+  const close = () => setOpen(false);
 
   if (!mounted) {
     return <BurgerButton />;
   }
 
-  return <StandardSheet trigger={<BurgerButton />}>{children}</StandardSheet>;
+  return (
+    <StandardSheet open={open} onOpenChange={setOpen} trigger={<BurgerButton />}>
+      {children({ close })}
+    </StandardSheet>
+  );
 };

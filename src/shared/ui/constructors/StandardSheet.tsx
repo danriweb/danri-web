@@ -10,6 +10,8 @@ interface StandardSheetProps {
   className?: string;
   title?: string;
   description?: string;
+  open?: boolean;
+  onOpenChange?: (open: boolean) => void;
 }
 
 /**
@@ -23,9 +25,11 @@ export const StandardSheet = ({
   className,
   title = "Меню",
   description = "Навигация по сайту",
+  open,
+  onOpenChange,
 }: StandardSheetProps) => {
   return (
-    <Sheet>
+    <Sheet open={open} onOpenChange={onOpenChange}>
       <SheetTrigger asChild>{trigger}</SheetTrigger>
       <SheetContent side={side} className={cn("bg-card border-border max-xs:w-full! backdrop-blur-xl", className)}>
         <SheetHeader className="sr-only">
