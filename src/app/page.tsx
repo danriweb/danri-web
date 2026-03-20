@@ -3,6 +3,7 @@ import { Metadata } from "next";
 import { Hero } from "@widgets/hero";
 import { Processes } from "@widgets/processes";
 import { Projects } from "@widgets/projects";
+import { Stack } from "@widgets/stack";
 
 export const metadata: Metadata = {
   title: "DanriWeb | Frontend разработчик",
@@ -16,6 +17,7 @@ export default function Home() {
       <Hero />
       <Processes />
       <Projects />
+      <Stack />
     </div>
   );
 }

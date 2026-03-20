@@ -17,9 +17,9 @@ export const BackgroundGrid = ({ className, top = 0, index = 0 }: BackgroundGrid
   const [windowWidth, setWindowWidth] = useState(0);
 
   useEffect(() => {
-    // Получаем ширину окна
+    // Получаем ширину окна без учета скролла
     const calculateWidth = () => {
-      setWindowWidth(window.innerWidth);
+      setWindowWidth(document.documentElement.clientWidth);
     };
 
     // Вызываем функцию при монтировании компонента

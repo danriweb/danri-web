@@ -3,7 +3,7 @@ import { ReactNode } from "react";
 
 import { cn } from "@styles";
 
-interface GlowCardProps {
+interface GlowCardProps extends React.HTMLAttributes<HTMLDivElement> {
   children: ReactNode;
   index: number;
   className?: string;
@@ -13,7 +13,7 @@ interface GlowCardProps {
 /**
  * Универсальная обертка для карточек с эффектом свечения и анимированной границей.
  */
-export const GlowCard = ({ children, index, className, wrapperClassName }: GlowCardProps) => {
+export const GlowCard = ({ children, index, className, wrapperClassName, ...props }: GlowCardProps) => {
   return (
     <m.div
       initial={{ opacity: 0, y: 20 }}
@@ -37,6 +37,7 @@ export const GlowCard = ({ children, index, className, wrapperClassName }: GlowC
           "bg-card relative z-10 flex h-full w-full flex-col rounded-[18px] transition-all duration-500 select-none md:select-text",
           className,
         )}
+        {...props}
       >
         {/* Градиенты фона */}
         <div className="absolute inset-0 rounded-[18px] bg-linear-to-br from-white/5 via-transparent to-transparent opacity-100 transition-opacity duration-500 group-hover:opacity-0" />

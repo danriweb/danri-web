@@ -82,6 +82,8 @@ export default function RootLayout({
             <BackgroundGrid top={960} className="opacity-80" key={1} index={1} />
             <BackgroundGrid top={1920} className="opacity-80" key={2} index={2} />
             <BackgroundGrid top={2880} className="opacity-80" key={3} index={3} />
+            <BackgroundGrid top={3840} className="opacity-80" key={4} index={4} />
+            <BackgroundGrid top={4800} className="opacity-80" key={5} index={5} />
           </main>
         </Providers>
         <HeroGlow />
