@@ -23,11 +23,11 @@ export const Hero = () => {
               Frontend Developer
             </Badge>
 
-            <h1 className="xs:text-5xl font-sans text-[40px] leading-[1.05] font-extrabold tracking-tighter text-balance text-white sm:text-6xl md:text-8xl">
+            <h1 className="xs:text-5xl text-[40px] leading-[1.05] font-extrabold tracking-tighter text-balance text-white sm:text-6xl md:text-8xl">
               ПЛАТИТЕ ЗА <i className="text-primary">РЕЗУЛЬТАТ</i>, А НЕ ЗА ОБЕЩАНИЯ
             </h1>
 
-            <p className="text-muted-foreground max-w-2xl font-sans text-sm leading-relaxed tracking-wide sm:text-base">
+            <p className="text-muted-foreground max-w-2xl text-sm leading-relaxed tracking-wide sm:text-base">
               Тот самый разработчик, которому не всё равно. Фокус на бизнесе и качестве кода: поддерживаемые решения и
               предсказуемая архитектура.
             </p>
@@ -51,7 +51,7 @@ export const Hero = () => {
         </div>
 
         {/*Метрики*/}
-        <div className="border-border/30 flex w-full flex-wrap items-center justify-center gap-12 border-t pt-16 md:gap-24">
+        <div className="border-border/30 flex w-full flex-wrap items-center justify-center gap-12 border-t md:gap-24">
           <Metric unit="3+" label="ГОДА ОПЫТА" />
           <Metric unit="20+" label="ПРОЕКТОВ" />
           <Metric unit="100%" label="БИЗНЕС-ФОКУС" highlight />

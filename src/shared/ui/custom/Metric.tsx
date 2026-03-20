@@ -10,8 +10,6 @@ export const Metric = ({ unit, label, highlight }: { unit: string; label: string
     >
       {unit}
     </span>
-    <span className="text-muted-foreground font-sans text-[9px] font-medium tracking-[3px] md:text-[10px]">
-      {label}
-    </span>
+    <span className="text-muted-foreground text-[9px] font-medium tracking-[3px] md:text-[10px]">{label}</span>
   </div>
 );

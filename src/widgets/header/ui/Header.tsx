@@ -5,7 +5,7 @@ import { cn } from "@styles";
 import { MobileMenu } from "./MobileMenu";
 
 const navItems = [
-  { href: "#process", label: "Процессы" },
+  { href: "#processes", label: "Процессы" },
   { href: "#cases", label: "Кейсы" },
   { href: "#stack", label: "Стек" },
   { href: "#about", label: "Обо мне" },

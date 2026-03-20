@@ -73,7 +73,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru" className={`${inter.variable} ${funnelDisplay.variable}`} suppressHydrationWarning>
-      <body className="bg-background text-foreground relative min-w-80 font-sans antialiased">
+      <body className="bg-background text-foreground relative min-w-80 antialiased">
         <Providers>
           <Header />
           <main className="relative">
