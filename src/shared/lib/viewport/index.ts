@@ -1,1 +1,2 @@
-export * from './use-mobile';
+export * from "./useMobile";
+export * from "./useTouch";

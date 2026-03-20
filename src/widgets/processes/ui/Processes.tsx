@@ -3,9 +3,9 @@
 import { m } from "framer-motion";
 
 import { SectionTitle } from "@constructors";
-import { ProcessCard } from "@custom-ui";
 
 import { processes } from "../model/processes";
+import { ProcessCard } from "./ProcessCard";
 
 export const Processes = () => {
   return (

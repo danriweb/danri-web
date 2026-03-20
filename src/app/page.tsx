@@ -2,6 +2,7 @@ import { Metadata } from "next";
 
 import { Hero } from "@widgets/hero";
 import { Processes } from "@widgets/processes";
+import { Projects } from "@widgets/projects";
 
 export const metadata: Metadata = {
   title: "DanriWeb | Frontend разработчик",
@@ -14,6 +15,7 @@ export default function Home() {
     <div className="flex flex-col gap-15">
       <Hero />
       <Processes />
+      <Projects />
     </div>
   );
 }

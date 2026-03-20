@@ -80,6 +80,8 @@ export default function RootLayout({
             <div className="mx-auto max-w-300 px-4 sm:px-6 md:px-8 lg:px-12">{children}</div>
             <BackgroundGrid top={0} key={0} index={0} />
             <BackgroundGrid top={960} className="opacity-80" key={1} index={1} />
+            <BackgroundGrid top={1920} className="opacity-80" key={2} index={2} />
+            <BackgroundGrid top={2880} className="opacity-80" key={3} index={3} />
           </main>
         </Providers>
         <HeroGlow />
