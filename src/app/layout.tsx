@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Funnel_Display, Inter } from "next/font/google";
 import "react-loading-skeleton/dist/skeleton.css";
 
-import { BackgroundGrid } from "@custom-ui";
+import { BackgroundGrid, HeroGlow } from "@custom-ui";
 
 import { Header } from "@/widgets/header";
 
@@ -73,7 +73,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru" className={`${inter.variable} ${funnelDisplay.variable}`} suppressHydrationWarning>
-      <body className="bg-background text-foreground min-w-80 font-sans antialiased">
+      <body className="bg-background text-foreground relative min-w-80 font-sans antialiased">
         <Providers>
           <Header />
           <main className="relative">
@@ -82,6 +82,7 @@ export default function RootLayout({
             <BackgroundGrid top={960} className="opacity-80" key={1} index={1} />
           </main>
         </Providers>
+        <HeroGlow />
       </body>
     </html>
   );

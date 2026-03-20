@@ -1,5 +1,7 @@
 import { Metadata } from "next";
 
+import { Hero } from "@widgets/hero";
+
 export const metadata: Metadata = {
   title: "DanriWeb | Frontend разработчик",
   description:
@@ -8,8 +10,8 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center p-8">
-      <h1 className="text-2xl font-bold">DanriWeb</h1>
+    <div className="flex flex-col">
+      <Hero />
     </div>
   );
 }

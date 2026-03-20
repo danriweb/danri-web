@@ -140,8 +140,10 @@
   --card: oklch(15.94% 0.0157 266.6);
   --card-foreground: oklch(100% 0 0);
   --primary: oklch(72.77% 0.161 237.8);
+  --primary-gradient: linear-gradient(90deg, #4bd1ff 0%, #0073ff 100%);
   --primary-foreground: oklch(15.94% 0.0157 266.6);
   --accent: oklch(72.77% 0.161 237.8);
+  --accent-gradient: linear-gradient(90deg, #4bd1ff 0%, #0073ff 100%);
   --accent-foreground: oklch(15.94% 0.0157 266.6);
   --border: oklch(25.07% 0.0315 260.41);
   --ring: oklch(72.77% 0.161 237.8);
@@ -154,6 +156,9 @@
 
   --font-sans: var(--font-inter), Arial, sans-serif;
   --font-funnel: var(--font-funnel-display), Arial, sans-serif;
+
+  --background-image-primary-gradient: var(--primary-gradient);
+  --background-image-accent-gradient: var(--accent-gradient);
 }
 
 @layer base {
