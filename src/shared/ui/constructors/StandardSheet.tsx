@@ -1,3 +1,5 @@
+"use client";
+
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "@shadcn";
 import { cn } from "@styles";
 

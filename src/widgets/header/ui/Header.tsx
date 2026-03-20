@@ -1,12 +1,8 @@
-"use client";
-
-import { Menu } from "lucide-react";
 import Link from "next/link";
-import { forwardRef } from "react";
 
-import { StandardSheet } from "@constructors";
-import { Button } from "@shadcn";
 import { cn } from "@styles";
+
+import { MobileMenu } from "./MobileMenu";
 
 const navItems = [
   { href: "#process", label: "Процессы" },
@@ -39,14 +35,6 @@ const NavItem = ({
   </Link>
 );
 
-const BurgerButton = forwardRef<HTMLButtonElement, React.ComponentProps<typeof Button>>((props, ref) => (
-  <Button variant="ghost" size="icon" className="text-foreground py-1 md:hidden" {...props} ref={ref}>
-    <Menu className="h-full! w-auto!" />
-    <span className="sr-only">Открыть меню</span>
-  </Button>
-));
-BurgerButton.displayName = "BurgerButton";
-
 const Navigation = ({ className, itemClassName }: { className?: string; itemClassName?: string }) => (
   <nav className={className} aria-label="Основное меню">
     {navItems.map((item) => (
@@ -69,9 +57,9 @@ export const Header = () => {
         </div>
 
         {/* Мобильная навигация */}
-        <StandardSheet trigger={<BurgerButton />}>
+        <MobileMenu>
           <Navigation className="mt-12 flex flex-col items-center gap-4" itemClassName="text-xl py-4 w-full" />
-        </StandardSheet>
+        </MobileMenu>
 
         {/* Десктопная навигация */}
         <Navigation className="hidden items-center gap-8 md:flex" />
