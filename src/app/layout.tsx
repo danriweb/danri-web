@@ -4,6 +4,7 @@ import "react-loading-skeleton/dist/skeleton.css";
 
 import { BackgroundGrid, HeroGlow } from "@custom-ui";
 
+import { ContactModal } from "@/features/contact";
 import { Header } from "@/widgets/header";
 
 import "./globals.css";
@@ -78,15 +79,11 @@ export default function RootLayout({
           <Header />
           <main className="relative">
             <div className="mx-auto max-w-300 px-4 sm:px-6 md:px-8 lg:px-12">{children}</div>
-            <BackgroundGrid top={0} key={0} index={0} />
-            <BackgroundGrid top={960} className="opacity-80" key={1} index={1} />
-            <BackgroundGrid top={1920} className="opacity-80" key={2} index={2} />
-            <BackgroundGrid top={2880} className="opacity-80" key={3} index={3} />
-            <BackgroundGrid top={3840} className="opacity-80" key={4} index={4} />
-            <BackgroundGrid top={4800} className="opacity-80" key={5} index={5} />
+            <BackgroundGrid />
           </main>
+          <HeroGlow />
+          <ContactModal />
         </Providers>
-        <HeroGlow />
       </body>
     </html>
   );

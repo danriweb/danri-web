@@ -12,7 +12,7 @@ const navItems = [
   { href: "#cases", label: "Кейсы" },
   { href: "#stack", label: "Стек" },
   { href: "#about", label: "Обо мне" },
-  { href: "#contact", label: "Контакты", isAccent: true },
+  { href: "/contact", label: "Контакты", isAccent: true },
 ];
 
 const NavItem = ({
@@ -59,25 +59,42 @@ const Navigation = ({
 
   return (
     <nav className={className} aria-label="Основное меню">
-      {navItems.map((item) => (
-        <NavItem
-          key={item.href}
-          {...item}
-          className={itemClassName}
-          onClick={scrollTo(item.href)}
-          onItemClick={onItemClick}
-        />
-      ))}
+      {navItems.map((item) => {
+        return (
+          <NavItem
+            key={item.href}
+            {...item}
+            className={itemClassName}
+            onClick={(e) => {
+              if (item.href.startsWith("#")) {
+                scrollTo(item.href)(e);
+              }
+            }}
+            onItemClick={onItemClick}
+          />
+        );
+      })}
     </nav>
   );
 };
 
+import { usePathname } from "next/navigation";
+
 export const Header = () => {
+  const pathname = usePathname();
+  const scrollTo = useSmoothScroll();
+
+  const handleLogoClick = (e: React.MouseEvent) => {
+    if (pathname === "/") {
+      scrollTo("hero")(e);
+    }
+  };
+
   return (
     <header className="bg-card/80 border-border sticky top-0 z-50 flex w-full flex-col items-center border-b px-4 py-4 backdrop-blur-2xl sm:px-6 md:px-8 md:py-5 lg:px-12 lg:py-6">
       <div className="flex w-full max-w-300 items-center justify-between">
         <div className="flex items-center gap-4">
-          <Link href="/" className="flex items-center gap-2" aria-label="Danri Web - на главную">
+          <Link href="/" onClick={handleLogoClick} className="flex items-center gap-2" aria-label="Danri Web - на главную">
             <span aria-hidden="true" className="font-funnel text-primary text-xl font-bold tracking-[2px]">
               {"</>"}
             </span>
@@ -102,3 +119,6 @@ export const Header = () => {
     </header>
   );
 };
+
+
+

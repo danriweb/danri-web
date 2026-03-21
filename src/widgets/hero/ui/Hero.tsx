@@ -1,11 +1,12 @@
 "use client";
 
+import Link from "next/link";
 import { m } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 
-import { useSmoothScroll } from "@viewport";
 import { Metric } from "@custom-ui";
 import { Badge, Button } from "@shadcn";
+import { useSmoothScroll } from "@viewport";
 
 export const Hero = () => {
   const scrollTo = useSmoothScroll();
@@ -33,31 +34,33 @@ export const Hero = () => {
               <span className="bg-primary mr-3 h-1.5 w-1.5 rounded-full" />
               Frontend Developer
             </Badge>
- 
+
             <h1
               id="hero-title"
               className="xs:text-5xl text-[40px] leading-[1.05] font-extrabold tracking-tighter text-balance text-white uppercase sm:text-6xl md:text-8xl"
             >
               Платите за <i className="text-primary">результат</i>, а не за обещания
             </h1>
- 
+
             <p className="text-muted-foreground max-w-2xl text-sm leading-relaxed tracking-wide sm:text-base">
               Тот самый разработчик, которому не всё равно. Фокус на бизнесе и качестве кода: поддерживаемые решения и
               предсказуемая архитектура.
             </p>
           </div>
- 
+
           {/*Кнопки*/}
           <div className="flex flex-wrap items-center justify-center gap-4">
             <Button
               size="lg"
-              onClick={scrollTo("contact")}
+              asChild
               className="group bg-primary-gradient h-14 px-10 text-base font-bold hover:text-white"
             >
-              Обсудить проект
-              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              <Link href="/contact">
+                Обсудить проект
+                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </Link>
             </Button>
- 
+
             <Button
               size="lg"
               variant="outline"
