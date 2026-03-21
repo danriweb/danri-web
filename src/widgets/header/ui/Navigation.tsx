@@ -3,6 +3,7 @@
 import { m } from "framer-motion";
 import { Activity, Binary, Briefcase, Mail, User } from "lucide-react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { FaGithub, FaTelegram } from "react-icons/fa";
 
 import { cn } from "@styles";
@@ -46,11 +47,16 @@ const NavItem = ({
   index = 0,
   isMobile,
 }: NavItemProps) => {
+  const pathname = usePathname();
+
+  // Если мы не на главной, якорная ссылка должна вести на корень /#anchor
+  const actualHref = href.startsWith("#") && pathname !== "/" ? `/${href}` : href;
+
   // --- Десктопная версия (простая ссылка) ---
   if (!isMobile) {
     return (
       <Link
-        href={href}
+        href={actualHref}
         onClick={onClick}
         className={cn(
           "hover:text-foreground inline-flex items-center justify-center text-xs tracking-[2px] uppercase transition-colors",
@@ -72,7 +78,7 @@ const NavItem = ({
       className="w-full"
     >
       <Link
-        href={href}
+        href={actualHref}
         onClick={(e) => {
           onClick(e);
           onItemClick?.();
@@ -124,6 +130,7 @@ interface NavigationProps {
  */
 export const Navigation = ({ className, itemClassName, onItemClick, isMobile }: NavigationProps) => {
   const scrollTo = useSmoothScroll();
+  const pathname = usePathname();
 
   return (
     <nav
@@ -141,7 +148,8 @@ export const Navigation = ({ className, itemClassName, onItemClick, isMobile }: 
               isMobile={isMobile}
               className={itemClassName}
               onClick={(e) => {
-                if (item.href.startsWith("#")) {
+                // Если мы на главной, используем плавный скролл
+                if (item.href.startsWith("#") && pathname === "/") {
                   scrollTo(item.href)(e);
                 }
               }}
