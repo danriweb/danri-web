@@ -35,7 +35,7 @@ export const Projects = () => {
       </div>
 
       {/* Список проектов */}
-      <div className="flex w-full flex-col gap-10 px-4 md:px-6">
+      <div className="flex w-full flex-col gap-10 px-0 md:px-6">
         <ol className="flex flex-col gap-8 md:gap-12">
           {projects.map((project, index) => (
             <li key={project.id} className="contents">

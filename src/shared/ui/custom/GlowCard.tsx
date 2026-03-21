@@ -8,19 +8,20 @@ interface GlowCardProps extends React.HTMLAttributes<HTMLDivElement> {
   index: number;
   className?: string;
   wrapperClassName?: string;
+  maxWidth?: string;
 }
 
 /**
  * Универсальная обертка для карточек с эффектом свечения и анимированной границей.
  */
-export const GlowCard = ({ children, index, className, wrapperClassName, ...props }: GlowCardProps) => {
+export const GlowCard = ({ children, index, className, wrapperClassName, maxWidth, ...props }: GlowCardProps) => {
   return (
     <m.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      className={cn("group relative overflow-clip rounded-[20px] bg-white/5 p-0.5", wrapperClassName)}
+      className={cn("group relative overflow-clip rounded-[20px] bg-white/5 p-0.5", wrapperClassName, maxWidth)}
     >
       {/* Анимированный градиент бордера */}
       <m.div

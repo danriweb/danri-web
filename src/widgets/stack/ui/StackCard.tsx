@@ -16,7 +16,13 @@ export const StackCategoryCard = ({ category, index }: StackCategoryCardProps) =
   const titleId = `category-title-${category.id}`;
 
   return (
-    <GlowCard index={index} className="p-8 md:p-10" aria-labelledby={titleId} role="group">
+    <GlowCard
+      index={index}
+      className="p-8 md:p-10"
+      maxWidth="xs:min-w-100 max-w-80 md:min-w-0 xs:max-w-100"
+      aria-labelledby={titleId}
+      role="group"
+    >
       <div className="flex h-full flex-col gap-8">
         {/* Заголовок категории */}
         <div className="flex items-center gap-4 border-b border-white/5 pb-6">
