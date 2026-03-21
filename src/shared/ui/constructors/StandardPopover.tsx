@@ -10,6 +10,8 @@ interface StandardPopoverProps {
   align?: "start" | "center" | "end";
   className?: string;
   sideOffset?: number;
+  open?: boolean;
+  onOpenChange?: (open: boolean) => void;
 }
 
 /**
@@ -23,9 +25,11 @@ export const StandardPopover = ({
   align = "center",
   className,
   sideOffset = 8,
+  open,
+  onOpenChange,
 }: StandardPopoverProps) => {
   return (
-    <Popover>
+    <Popover open={open} onOpenChange={onOpenChange}>
       <PopoverTrigger asChild>{trigger}</PopoverTrigger>
       <PopoverContent
         side={side}

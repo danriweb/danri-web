@@ -1,5 +1,3 @@
-"use client";
-
 import { ArrowRight } from "lucide-react";
 
 import { SectionTitle } from "@constructors";
@@ -10,6 +8,7 @@ import { ProjectCard } from "./ProjectCard";
 
 /**
  * Секция с проектами (портфолио).
+ * Теперь является Server Component, отдавая чистый HTML.
  */
 export const Projects = () => {
   return (
@@ -44,7 +43,7 @@ export const Projects = () => {
           ))}
         </ol>
 
-        {/* Кнопка "Смотреть все" */}
+        {/* Кнопка "Смотреть все" (клиентский интерактив) */}
         <div className="flex justify-center pt-8">
           <Button
             variant="outline"

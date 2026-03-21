@@ -1,5 +1,3 @@
-"use client";
-
 import { GlowCard } from "@custom-ui";
 
 import { StackCategory } from "../model/stack";

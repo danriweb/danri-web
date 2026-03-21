@@ -1,10 +1,12 @@
-"use client";
-
 import { SectionTitle } from "@constructors";
 
 import { stackCategories } from "../model/stack";
 import { StackCategoryCard } from "./StackCard";
 
+/**
+ * Секция Стек — теперь Server Component!
+ * Google видит все технологии сразу, а клиент не грузит лишний JS.
+ */
 export const Stack = () => {
   return (
     <section
@@ -22,7 +24,6 @@ export const Stack = () => {
 
       {/* Грид скиллов */}
       <div className="flex w-full flex-col gap-12 md:gap-20">
-        {/* Сетка категорий навыков */}
         <div className="mx-auto grid grid-cols-1 gap-8 px-0 md:grid-cols-2 lg:grid-cols-2 lg:gap-12 xl:grid-cols-3">
           {stackCategories.map((category, index) => (
             <StackCategoryCard key={category.id} category={category} index={index} />
