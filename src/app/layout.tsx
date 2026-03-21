@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Funnel_Display, Inter } from "next/font/google";
+import Script from "next/script";
 import "react-loading-skeleton/dist/skeleton.css";
 
 import { BackgroundGrid, HeroGlow } from "@custom-ui";
@@ -74,6 +75,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru" className={`${inter.variable} ${funnelDisplay.variable}`} suppressHydrationWarning>
+      <head>
+        <Script src="//unpkg.com/react-scan/dist/auto.global.js" crossOrigin="anonymous" strategy="beforeInteractive" />
+      </head>
       <body className="bg-background text-foreground relative min-w-80 antialiased">
         <Providers>
           <Header />
