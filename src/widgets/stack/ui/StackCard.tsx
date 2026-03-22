@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import { GlowCard } from "@custom-ui";
 
 import { StackCategory } from "../model/stack";
@@ -11,6 +12,7 @@ interface StackCategoryCardProps {
  * Карточка категории навыков
  */
 export const StackCategoryCard = ({ category, index }: StackCategoryCardProps) => {
+  const t = useTranslations(`widgets.stack.categories.${index}`);
   const titleId = `category-title-${category.id}`;
 
   return (
@@ -31,7 +33,7 @@ export const StackCategoryCard = ({ category, index }: StackCategoryCardProps) =
             <category.icon className="size-5" />
           </div>
           <h3 id={titleId} className="text-xl font-bold tracking-wider text-white uppercase">
-            {category.title}
+            {t("title")}
           </h3>
         </div>
 
@@ -39,7 +41,7 @@ export const StackCategoryCard = ({ category, index }: StackCategoryCardProps) =
         <ul
           className="flex flex-col gap-6"
           role="list"
-          aria-label={`Список инструментов в категории ${category.title}`}
+          aria-label={`Список инструментов в категории ${t("title")}`}
         >
           {category.items.map((item) => (
             <li key={item.id} role="listitem">
@@ -52,9 +54,9 @@ export const StackCategoryCard = ({ category, index }: StackCategoryCardProps) =
                 </div>
                 <div className="flex flex-col gap-0.5">
                   <span className="group-hover:text-primary text-sm font-bold tracking-wide text-white transition-colors">
-                    {item.name}
+                    {t(`items.${item.id}.name`)}
                   </span>
-                  <span className="text-muted-foreground text-xs opacity-60">{item.description}</span>
+                  <span className="text-muted-foreground text-xs opacity-60">{t(`items.${item.id}.description`)}</span>
                 </div>
               </div>
             </li>

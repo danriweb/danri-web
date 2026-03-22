@@ -1,4 +1,4 @@
-import { Metadata } from "next";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import dynamic from "next/dynamic";
 
 import { Hero } from "@widgets/hero";
@@ -18,14 +18,19 @@ const Stack = dynamic(() => import("@widgets/stack").then((mod) => mod.Stack), {
 const About = dynamic(() => import("@widgets/about").then((mod) => mod.About), {
   ssr: true,
 });
+export async function generateMetadata(props: { params: Promise<{ locale: string }> }) {
+  const { locale } = await props.params;
+  const t = await getTranslations({ locale, namespace: "app.home.metadata" });
+  return {
+    title: t("title"),
+    description: t("description"),
+  };
+}
 
-export const metadata: Metadata = {
-  title: "DanriWeb | Frontend разработчик",
-  description:
-    "Добро пожаловать на официальный сайт DanriWeb. Здесь вы найдете информацию о моих проектах, навыках создания современных интерфейсов и опыте во Frontend-разработке.",
-};
+export default async function Home(props: { params: Promise<{ locale: string }> }) {
+  const { locale } = await props.params;
+  setRequestLocale(locale);
 
-export default function Home() {
   return (
     <div className="flex flex-col gap-15 overflow-x-hidden">
       <Hero />

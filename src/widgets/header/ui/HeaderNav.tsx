@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { navItems } from "@data";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -114,12 +115,16 @@ interface HeaderNavProps {
   isMobile?: boolean;
 }
 
+const navItemKeys = ["cases", "about", "processes", "stack", "contact"] as const;
+
 /**
  * Общий компонент навигации для хедера и мобильного меню
  */
 export const HeaderNavProps = ({ className, itemClassName, onItemClick, isMobile }: HeaderNavProps) => {
   const scrollTo = useSmoothScroll();
   const pathname = usePathname();
+  const tNav = useTranslations("shared.nav");
+  const tHeader = useTranslations("widgets.header");
 
   return (
     <nav
@@ -131,6 +136,7 @@ export const HeaderNavProps = ({ className, itemClassName, onItemClick, isMobile
         <NavItem
           key={item.href}
           {...item}
+          label={tNav(navItemKeys[index])}
           index={index}
           isMobile={isMobile}
           className={itemClassName}
@@ -172,7 +178,7 @@ export const HeaderNavProps = ({ className, itemClassName, onItemClick, isMobile
 
           {/* Копирайт */}
           <p className="text-muted-foreground/40 text-center text-[10px] tracking-[3px] uppercase">
-            © 2026 DanriWeb • Frontend
+            {tHeader("copyright")}
           </p>
         </MotionWrapper>
       )}

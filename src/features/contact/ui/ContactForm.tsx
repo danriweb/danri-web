@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { FaTelegramPlane } from "react-icons/fa";
@@ -27,6 +28,7 @@ const fadeIn = (delay: number) => ({
 
 export const ContactForm = () => {
   const { close } = useContactModal();
+  const t = useTranslations("features.contact.form");
 
   const {
     register,
@@ -41,7 +43,7 @@ export const ContactForm = () => {
     // Имитация отправки
     await new Promise((resolve) => setTimeout(resolve, 1500));
     console.log("Contact form data:", data);
-    toast.success("Сообщение успешно отправлено! Я свяжусь с вами в ближайшее время.");
+    toast.success(t("success"));
     reset();
     close();
   };
@@ -61,7 +63,7 @@ export const ContactForm = () => {
             <FaTelegramPlane className="size-6" />
           </div>
           <span className="relative text-[10px] font-bold tracking-[3px] text-white/50 uppercase transition-colors group-hover:text-white">
-            Telegram
+            {t("telegram")}
           </span>
         </a>
 
@@ -74,24 +76,24 @@ export const ContactForm = () => {
             <HiMail className="size-6" />
           </div>
           <span className="relative text-[10px] font-bold tracking-[3px] text-white/50 uppercase transition-colors group-hover:text-white">
-            Email
+            {t("email")}
           </span>
         </a>
       </MotionWrapper>
 
       <MotionWrapper {...fadeIn(0.2)} className="relative">
         <FieldSeparator className="text-muted-foreground text-[10px] font-bold tracking-[3px] uppercase">
-          Или напишите здесь
+          {t("separator")}
         </FieldSeparator>
       </MotionWrapper>
 
       {/* Форма */}
       <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4 sm:gap-5">
         <MotionWrapper {...fadeIn(0.3)}>
-          <StandardField label="Как вас зовут?" error={errors.name} id="name">
+          <StandardField label={t("nameLabel")} error={errors.name} id="name">
             <Input
               id="name"
-              placeholder="Danri"
+              placeholder={t("namePlaceholder")}
               className="focus:border-primary/50 h-11 border-white/10 bg-white/5 transition-colors focus:bg-white/10"
               {...register("name")}
             />
@@ -99,11 +101,11 @@ export const ContactForm = () => {
         </MotionWrapper>
 
         <MotionWrapper {...fadeIn(0.4)}>
-          <StandardField label="Ваша почта для связи" error={errors.email} id="email">
+          <StandardField label={t("emailLabel")} error={errors.email} id="email">
             <Input
               id="email"
               type="email"
-              placeholder="example@mail.com"
+              placeholder={t("emailPlaceholder")}
               className="focus:border-primary/50 h-11 border-white/10 bg-white/5 transition-colors focus:bg-white/10"
               {...register("email")}
             />
@@ -111,10 +113,10 @@ export const ContactForm = () => {
         </MotionWrapper>
 
         <MotionWrapper {...fadeIn(0.5)}>
-          <StandardField label="О чем проект?" error={errors.message} id="message">
+          <StandardField label={t("messageLabel")} error={errors.message} id="message">
             <Textarea
               id="message"
-              placeholder="Расскажите немного о задаче..."
+              placeholder={t("messagePlaceholder")}
               className="focus:border-primary/50 min-h-25 resize-none border-white/10 bg-white/5 transition-colors focus:bg-white/10"
               {...register("message")}
             />
@@ -127,7 +129,7 @@ export const ContactForm = () => {
             disabled={isSubmitting}
             className="bg-primary-gradient mt-2 h-12 w-full text-sm font-bold tracking-widest uppercase transition-transform hover:text-white active:scale-95"
           >
-            {isSubmitting ? "Отправка..." : "Отправить запрос"}
+            {isSubmitting ? t("submitting") : t("submit")}
             {!isSubmitting && <RiSendPlaneFill className="ml-2 size-4" />}
           </Button>
         </MotionWrapper>

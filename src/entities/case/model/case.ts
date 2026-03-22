@@ -1,4 +1,20 @@
-import { Activity, BookOpen, Calendar, Cpu, Gauge, Layers, Layout, LucideIcon, Store, Users } from "lucide-react";
+import {
+  Activity,
+  BookOpen,
+  Calendar,
+  Cpu,
+  Eye,
+  Gauge,
+  Globe,
+  KeyRound,
+  Layers,
+  Layout,
+  LucideIcon,
+  Monitor,
+  Store,
+  Users,
+  Zap,
+} from "lucide-react";
 
 export interface CaseMetric {
   label: string;
@@ -159,6 +175,146 @@ export const cases: Case[] = [
     metrics: [
       { label: "ОНБОРДИНГ", value: "5д → 1д", className: "text-primary" },
       { label: "СТИЛЬ КОДА", value: "единый", className: "text-green-400" },
+    ],
+  },
+  {
+    id: "06",
+    title: "Адаптивный интерфейс под любой экран",
+    task: "Таблица с большим количеством данных отображалась только на десктопе. На мобильных - горизонтальный скролл и потеря данных.",
+    solution:
+      "Перестроил компонент: на мобильных - карточки, на десктопе - таблица. CSS без JS, переключение через media query.",
+    meta: [
+      {
+        label: "Адаптив",
+        icon: Monitor,
+        description: "Разный лейаут под разные экраны без JS-переключения",
+      },
+      {
+        label: "Без библиотек",
+        icon: Layout,
+        description: "Чистый CSS, без сторонних решений",
+      },
+      {
+        label: "2024",
+        icon: Calendar,
+        description: "Часть фриланс-проекта для малого бизнеса",
+      },
+    ],
+    metrics: [
+      { label: "ПОДДЕРЖКА ЭКРАНОВ", value: "320px+", className: "text-primary" },
+      { label: "JS ДЛЯ АДАПТИВА", value: "0 строк", className: "text-green-400" },
+    ],
+  },
+  {
+    id: "07",
+    title: "Оптимизация загрузки страницы",
+    task: "Страница с тяжёлыми компонентами грузилась медленно. LCP выше 4 секунд - плохо и для пользователя, и для SEO.",
+    solution:
+      "Lazy loading компонентов, code splitting, оптимизация изображений через next/image. Убрал блокирующие запросы на старте.",
+    meta: [
+      {
+        label: "Производительность",
+        icon: Zap,
+        description: "Фокус на Core Web Vitals: LCP, CLS, FID",
+      },
+      {
+        label: "Next.js",
+        icon: Gauge,
+        description: "Использовал встроенные инструменты фреймворка",
+      },
+      {
+        label: "2025",
+        icon: Calendar,
+        description: "Оптимизация для SEO и пользовательского опыта",
+      },
+    ],
+    metrics: [
+      { label: "LCP", value: "4.1с → 1.3с", className: "text-primary" },
+      { label: "LIGHTHOUSE", value: "61 → 97", className: "text-green-400" },
+    ],
+  },
+  {
+    id: "08",
+    title: "Авторизация и защита маршрутов",
+    task: "Проект без авторизации: любой мог зайти на любую страницу. Нужна была система с токенами и разграничением доступа.",
+    solution:
+      "JWT + refresh-токены, protected routes через middleware. Логика хранения токенов вынесена отдельно от UI.",
+    meta: [
+      {
+        label: "Безопасность",
+        icon: KeyRound,
+        description: "JWT, refresh-логика, защита роутов",
+      },
+      {
+        label: "Архитектура",
+        icon: Cpu,
+        description: "Авторизация изолирована от UI-слоя",
+      },
+      {
+        label: "2025",
+        icon: Calendar,
+        description: "Реализовано в рамках фриланс-проекта",
+      },
+    ],
+    metrics: [
+      { label: "УЯЗВИМЫХ РОУТОВ", value: "12 → 0", className: "text-primary" },
+      { label: "СЛОЁВ ЗАЩИТЫ", value: "3", className: "text-green-400" },
+    ],
+  },
+  {
+    id: "09",
+    title: "Многоязычность (i18n)",
+    task: "Продукт выходил на новый рынок. Весь текст был вшит в компоненты - добавить второй язык без рефакторинга было невозможно.",
+    solution:
+      "Перевёл строки в JSON-файлы, подключил next-intl. Организовал структуру переводов так, чтобы их мог обновлять не только разработчик.",
+    meta: [
+      {
+        label: "Локализация",
+        icon: Globe,
+        description: "Поддержка нескольких языков через next-intl",
+      },
+      {
+        label: "Структура",
+        icon: BookOpen,
+        description: "Переводы вынесены в отдельные файлы по namespace",
+      },
+      {
+        label: "2025",
+        icon: Calendar,
+        description: "Реализовано в рамках фриланс-проекта",
+      },
+    ],
+    metrics: [
+      { label: "ЯЗЫКОВ", value: "3", className: "text-primary" },
+      { label: "СТРОК ХАРДКОДА", value: "200+ → 0", className: "text-green-400" },
+    ],
+  },
+  {
+    id: "10",
+    title: "Доступность по стандартам WCAG 2.1",
+    task: "Интерфейс не работал с клавиатурой и скринридером. Часть пользователей просто не могла им пользоваться.",
+    solution:
+      "Добавил ARIA-атрибуты, настроил фокус-менеджмент, исправил контраст. Прошёлся по ключевым сценариям с axe-core и вручную.",
+    meta: [
+      {
+        label: "Доступность",
+        icon: Eye,
+        description: "WCAG 2.1 уровень AA: фокус, контраст, ARIA",
+      },
+      {
+        label: "Инструменты",
+        icon: Activity,
+        description: "axe-core, ручное тестирование с клавиатурой",
+      },
+      {
+        label: "2025",
+        icon: Calendar,
+        description: "Внедрено в UI-ките контрактного проекта",
+      },
+    ],
+    metrics: [
+      { label: "A11Y ОШИБОК", value: "34 → 2", className: "text-primary" },
+      { label: "WCAG", value: "AA", className: "text-green-400" },
     ],
   },
 ];

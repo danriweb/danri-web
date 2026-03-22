@@ -1,20 +1,16 @@
+import { ElementType } from "react";
 import { GlowCard } from "@custom-ui";
 import { cn } from "@styles";
 
-import { Principle } from "../model/about";
-
 interface PrincipleCardProps {
-  principle: Principle;
+  icon: ElementType;
+  title: string;
+  description: string;
   index: number;
   className?: string;
 }
 
-/**
- * Карточка принципа - по образцу ProcessCard, Server Component.
- */
-export const PrincipleCard = ({ principle, index, className }: PrincipleCardProps) => {
-  const Icon = principle.icon;
-
+export const PrincipleCard = ({ icon: Icon, title, description, index, className }: PrincipleCardProps) => {
   return (
     <GlowCard index={index} className={cn("p-8", className)}>
       <div className="flex flex-col gap-6">
@@ -23,8 +19,8 @@ export const PrincipleCard = ({ principle, index, className }: PrincipleCardProp
         </div>
 
         <div className="flex flex-col gap-2">
-          <h3 className="text-lg font-bold tracking-tight text-white uppercase">{principle.title}</h3>
-          <p className="text-muted-foreground text-sm leading-relaxed">{principle.description}</p>
+          <h3 className="text-lg font-bold tracking-tight text-white uppercase">{title}</h3>
+          <p className="text-muted-foreground text-sm leading-relaxed">{description}</p>
         </div>
       </div>
     </GlowCard>

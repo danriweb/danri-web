@@ -1,9 +1,12 @@
+import { useTranslations } from "next-intl";
 import { SectionTitle } from "@custom-ui";
 
 import { stackCategories } from "../model/stack";
 import { StackCategoryCard } from "./StackCard";
 
 export const Stack = () => {
+  const t = useTranslations("widgets.stack");
+
   return (
     <section
       id="stack"
@@ -13,9 +16,9 @@ export const Stack = () => {
       {/* Заголовок секции */}
       <SectionTitle
         id="stack-title"
-        tag="МОЙ СТЕК"
-        title="Технический арсенал"
-        description="Инструменты и технологии, которые я использую для создания надежных и производительных веб-приложений."
+        tag={t("tag")}
+        title={t("title")}
+        description={t("description")}
       />
 
       {/* Грид скиллов */}

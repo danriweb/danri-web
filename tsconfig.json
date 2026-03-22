@@ -26,8 +26,8 @@
       "@entities/*": ["./src/entities/*"],
       "@shared/*": ["./src/shared/*"],
 
-      "@providers/*": ["./src/app/providers/*"],
-      "@providers": ["./src/app/providers"],
+      "@providers/*": ["./src/app/[locale]/providers/*"],
+      "@providers": ["./src/app/[locale]/providers"],
 
       "@dom/*": ["./src/shared/lib/dom/*"],
       "@dom": ["./src/shared/lib/dom"],

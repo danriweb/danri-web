@@ -1,31 +1,59 @@
-name: Deploy to VPS
+name: Deploy
 
 on:
   push:
     branches: ["main"]
 
 jobs:
-  deploy:
+  build-and-push:
     runs-on: ubuntu-latest
-
+    permissions:
+      contents: read
+      packages: write
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
 
+      - name: Log in to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: true
+          tags: ghcr.io/${{ github.repository }}:latest
+
+  deploy:
+    needs: build-and-push
+    runs-on: ubuntu-latest
+    steps:
       - name: Setup SSH
         uses: webfactory/ssh-agent@v0.8.0
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
-      - name: Deploy to server
+      - name: Deploy to VPS
         run: |
           ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} << 'EOF'
+            # Авторизуемся в GHCR на сервере, чтобы он мог скачивать приватные образы
+            echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+            
+            # Обновляем код (docker-compose.yml)
             cd /home/deploy/apps/danri-web || git clone git@github.com:danriweb/danri-web.git /home/deploy/apps/danri-web
             cd /home/deploy/apps/danri-web
             git fetch origin main
             git reset --hard origin/main
             git clean -fd
 
-            docker compose build --no-cache
+            # Скачиваем образ и запускаем контейнер
+            docker compose pull
             docker compose up -d
+            
+            # Чистим старые кэши, чтобы не забить диск
+            docker system prune -f
           EOF

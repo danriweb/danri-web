@@ -9,3 +9,4 @@ export * from "./SectionHeader";
 export * from "./SectionRevealer";
 export * from "./SectionTag";
 export * from "./SectionTitle";
+export * from "./StandardDropdown";

@@ -1,12 +1,15 @@
 import { ArrowRight } from "lucide-react";
+import { useTranslations } from "next-intl";
 import Link from "next/link";
+
+import { CaseCard, cases } from "@entities/case";
 
 import { SectionTitle } from "@custom-ui";
 import { Button } from "@shadcn";
 
-import { cases, CaseCard } from "@entities/case";
-
 export const Cases = () => {
+  const t = useTranslations("widgets.cases");
+
   return (
     <section
       id="cases"
@@ -17,15 +20,9 @@ export const Cases = () => {
       <div className="w-full px-4 md:px-6">
         <SectionTitle
           id="cases-title"
-          tag="Кейсы"
-          title="Инженерный подход в деле"
-          description={
-            <>
-              Не просто красивый UI, но и продуманная логика под капотом.
-              <br className="hidden md:block" />
-              Легко, быстро, надёжно и с поддержкой лучших практик кода.
-            </>
-          }
+          tag={t("tag")}
+          title={t("title")}
+          description={t.rich("description", { br: () => <br className="hidden md:block" /> })}
         />
       </div>
 
@@ -46,7 +43,7 @@ export const Cases = () => {
               variant="outline"
               className="group hover:bg-card h-14 border-white/10 px-12 text-base font-bold text-white uppercase backdrop-blur-sm transition-all hover:border-white/30"
             >
-              Смотреть все кейсы
+              {t("viewAll")}
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Button>
           </Link>

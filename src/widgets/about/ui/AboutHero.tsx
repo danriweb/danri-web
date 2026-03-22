@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 import { FaGithub, FaTelegram } from "react-icons/fa";
@@ -11,6 +12,9 @@ import { timeline } from "../model/about";
 import { TimelineCard } from "./TimelineCard";
 
 export const AboutHero = () => {
+  const t = useTranslations("widgets.about.hero");
+  const tRoot = useTranslations("widgets.about");
+
   return (
     <div className="grid w-full grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-20">
       {/* ── Левая колонка ── */}
@@ -26,7 +30,7 @@ export const AboutHero = () => {
           <div className="relative size-20 shrink-0 md:size-24">
             <Image
               src={avatar}
-              alt="Фото DanriWeb"
+              alt="DanriWeb"
               fill
               sizes="(max-width: 768px) 80px, 96px"
               className="object-contain"
@@ -40,7 +44,7 @@ export const AboutHero = () => {
               className="w-fit px-3 py-1 text-[10px] font-bold tracking-[3px] uppercase backdrop-blur-md"
             >
               <span className="bg-primary mr-2 h-1.5 w-1.5 rounded-full" />
-              Frontend Developer
+              {t("badge")}
             </Badge>
           </div>
         </MotionWrapper>
@@ -54,20 +58,10 @@ export const AboutHero = () => {
           className="flex flex-col gap-4"
         >
           <p className="text-card-foreground text-base leading-relaxed md:text-lg">
-            Привет! Я - Frontend-разработчик из Казахстана с{" "}
-            <span className="text-primary font-bold">3&nbsp;годами</span> коммерческого опыта. В IT пришёл без
-            университета и курсов. Вдохновила философия и суть разработки. По сей день я не останавливаюсь, стремясь
-            стать лучшей версией себя изо дня в день.
+            {t.rich("bio1", { years: (chunks) => <span className="text-primary font-bold">{chunks}</span> })}
           </p>
-          <p className="text-muted-foreground text-sm leading-relaxed">
-            Когда мне доверили менторить новичков, я понял кое-что важное: ценность разработчика - не в объёме знаний, а
-            в мышлении. Том мышлении, которое помогает расти не только тебе, но и команде, и продукту рядом.
-          </p>
-          <p className="text-muted-foreground text-sm leading-relaxed">
-            Для меня самодисциплина - не бонус, а стандарт. Понятный коммит, чистая архитектура, следование практикам
-            каждый день - это уважение к тем, кто придёт после. Вне кода читаю корейскую мангу: её философия неожиданно
-            хорошо рифмуется с тем, что я ценю в разработке.
-          </p>
+          <p className="text-muted-foreground text-sm leading-relaxed">{t("bio2")}</p>
+          <p className="text-muted-foreground text-sm leading-relaxed">{t("bio3")}</p>
         </MotionWrapper>
 
         {/* Соцсети + CTA */}
@@ -79,7 +73,7 @@ export const AboutHero = () => {
           className="flex flex-wrap items-center gap-4"
         >
           <Button size="lg" asChild className="group bg-primary-gradient h-12 px-8 text-sm font-bold hover:text-white">
-            <Link href="/contact">Обсудить проект</Link>
+            <Link href="/contact">{t("discussProject")}</Link>
           </Button>
 
           <div className="flex items-center gap-4">
@@ -113,11 +107,18 @@ export const AboutHero = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.55 }}
         >
-          <p className="text-muted-foreground/50 mb-6 text-xs font-bold tracking-[3px] uppercase">Путь</p>
+          <p className="text-muted-foreground/50 mb-6 text-xs font-bold tracking-[3px] uppercase">{t("pathTitle")}</p>
         </MotionWrapper>
 
         {timeline.map((item, i) => (
-          <TimelineCard key={item.year} item={item} index={i} isLast={i === timeline.length - 1} />
+          <TimelineCard
+            key={item.year}
+            year={tRoot(`timeline.${i}.year`)}
+            title={tRoot(`timeline.${i}.title`)}
+            description={tRoot(`timeline.${i}.description`)}
+            index={i}
+            isLast={i === timeline.length - 1}
+          />
         ))}
       </div>
     </div>

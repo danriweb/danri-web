@@ -1,9 +1,13 @@
+import { useTranslations } from "next-intl";
+
 import { SectionTitle } from "@custom-ui";
 
 import { processes } from "../model/processes";
 import { ProcessCard } from "./ProcessCard";
 
 export const Processes = () => {
+  const t = useTranslations("widgets.processes");
+
   return (
     <section
       id="processes"
@@ -13,16 +17,10 @@ export const Processes = () => {
       {/* Заголовок секции */}
       <div className="flex flex-col items-center gap-6">
         <SectionTitle
-          tag="Процессы"
-          title="Процесс без сюрпризов"
+          tag={t("tag")}
+          title={t("title")}
           id="processes-title"
-          description={
-            <>
-              Четыре этапа, которые я прохожу с каждым клиентом.
-              <br className="hidden md:block" />
-              Прозрачно, по-человечески и в срок.
-            </>
-          }
+          description={t.rich("description", { br: () => <br className="hidden md:block" /> })}
         />
       </div>
 
@@ -32,8 +30,8 @@ export const Processes = () => {
           <li key={process.id} className="contents">
             <ProcessCard
               id={process.id}
-              title={process.title}
-              description={process.description}
+              title={t(`items.${index}.title`)}
+              description={t(`items.${index}.description`)}
               icon={process.icon}
               index={index}
             />

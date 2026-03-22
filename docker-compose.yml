@@ -2,7 +2,7 @@ version: "3.9"
 
 services:
   nextjs:
-    build: .
+    image: ghcr.io/danriweb/danri-web:latest
     container_name: nextjs
     restart: always
     ports:

@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 import { FaGithub, FaTelegram } from "react-icons/fa";
@@ -5,6 +6,8 @@ import { FaGithub, FaTelegram } from "react-icons/fa";
 import { FooterNav } from "./FooterNav";
 
 export const Footer = () => {
+  const t = useTranslations("widgets.footer");
+
   return (
     <footer className="border-border/30 border-t">
       <div className="mx-auto flex max-w-7xl flex-col gap-6 px-4 py-12 md:px-6 md:py-16">
@@ -29,7 +32,7 @@ export const Footer = () => {
         {/* Нижняя строка: копирайт + соцсети */}
         <div className="border-border/20 flex flex-col-reverse items-start gap-4 border-t pt-8 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-muted-foreground/50 text-[11px] tracking-[2px] uppercase">
-            © 2026 DanriWeb · Frontend Developer · Казахстан
+            {t("copyright")}
           </p>
 
           <div className="flex items-center gap-4">

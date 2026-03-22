@@ -1,3 +1,5 @@
+import { useTranslations } from "next-intl";
+
 import { SectionTitle } from "@custom-ui";
 
 import { principles } from "../model/about";
@@ -5,6 +7,8 @@ import { AboutHero } from "./AboutHero";
 import { PrincipleCard } from "./PrincipleCard";
 
 export const About = () => {
+  const t = useTranslations("widgets.about");
+
   return (
     <section
       id="about"
@@ -14,14 +18,9 @@ export const About = () => {
       {/* Заголовок секции */}
       <SectionTitle
         id="about-title"
-        tag="Обо мне"
-        title="Тот самый разработчик"
-        description={
-          <>
-            Задаю нужные вопросы до старта, и меньше переделываю после.
-            <br className="hidden md:block" /> Так выглядит разработка, когда она в правильных руках.
-          </>
-        }
+        tag={t("tag")}
+        title={t("title")}
+        description={t.rich("description", { br: () => <br className="hidden md:block" /> })}
       />
 
       {/* БИО + Timeline */}
@@ -30,13 +29,18 @@ export const About = () => {
       {/* Принципы */}
       <div className="flex w-full flex-col gap-8">
         <p className="text-muted-foreground/50 text-center text-xs font-bold tracking-[3px] uppercase">
-          Принципы работы
+          {t("principlesTitle")}
         </p>
 
         <ol className="grid w-full grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {principles.map((principle, index) => (
             <li key={principle.id} className="contents">
-              <PrincipleCard principle={principle} index={index} />
+              <PrincipleCard
+                icon={principle.icon}
+                title={t(`principles.${index}.title`)}
+                description={t(`principles.${index}.description`)}
+                index={index}
+              />
             </li>
           ))}
         </ol>

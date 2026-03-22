@@ -1,19 +1,15 @@
 import { MotionWrapper } from "@custom-ui";
 import { cn } from "@styles";
 
-import { TimelineItem } from "../model/about";
-
 interface TimelineCardProps {
-  item: TimelineItem;
+  year: string;
+  title: string;
+  description: string;
   index: number;
   isLast: boolean;
 }
 
-/**
- * Одна ячейка вертикального тайм-лайна.
- * Server Component - анимация через клиентский MotionCardWrapper.
- */
-export const TimelineCard = ({ item, index, isLast }: TimelineCardProps) => {
+export const TimelineCard = ({ year, title, description, index, isLast }: TimelineCardProps) => {
   return (
     <MotionWrapper
       initial={{ opacity: 0, x: -24 }}
@@ -30,9 +26,9 @@ export const TimelineCard = ({ item, index, isLast }: TimelineCardProps) => {
 
       {/* Содержимое */}
       <div className={cn("flex flex-col gap-1.5 pb-10", isLast && "pb-0")}>
-        <span className="text-primary text-xs font-bold tracking-[3px] uppercase">{item.year}</span>
-        <h3 className="text-base font-bold text-white">{item.title}</h3>
-        <p className="text-muted-foreground text-sm leading-relaxed">{item.description}</p>
+        <span className="text-primary text-xs font-bold tracking-[3px] uppercase">{year}</span>
+        <h3 className="text-base font-bold text-white">{title}</h3>
+        <p className="text-muted-foreground text-sm leading-relaxed">{description}</p>
       </div>
     </MotionWrapper>
   );

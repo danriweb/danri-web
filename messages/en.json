@@ -1,0 +1,628 @@
+{
+  "app": {
+    "layout": {
+      "metadata": {
+        "titleDefault": "DanriWeb | Frontend Developer",
+        "titleTemplate": "%s | DanriWeb",
+        "description": "Official website of DanriWeb - a Frontend Developer specializing in creating modern, fast, and aesthetically pleasing interfaces using React and Next.js.",
+        "keywords": [
+          "Frontend Developer",
+          "Frontend",
+          "Frontend development",
+          "React",
+          "Next.js",
+          "TypeScript",
+          "UI/UX",
+          "Portfolio",
+          "DanriWeb",
+          "FSD",
+          "Feature-Sliced Design",
+          "Redux Toolkit",
+          "Zustand",
+          "Framer Motion",
+          "Playwright",
+          "Docker",
+          "Tailwind CSS",
+          "SCSS"
+        ],
+        "ogTitle": "DanriWeb | Frontend Developer",
+        "ogDescription": "Official website of DanriWeb - Frontend Developer. Pay for the result, not promises.",
+        "twitterTitle": "DanriWeb | Frontend Developer",
+        "twitterDescription": "Pay for the result, not promises."
+      }
+    },
+    "home": {
+      "metadata": {
+        "title": "DanriWeb | Frontend Developer",
+        "description": "Welcome to the official DanriWeb website. Here you will find information about my projects, skills in creating modern interfaces, and experience in Frontend development."
+      }
+    },
+    "cases": {
+      "metadata": {
+        "title": "Cases",
+        "description": "All DanriWeb projects are real tasks, architectural solutions, and measurable results. Frontend development using React and Next.js."
+      },
+      "backToHome": "Back to Home",
+      "tag": "Cases",
+      "title": "Engineering approach in action",
+      "description": "Real tasks - no tutorials. Every case involves a specific problem, accepted solutions, and measurable results."
+    },
+    "contact": {
+      "metadata": {
+        "title": "Discuss a project",
+        "description": "Leave your contacts, and we will bring your ideas to life. Frontend developer DanriWeb."
+      }
+    }
+  },
+  "widgets": {
+    "hero": {
+      "badge": "Frontend Developer",
+      "title": "Pay for the <result>result</result>, not promises",
+      "description": "The developer who actually cares. Business-focused with code quality in mind: maintainable solutions and predictable architecture.",
+      "discussProject": "Discuss project",
+      "readCases": "Read cases",
+      "metrics": {
+        "years": "YEARS EXPERIENCE",
+        "projects": "PROJECTS",
+        "businessFocus": "BUSINESS FOCUS"
+      }
+    },
+    "about": {
+      "tag": "About me",
+      "title": "The developer you need",
+      "principlesTitle": "Working Principles",
+      "hero": {
+        "badge": "Frontend Developer",
+        "bio1": "Hi! I am a Frontend Developer from Kazakhstan with <years>3 years</years> of commercial experience. I entered IT without university or bootcamps. I was inspired by the philosophy and core of development. To this day, I never stop, striving to become the best version of myself every single day.",
+        "bio2": "When I was trusted to mentor juniors, I realized something important: the value of a developer is not in the amount of knowledge, but in the mindset. The mindset that helps not only you to grow, but the team and the product around you too.",
+        "bio3": "For me, self-discipline is not a perk, it's a standard. A clear commit, clean architecture, adhering to best practices every day - this is respect for those who come after. Outside of code, I read Korean manga: its philosophy rhymes unexpectedly well with what I value in development.",
+        "discussProject": "Discuss project",
+        "pathTitle": "Timeline"
+      },
+      "principles": [
+        {
+          "title": "Business, not just code",
+          "description": "I filter every technical decision through a critical question: what does it give the product and the person behind the screen? Beautiful code itself is not the goal - the goal is a working result."
+        },
+        {
+          "title": "Ask, don't guess",
+          "description": "Asking the right question before the start is fairer and more effective than confidently doing the wrong thing. Good communication saves more time than any code optimization."
+        },
+        {
+          "title": "Mistakes are fuel",
+          "description": "I accept mistakes not as a disappointment, but as an excuse to dig deeper. A developer who is not afraid to admit being wrong grows faster than one who protects their solution."
+        },
+        {
+          "title": "Follow, not just know",
+          "description": "Many say that best practices are the basics. But the hardest part is not learning them, but applying them every day. Consistency in the little things is professionalism."
+        }
+      ],
+      "timeline": [
+        {
+          "year": "2022",
+          "title": "The beginning of the journey",
+          "description": "Started without courses or university. During financial difficulties, I took screenshots of docs to study offline during my part-time job. First project: a weather app via public API."
+        },
+        {
+          "year": "2023",
+          "title": "First commercial tasks",
+          "description": "Freelancing via acquaintances and job boards, first startups. I realized: the objective of learning is not to memorize, but to reconstruct the mindset."
+        },
+        {
+          "year": "2024",
+          "title": "Production and Mentorship",
+          "description": "Marketplaces, dashboards, active products. For the first time I was asked to mentor juniors - that's when I understood that mindset is more important than knowledge volume."
+        },
+        {
+          "year": "2025+",
+          "title": "Positioning and Growth",
+          "description": "Focus on architecture and quality. Managing contract projects, developing my portfolio, and purposefully moving towards a strong product team."
+        }
+      ],
+      "description": "I ask the right questions before starting, so there's less to redo after.<br></br>This is what development looks like in capable hands."
+    },
+    "cases": {
+      "tag": "Cases",
+      "title": "Engineering approach in action",
+      "viewAll": "View all cases",
+      "description": "Not just a beautiful UI, but a well-thought-out logic under the hood.<br></br>Fast, secure, and supported by best coding practices."
+    },
+    "processes": {
+      "tag": "Processes",
+      "title": "Process without surprises",
+      "items": [
+        {
+          "title": "Idea",
+          "description": "I analyze the task, business goals, and the needs of your audience."
+        },
+        {
+          "title": "Strategy",
+          "description": "I pick the optimal tech stack and design the architecture."
+        },
+        {
+          "title": "Development",
+          "description": "I write clean, scalable code with regular demonstrations of the result."
+        },
+        {
+          "title": "Result",
+          "description": "We launch the project! I'm always in touch for support and further development."
+        }
+      ],
+      "description": "Four stages I go through with every client.<br></br>Transparent, humanely, and on time."
+    },
+    "stack": {
+      "tag": "MY STACK",
+      "title": "Technical arsenal",
+      "description": "Tools and technologies I use to build robust and performant web applications.",
+      "categories": [
+        {
+          "title": "Base & Core",
+          "items": {
+            "react": {
+              "name": "React",
+              "description": "Component Library"
+            },
+            "next": {
+              "name": "Next.js",
+              "description": "Full-stack Framework"
+            },
+            "ts": {
+              "name": "TypeScript",
+              "description": "Strict Typing"
+            },
+            "tailwind": {
+              "name": "Tailwind CSS",
+              "description": "Utility-first Styling"
+            },
+            "scss": {
+              "name": "SCSS",
+              "description": "CSS Preprocessor"
+            }
+          }
+        },
+        {
+          "title": "UI & UIKit",
+          "items": {
+            "framer": {
+              "name": "Framer Motion",
+              "description": "Interface Animations"
+            },
+            "shadcn": {
+              "name": "shadcn/ui",
+              "description": "Accessible Components"
+            },
+            "radix": {
+              "name": "Radix UI",
+              "description": "Low-level Primitives"
+            },
+            "mui": {
+              "name": "MUI",
+              "description": "Prebuilt Component Library"
+            },
+            "sonner": {
+              "name": "Sonner",
+              "description": "Toasts and Notifications"
+            }
+          }
+        },
+        {
+          "title": "Architecture",
+          "items": {
+            "fsd": {
+              "name": "FSD",
+              "description": "Feature-Sliced Design"
+            },
+            "feature-based": {
+              "name": "Feature-Based",
+              "description": "Feature Segregation"
+            },
+            "classic": {
+              "name": "Classic",
+              "description": "Traditional Structure"
+            },
+            "atomic": {
+              "name": "Atomic Design",
+              "description": "Atomic Approach"
+            },
+            "solid": {
+              "name": "SOLID",
+              "description": "Clean Code Principles"
+            }
+          }
+        },
+        {
+          "title": "State & Data",
+          "items": {
+            "redux": {
+              "name": "Redux Toolkit",
+              "description": "Complex State Management"
+            },
+            "zustand": {
+              "name": "Zustand",
+              "description": "Lightweight State Manager"
+            },
+            "query": {
+              "name": "TanStack Query",
+              "description": "API Cache Management"
+            },
+            "hookform": {
+              "name": "React Hook Form",
+              "description": "Form Validations"
+            },
+            "zod": {
+              "name": "Zod",
+              "description": "Data Validation Schemas"
+            }
+          }
+        },
+        {
+          "title": "Testing",
+          "items": {
+            "playwright": {
+              "name": "Playwright",
+              "description": "E2E Testing"
+            },
+            "jest": {
+              "name": "Jest / Vitest",
+              "description": "Unit Testing"
+            }
+          }
+        },
+        {
+          "title": "DevOps",
+          "items": {
+            "docker": {
+              "name": "Docker",
+              "description": "Containerization"
+            },
+            "kubernetes": {
+              "name": "Kubernetes",
+              "description": "Orchestration"
+            }
+          }
+        }
+      ]
+    },
+    "header": {
+      "mobileMenu": "Open menu",
+      "copyright": "© 2026 DanriWeb • Frontend"
+    },
+    "footer": {
+      "copyright": "© 2026 DanriWeb · Frontend Developer · Kazakhstan"
+    }
+  },
+  "features": {
+    "contact": {
+      "form": {
+        "success": "Message sent successfully! I will contact you shortly.",
+        "telegram": "Telegram",
+        "email": "Email",
+        "separator": "Or text me here",
+        "nameLabel": "What is your name?",
+        "namePlaceholder": "Danri",
+        "emailLabel": "Your email to contact",
+        "emailPlaceholder": "example@mail.com",
+        "messageLabel": "What is your project about?",
+        "messagePlaceholder": "Tell me a bit about the task...",
+        "submitting": "Submitting...",
+        "submit": "Send request"
+      },
+      "modal": {
+        "title": "Discuss a project",
+        "description": "Leave your contacts and we will bring your ideas to life."
+      }
+    }
+  },
+  "entities": {
+    "case": {
+      "card": {
+        "more": "More info",
+        "task": "Task",
+        "solution": "Solution",
+        "was": "was",
+        "became": "became"
+      },
+      "list": {
+        "10": {
+          "title": "WCAG 2.1 Web Accessibility",
+          "task": "The interface wasn't working with keyboards or screen readers. Partially impaired users simply could not use it.",
+          "solution": "Added ARIA attributes, handled focus management, fixed color contrast. Walked through edge scenarios using axe-core and manually.",
+          "meta": {
+            "0": {
+              "label": "Accessibility",
+              "description": "WCAG 2.1 AA level: focus, contrast, ARIA"
+            },
+            "1": {
+              "label": "Tools",
+              "description": "axe-core, manual keyboard testing"
+            },
+            "2": {
+              "label": "2025",
+              "description": "Implemented within the UI kit of a contract project"
+            }
+          },
+          "metrics": {
+            "0": {
+              "label": "A11Y ERRORS",
+              "value": "34 → 2"
+            },
+            "1": {
+              "label": "WCAG",
+              "value": "AA"
+            }
+          }
+        },
+        "01": {
+          "title": "Architectural Evolution of a Marketplace",
+          "task": "Legacy monolith with circular dependencies. Release cycle took 2 weeks due to the complexity of refactoring.",
+          "solution": "Migration to FSD, business logic isolation. Migrated from Redux to Zustand. State machines for checkout.",
+          "meta": {
+            "0": {
+              "label": "Architecture",
+              "description": "Full transition to FSD decomposing the legacy monolith"
+            },
+            "1": {
+              "label": "Performance",
+              "description": "Build and runtime performance optimization"
+            },
+            "2": {
+              "label": "2025",
+              "description": "Refactoring period: 2 weeks"
+            }
+          },
+          "metrics": {
+            "0": {
+              "label": "CHECKOUT ERRORS",
+              "value": "12% → 0.1%"
+            },
+            "1": {
+              "label": "RELEASE CYCLE",
+              "value": "5d → 1d"
+            }
+          }
+        },
+        "02": {
+          "title": "Brand User Dashboard",
+          "task": "Launch a fully functional user dashboard from scratch in 2 working days.",
+          "solution": "shadcn/ui + Zod validation for reactive forms. Notification system implemented hours before launch.",
+          "meta": {
+            "0": {
+              "label": "Speed",
+              "description": "Full implementation of the user dashboard in 20 hours"
+            },
+            "1": {
+              "label": "Complexity",
+              "description": "Over 15 complex forms and dynamic user data"
+            },
+            "2": {
+              "label": "2025",
+              "description": "System launched for the sale event without critical bugs"
+            }
+          },
+          "metrics": {
+            "0": {
+              "label": "TIME TO MARKET",
+              "value": "2 days"
+            },
+            "1": {
+              "label": "READINESS",
+              "value": "100%"
+            }
+          }
+        },
+        "03": {
+          "title": "UI Kit from Scratch",
+          "task": "A project without a design system - every component was written differently, zero reusability.",
+          "solution": "Built a core set of components: buttons, inputs, cards, typography. Documented usage and variants.",
+          "meta": {
+            "0": {
+              "label": "Components",
+              "description": "Core set of reusable UI elements"
+            },
+            "1": {
+              "label": "Documentation",
+              "description": "Description of states and usage rules for every component"
+            },
+            "2": {
+              "label": "2025",
+              "description": "Developed during an actual freelance project"
+            }
+          },
+          "metrics": {
+            "0": {
+              "label": "COMPONENTS",
+              "value": "20+"
+            },
+            "1": {
+              "label": "DUPLICATION",
+              "value": "was → gone"
+            }
+          }
+        },
+        "04": {
+          "title": "Landing Page for Small Business",
+          "task": "A small business without a website. Needed a quick launch with no bloat - just the essence.",
+          "solution": "Next.js layout highlighting fast load times, optimization, and mobile responsiveness. No unnecessary libraries or logic. Just what actually works.",
+          "meta": {
+            "0": {
+              "label": "Business",
+              "description": "Actual client, small business"
+            },
+            "1": {
+              "label": "Speed",
+              "description": "Performance as a priority from day one"
+            },
+            "2": {
+              "label": "2024",
+              "description": "Launched during a freelance contract"
+            }
+          },
+          "metrics": {
+            "0": {
+              "label": "LIGHTHOUSE",
+              "value": "98"
+            },
+            "1": {
+              "label": "LAUNCH TIME",
+              "value": "3 days"
+            }
+          }
+        },
+        "05": {
+          "title": "Onboarding & Team Agreements",
+          "task": "New developers spent days trying to understand the project. No agreements existed, everyone coded differently.",
+          "solution": "Established project structure, naming conventions, commit formats, and basic code review principles. Pushed it to the repository for everyone to read.",
+          "meta": {
+            "0": {
+              "label": "Team",
+              "description": "The document was written in a real team, not in a vacuum"
+            },
+            "1": {
+              "label": "Process",
+              "description": "Commits, naming, code reviews - basic but critical things"
+            },
+            "2": {
+              "label": "2024",
+              "description": "Implemented in an actual team"
+            }
+          },
+          "metrics": {
+            "0": {
+              "label": "ONBOARDING",
+              "value": "5d → 1d"
+            },
+            "1": {
+              "label": "CODE STYLE",
+              "value": "unified"
+            }
+          }
+        },
+        "06": {
+          "title": "Responsive Interface for Every Screen",
+          "task": "A table with detailed data only displayed correctly on desktop. On mobile, there was a horizontal scroll and lost data.",
+          "solution": "Rebuilt the component: cards on mobile, table on desktop. Pure CSS using media queries without JS.",
+          "meta": {
+            "0": {
+              "label": "Responsive",
+              "description": "Different layouts across screens without JS calculations"
+            },
+            "1": {
+              "label": "No Libraries",
+              "description": "Pure CSS, no third-party solutions"
+            },
+            "2": {
+              "label": "2024",
+              "description": "Part of a freelance project for a small business"
+            }
+          },
+          "metrics": {
+            "0": {
+              "label": "SUPPORTED SCREENS",
+              "value": "320px+"
+            },
+            "1": {
+              "label": "JS FOR RESPONSIVE",
+              "value": "0 lines"
+            }
+          }
+        },
+        "07": {
+          "title": "Page Load Optimization",
+          "task": "A page packed with heavy components loaded slowly. LCP above 4 seconds - bad for both users and SEO.",
+          "solution": "Component lazy loading, code splitting, image optimization via next/image. Removed blocking requests at startup.",
+          "meta": {
+            "0": {
+              "label": "Performance",
+              "description": "Focus on Core Web Vitals: LCP, CLS, FID"
+            },
+            "1": {
+              "label": "Next.js",
+              "description": "Leveraged framework's built-in tools"
+            },
+            "2": {
+              "label": "2025",
+              "description": "SEO and User Experience optimization"
+            }
+          },
+          "metrics": {
+            "0": {
+              "label": "LCP",
+              "value": "4.1s → 1.3s"
+            },
+            "1": {
+              "label": "LIGHTHOUSE",
+              "value": "61 → 97"
+            }
+          }
+        },
+        "08": {
+          "title": "Authentication & Route Protection",
+          "task": "A project without authorization: anyone could load any page. A token-based system and access control were required.",
+          "solution": "JWT + refresh tokens, protected routes using Next.js middleware. Token storage logic isolated from the UI.",
+          "meta": {
+            "0": {
+              "label": "Security",
+              "description": "JWT, refresh logic, protected routes"
+            },
+            "1": {
+              "label": "Architecture",
+              "description": "Authorization is isolated from the UI layer"
+            },
+            "2": {
+              "label": "2025",
+              "description": "Implemented during a freelance project"
+            }
+          },
+          "metrics": {
+            "0": {
+              "label": "VULNERABLE ROUTES",
+              "value": "12 → 0"
+            },
+            "1": {
+              "label": "SECURITY LAYERS",
+              "value": "3"
+            }
+          }
+        },
+        "09": {
+          "title": "Multilingual Support (i18n)",
+          "task": "The product expanded into a new market. All strings were hardcoded in components - adding a second language was impossible without refactoring.",
+          "solution": "Extracted strings to JSON files, integrated next-intl. Organized translation structure so they can be updated by non-developers.",
+          "meta": {
+            "0": {
+              "label": "Localization",
+              "description": "Multiple languages support via next-intl"
+            },
+            "1": {
+              "label": "Structure",
+              "description": "Translations organized in separate files by namespace"
+            },
+            "2": {
+              "label": "2025",
+              "description": "Implemented during a freelance project"
+            }
+          },
+          "metrics": {
+            "0": {
+              "label": "LANGUAGES",
+              "value": "3"
+            },
+            "1": {
+              "label": "LINES OF HARDCODE",
+              "value": "200+ → 0"
+            }
+          }
+        }
+      }
+    }
+  },
+  "shared": {
+    "nav": {
+      "cases": "Cases",
+      "about": "About",
+      "processes": "Workflow",
+      "stack": "Stack",
+      "contact": "Contact"
+    }
+  }
+}

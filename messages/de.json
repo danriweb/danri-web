@@ -1,0 +1,628 @@
+{
+  "app": {
+    "layout": {
+      "metadata": {
+        "titleDefault": "DanriWeb | Frontend-Entwickler",
+        "titleTemplate": "%s | DanriWeb",
+        "description": "Offizielle Website von DanriWeb - Ein Frontend-Entwickler, der sich auf die Entwicklung moderner, schneller und ästhetisch ansprechender Benutzeroberflächen mit React und Next.js spezialisiert hat.",
+        "keywords": [
+          "Frontend-Entwickler",
+          "Frontend-Entwicklung",
+          "Benutzeroberflächenentwickler",
+          "React",
+          "Next.js",
+          "TypeScript",
+          "UI/UX",
+          "Portfolio",
+          "DanriWeb",
+          "FSD",
+          "Feature-Sliced Design",
+          "Redux Toolkit",
+          "Zustand",
+          "Framer Motion",
+          "Playwright",
+          "Docker",
+          "Tailwind CSS",
+          "SCSS"
+        ],
+        "ogTitle": "DanriWeb | Frontend-Entwickler",
+        "ogDescription": "Offizielle Website von DanriWeb - Frontend-Entwickler. Bezahlen Sie für das Ergebnis, nicht für Versprechungen.",
+        "twitterTitle": "DanriWeb | Frontend-Entwickler",
+        "twitterDescription": "Bezahlen Sie für das Ergebnis, nicht für Versprechungen."
+      }
+    },
+    "home": {
+      "metadata": {
+        "title": "DanriWeb | Frontend-Entwickler",
+        "description": "Willkommen auf der offiziellen DanriWeb-Website. Hier finden Sie Informationen über meine Projekte, Fähigkeiten in der Gestaltung moderner Schnittstellen und Erfahrungen in der Frontend-Entwicklung."
+      }
+    },
+    "cases": {
+      "metadata": {
+        "title": "Fallstudien",
+        "description": "Alle DanriWeb-Projekte sind echte Aufgaben, Architekturlösungen und messbare Ergebnisse. Frontend-Entwicklung mit React und Next.js."
+      },
+      "backToHome": "Zurück zur Startseite",
+      "tag": "Fallstudien",
+      "title": "Ingenieuransatz in Aktion",
+      "description": "Echte Aufgaben – keine Tutorials. Bei jedem Fall geht es um ein spezifisches Problem, die angewandten Lösungen und messbare Ergebnisse."
+    },
+    "contact": {
+      "metadata": {
+        "title": "Projekt besprechen",
+        "description": "Hinterlassen Sie Ihre Kontaktdaten, und wir setzen Ihre Ideen in die Tat um. Frontend-Entwickler DanriWeb."
+      }
+    }
+  },
+  "widgets": {
+    "hero": {
+      "badge": "Frontend-Entwickler",
+      "title": "Bezahlen Sie für das <result>Ergebnis</result>, nicht für Versprechungen",
+      "description": "Ein Entwickler, der sich wirklich kümmert. Geschäftsorientierung steht an erster Stelle, kombiniert mit Code-Qualität: wartbare Lösungen und eine berechenbare Architektur.",
+      "discussProject": "Projekt besprechen",
+      "readCases": "Fallstudien lesen",
+      "metrics": {
+        "years": "JAHRE ERFAHRUNG",
+        "projects": "PROJEKTE",
+        "businessFocus": "GESCHÄFTSORIENTIERUNG"
+      }
+    },
+    "about": {
+      "tag": "ÜBER MICH",
+      "title": "Der Entwickler, den Sie brauchen",
+      "principlesTitle": "Arbeitsprinzipien",
+      "hero": {
+        "badge": "Frontend-Entwickler",
+        "bio1": "Hallo! Ich bin ein Frontend-Entwickler aus Kasachstan mit <years>3 Jahren</years> kommerzieller Erfahrung. Ich bin ohne Universität oder Bootcamps in die IT-Welt eingestiegen, inspiriert durch die Philosophie und den Kern der Entwicklung. Bis heute lerne ich kontinuierlich und strebe jeden Tag danach, die beste Version meiner selbst zu werden.",
+        "bio2": "Als mir das Mentoring von Nachwuchsentwicklern anvertraut wurde, wurde mir etwas Wichtiges klar: Der wahre Wert eines Entwicklers liegt nicht in der Menge seines Wissens, sondern in seiner Denkweise. Eine Denkweise, die nicht nur dir selbst beim Wachsen hilft, sondern auch dem Team und dem Produkt um dich herum.",
+        "bio3": "Für mich ist Selbstdisziplin kein Bonus, sondern ein Standard. Ein klarer Commit, saubere Architektur, tägliche Einhaltung von Best Practices – dies ist Respekt für diejenigen, die nach einem kommen. Abseits des Codes lese ich südkoreanische Manhwa: Deren Philosophie reimt sich überraschend gut mit dem, was ich in der Entwicklung schätze.",
+        "discussProject": "Projekt besprechen",
+        "pathTitle": "Zeitachse"
+      },
+      "principles": [
+        {
+          "title": "Business, nicht nur Code",
+          "description": "Ich filtere jede technische Entscheidung durch eine kritische Frage: Welchen Mehrwert bietet sie dem Produkt und der Person hinter dem Bildschirm? Wunderschöner Code an sich ist nicht das Ziel – das funktionierende Ergebnis ist das wahre Ziel."
+        },
+        {
+          "title": "Fragen statt vermuten",
+          "description": "Die richtige Frage vor Beginn zu stellen ist fairer und effektiver, als selbstbewusst das Falsche zu implementieren. Gute Kommunikation spart mehr Zeit als jede Code-Optimierung."
+        },
+        {
+          "title": "Fehler sind Treibstoff",
+          "description": "Ich akzeptiere Fehler nicht als Scheitern, sondern als Grund, tiefer zu graben. Ein Entwickler, der keine Angst hat, sich zu irren, wächst schneller als einer, der nur seinen Code beschützt."
+        },
+        {
+          "title": "Praktizieren, nicht nur kennen",
+          "description": "Viele behaupten, dass Best Practices die absoluten Grundlagen sind. Aber das Schwierigste ist nicht, sie zu lernen, sondern sie tagtäglich anzuwenden. Konsequenz bei den kleinen Dingen ist wahre Professionalität."
+        }
+      ],
+      "timeline": [
+        {
+          "year": "2022",
+          "title": "Der Beginn der Reise",
+          "description": "Ohne Universitätsabschluss oder Online-Kurse angefangen. Bei finanziellen Schwierigkeiten machte ich Screenshots von den Dokumentationen, um sie während meines Teilzeitjobs offline studieren zu können. Erstes Projekt: eine Wetter-App mit Public API."
+        },
+        {
+          "year": "2023",
+          "title": "Erste kommerzielle Aufgaben",
+          "description": "Freelancing durch Bekannte und Job-Börsen, Mitarbeit in den ersten Startups. Ich erkannte: Das Ziel des Lernens ist nicht Auswendiglernen, sondern den eigenen Geist und die Denkweise zu rekonstruieren."
+        },
+        {
+          "year": "2024",
+          "title": "Produktion und Mentoring",
+          "description": "Marktplätze, Dashboards, Live-Produkte. Das erste Mal bat man mich, Junioren zu coachen – da begriff ich endgültig, dass die richtige Einstellung wichtiger ist als pures Wissen."
+        },
+        {
+          "year": "2025+",
+          "title": "Positionierung und Wachstum",
+          "description": "Fokus auf Architektur-Design und Qualitätssteigerung. Verwaltung von Vertragsprojekten, stetige Weiterentwicklung meines Portfolios und der zielstrebige Weg hin zu einem starken Produktteam."
+        }
+      ],
+      "description": "Ich stelle die richtigen Fragen vor dem Start, um spätere Nacharbeit drastisch zu reduzieren.<br></br>So sieht Entwicklung in fähigen Händen aus."
+    },
+    "cases": {
+      "tag": "Fallstudien",
+      "title": "Ingenieuransatz in Aktion",
+      "viewAll": "Alle Fallstudien ansehen",
+      "description": "Nicht nur eine schöne Benutzeroberfläche, sondern eine durchdachte Logik unter der Haube.<br></br>Schnell, extrem sicher und mit besten Codierungsstandards für eine garantierte Wartbarkeit ausgestattet."
+    },
+    "processes": {
+      "tag": "Prozesse",
+      "title": "Fortschritt ohne Überraschungen",
+      "items": [
+        {
+          "title": "Idee",
+          "description": "Ich analysiere die Aufgabe, die Geschäftsziele und die Bedürfnisse Ihrer Zielgruppe tiefgehend."
+        },
+        {
+          "title": "Strategie",
+          "description": "Ich wähle den optimalen Technologie-Stack aus und entwerfe eine tragfähige Anwendungsarchitektur."
+        },
+        {
+          "title": "Entwicklung",
+          "description": "Ich schreibe sauberen, extrem skalierbaren Code mit einer regelmäßigen Demonstration der Resultate."
+        },
+        {
+          "title": "Ergebnis",
+          "description": "Wir veröffentlichen das Projekt! Für Wartung, Betreuung und weitere Entwicklung bleibe ich stets in Kontakt."
+        }
+      ],
+      "description": "Vier Phasen, die ich mit jedem Kunden und Auftrag durchlaufe.<br></br>Absolut transparent, menschlich und streng im Zeitplan."
+    },
+    "stack": {
+      "tag": "MEIN STACK",
+      "title": "Technisches Arsenal",
+      "description": "Werkzeuge und moderne Technologien, die ich einsetze, um absolut robuste und extrem leistungsstarke Webanwendungen zu erstellen.",
+      "categories": [
+        {
+          "title": "Basis & Kernkomponenten",
+          "items": {
+            "react": {
+              "name": "React",
+              "description": "Komponentenbibliothek"
+            },
+            "next": {
+              "name": "Next.js",
+              "description": "Full-Stack-Framework"
+            },
+            "ts": {
+              "name": "TypeScript",
+              "description": "Strikte Typisierung"
+            },
+            "tailwind": {
+              "name": "Tailwind CSS",
+              "description": "Utility-First-Styling"
+            },
+            "scss": {
+              "name": "SCSS",
+              "description": "CSS-Präprozessor"
+            }
+          }
+        },
+        {
+          "title": "Benutzeroberfläche (UI)",
+          "items": {
+            "framer": {
+              "name": "Framer Motion",
+              "description": "Schnittstellen-Animationen"
+            },
+            "shadcn": {
+              "name": "shadcn/ui",
+              "description": "Barrierefreie UI-Komponenten"
+            },
+            "radix": {
+              "name": "Radix UI",
+              "description": "Tiefgreifende UI-Primitive"
+            },
+            "mui": {
+              "name": "MUI",
+              "description": "Vorgefertigte Komponenten"
+            },
+            "sonner": {
+              "name": "Sonner",
+              "description": "Toast-Benachrichtigungen"
+            }
+          }
+        },
+        {
+          "title": "Softwarearchitektur",
+          "items": {
+            "fsd": {
+              "name": "FSD",
+              "description": "Feature-Sliced Design Konzept"
+            },
+            "feature-based": {
+              "name": "Feature-basiert",
+              "description": "Code-Trennung nach Features"
+            },
+            "classic": {
+              "name": "Klassisch",
+              "description": "Traditionelle Komponentenstruktur"
+            },
+            "atomic": {
+              "name": "Atomic Design",
+              "description": "Atomarer Entwicklungsansatz"
+            },
+            "solid": {
+              "name": "SOLID",
+              "description": "Strikte Clean-Code-Prinzipien"
+            }
+          }
+        },
+        {
+          "title": "Zustand & Daten",
+          "items": {
+            "redux": {
+              "name": "Redux Toolkit",
+              "description": "Komplexe Zustandsverwaltung"
+            },
+            "zustand": {
+              "name": "Zustand",
+              "description": "Leichtgewichtiger State-Manager"
+            },
+            "query": {
+              "name": "TanStack Query",
+              "description": "Cache- und API-Management"
+            },
+            "hookform": {
+              "name": "React Hook Form",
+              "description": "Bewertung von Formulardaten"
+            },
+            "zod": {
+              "name": "Zod",
+              "description": "Datenvalidierungsschemata"
+            }
+          }
+        },
+        {
+          "title": "Testing",
+          "items": {
+            "playwright": {
+              "name": "Playwright",
+              "description": "End-To-End (E2E) Test-Framework"
+            },
+            "jest": {
+              "name": "Jest / Vitest",
+              "description": "Funktions-Unit-Testing"
+            }
+          }
+        },
+        {
+          "title": "DevOps",
+          "items": {
+            "docker": {
+              "name": "Docker",
+              "description": "Container-Virtualisierung"
+            },
+            "kubernetes": {
+              "name": "Kubernetes",
+              "description": "Orchestrierung"
+            }
+          }
+        }
+      ]
+    },
+    "header": {
+      "mobileMenu": "Menü öffnen",
+      "copyright": "© 2026 DanriWeb • Frontend"
+    },
+    "footer": {
+      "copyright": "© 2026 DanriWeb · Frontend-Entwickler · Kasachstan"
+    }
+  },
+  "features": {
+    "contact": {
+      "form": {
+        "success": "Nachricht erfolgreich gesendet! Ich werde mich in Kürze bei Ihnen melden.",
+        "telegram": "Telegram",
+        "email": "E-Mail",
+        "separator": "Oder schreiben Sie mir hier direkt",
+        "nameLabel": "Wie lautet Ihr Name?",
+        "namePlaceholder": "Danri",
+        "emailLabel": "Ihre E-Mail-Adresse für den Kontakt",
+        "emailPlaceholder": "beispiel@mail.com",
+        "messageLabel": "Worum geht es in Ihrem Projekt?",
+        "messagePlaceholder": "Erzählen Sie mir etwas über die vorliegende Aufgabe...",
+        "submitting": "Wird gesendet...",
+        "submit": "Anfrage absenden"
+      },
+      "modal": {
+        "title": "Ein Projekt besprechen",
+        "description": "Hinterlassen Sie Ihre Kontaktdaten, und wir setzen Ihre großartigen Ideen konsequent in die Tat um."
+      }
+    }
+  },
+  "entities": {
+    "case": {
+      "card": {
+        "more": "Mehr Informationen",
+        "task": "Aufgabenstellung",
+        "solution": "Angewandte Lösung",
+        "was": "Vorher",
+        "became": "Nachher"
+      },
+      "list": {
+        "10": {
+          "title": "WCAG 2.1 Web-Barrierefreiheit (Accessibility)",
+          "task": "Die Schnittstelle funktionierte weder mit der Tastaturnavigation noch mit Screenreadern. Benutzer mit partiellen Behinderungen konnten die Anwendung buchstäblich nicht bedienen.",
+          "solution": "Hinzufügen aller erforderlichen ARIA-Attribute, Optimierung der Fokusverwaltung und Behebung sämtlicher Farbkontrastprobleme. Kantenszenarien wurden sowohl mit axe-core als auch manuell ausgeschlossen.",
+          "meta": {
+            "0": {
+              "label": "Barrierefreiheit",
+              "description": "WCAG 2.1 AA-Niveau erreicht: Kontrast, Fokusverwaltung, korrekte ARIA"
+            },
+            "1": {
+              "label": "Verwendete Tools",
+              "description": "axe-core Systemüberprüfung, manuelle Tastaturtests"
+            },
+            "2": {
+              "label": "2025",
+              "description": "Implementiert im UI-Kit eines laufenden Vertragsprojekts"
+            }
+          },
+          "metrics": {
+            "0": {
+              "label": "A11Y FEHLERBEBUNG",
+              "value": "34 → 2"
+            },
+            "1": {
+              "label": "WCAG NIVEAU",
+              "value": "AA"
+            }
+          }
+        },
+        "01": {
+          "title": "Architektonische Evolution eines riesigen Marktplatzes",
+          "task": "Ein klassischer Legacy-Monolith mit massenhaften zyklischen Abhängigkeiten. Der vollständige Release-Zyklus dauerte extrem lang (2 Wochen) aufgrund der hohen Komplexität jeglichen Refactorings.",
+          "solution": "Absoluter Umstieg auf FSD-Architektur und tiefe Isolation der Geschäftslogik. Migriert von Redux zu Zustand. Zustandsmaschinen für Checkout-Bereiche integriert.",
+          "meta": {
+            "0": {
+              "label": "Softwarearchitektur",
+              "description": "Totalumbau des Legacy-Monolithen zur FSD-Infrastruktur"
+            },
+            "1": {
+              "label": "Leistungsbilanz",
+              "description": "Signifikante Optimierungen bei der Build- und Laufzeitleistung"
+            },
+            "2": {
+              "label": "2025",
+              "description": "Gewinn an Refactoring-Zeit: Abschluss in lediglich 2 Wochen"
+            }
+          },
+          "metrics": {
+            "0": {
+              "label": "FEHLER BEIM CHECKOUT",
+              "value": "12% → 0.1%"
+            },
+            "1": {
+              "label": "RELEASE-ZYKLUS (ZEIT)",
+              "value": "5d → 1d"
+            }
+          }
+        },
+        "02": {
+          "title": "Benutzer-Dashboard der Unternehmensmarke",
+          "task": "Fehlen von Designgrundlagen zum Startzeitpunkt. Gefordert war die Veröffentlichung eines voll funktionsfähigen User-Dashboards aus dem Nichts – in knapp 2 Werktagen.",
+          "solution": "Ausgiebige Nutzung von shadcn/ui + Zod-Validierungen für reaktive Webseitenformulare. Ein zuverlässiges Benachrichtigungssystem wurde noch wenige Stunden vor Start realisiert.",
+          "meta": {
+            "0": {
+              "label": "Geschwindigkeit",
+              "description": "Vollständige Dashboard-Realisierung in unschlagbaren 20 Stunden"
+            },
+            "1": {
+              "label": "Hohe Komplexität",
+              "description": "Über 15 komplexe Formulare verarbeitet dynamische Benutzerdaten"
+            },
+            "2": {
+              "label": "2025",
+              "description": "Das System startete am Verkaufsevent komplett fehlerfrei (Zero-Bug)"
+            }
+          },
+          "metrics": {
+            "0": {
+              "label": "TIME-TO-MARKET",
+              "value": "2 Tage Dauer"
+            },
+            "1": {
+              "label": "PROJEKTERFOLGSQUOTE",
+              "value": "100% Bereit"
+            }
+          }
+        },
+        "03": {
+          "title": "UI-Kit Infrastruktur von Grunde auf neu",
+          "task": "Ein enormes Projekt völlig ohne bestehendes Designsystem. Jeder verwendete Codebaustein war anders geschrieben und die Wiederverwendbarkeit (Reusability) lag bei fast 0,0%.",
+          "solution": "Erstellung eines absoluten Kernsatzes wiederverwendbarer Komponenten: dynamische Buttons, UI-Karten, Eingabefunktionen, Typografie. Erstellung einer detaillierten Dokumentation für deren Einsatz.",
+          "meta": {
+            "0": {
+              "label": "Hauptkomponenten",
+              "description": "Zentraler Satz an stabilen, wiederverwendungsfähigen UI-Elementen"
+            },
+            "1": {
+              "label": "Software-Dokumentation",
+              "description": "Eine exakte Beschreibung aller Systemzustände und Nutzungsregeln"
+            },
+            "2": {
+              "label": "2025",
+              "description": "Entwickelt während eines aktiven Freelance-Laufzeitprojekts"
+            }
+          },
+          "metrics": {
+            "0": {
+              "label": "GEBAUTE KOMPONENTEN",
+              "value": "20+ Stück"
+            },
+            "1": {
+              "label": "DOPPELTER QUELLCODE",
+              "value": "Massiv → Elimin."
+            }
+          }
+        },
+        "04": {
+          "title": "Schlanke Landingpage für ein mittelständisches Unternehmen",
+          "task": "Ein typischer Kleinunternehmer ganz ohne Onlinepräsenz. Ausdrücklich verlangt wurde ein extrem schneller Start der Lösung ohne Überfluss – nur das Nötigste.",
+          "solution": "Perfekte Implementierung im Next.js-Layout zur Gewährleistung extrem kurzer Ladezeiten und fehlerfreier mobiler Responsivität. Wir haben auf jeglichen Code-Overhead verzichtet.",
+          "meta": {
+            "0": {
+              "label": "Geschäftliches Umfeld",
+              "description": "Ein existierender, echter Kleinunternehmer-Kunde"
+            },
+            "1": {
+              "label": "Ausführungsgeschwindigkeit",
+              "description": "Kompromisslose Softwareleistung von der allerersten Sekunde an"
+            },
+            "2": {
+              "label": "2024",
+              "description": "Während eines freien Auftrags auf den Markt gebracht"
+            }
+          },
+          "metrics": {
+            "0": {
+              "label": "GOOGLE LIGHTHOUSE SCORE",
+              "value": "98 Punkte"
+            },
+            "1": {
+              "label": "GESAMTE STARTZEIT",
+              "value": "Schnelle 3 Tage"
+            }
+          }
+        },
+        "05": {
+          "title": "Effektives Onboarding und Teamvereinbarungen",
+          "task": "Neu integrierte Entwickler investierten Tage in das bloße Verständnis des Programms. Es gab keine klaren Codevereinbarungen, wodurch jeder höchst inkonsistent programmierte.",
+          "solution": "Erstellung detaillierter Dokumentationen mit grundlegenden Projektstrukturen, klaren Namenskonventionen, formalen Commit-Formaten. Alles in das offene Quellcode-Repository geladen.",
+          "meta": {
+            "0": {
+              "label": "Team-Entwicklung",
+              "description": "Verfasst und genutzt anhand echter Arbeitsumgebungen"
+            },
+            "1": {
+              "label": "Ablaufprozess",
+              "description": "Commit-Konventionen, Quellcodedurchsicht, Code-Review"
+            },
+            "2": {
+              "label": "2024",
+              "description": "Komplette Umsetzung innerhalb einer regulären Teamumgebung"
+            }
+          },
+          "metrics": {
+            "0": {
+              "label": "EINFÜHRUNGSZEIT (ONBOARDING)",
+              "value": "5d → 1d Dauer"
+            },
+            "1": {
+              "label": "CODE-STYLE VEREINFACHUNG",
+              "value": "100% Vereinheit."
+            }
+          }
+        },
+        "06": {
+          "title": "Responsive Benutzeroberfläche für alle Bildschirmgrößen",
+          "task": "Eine Tabelle mit enorm detaillierten Daten wurde lediglich am PC (Desktop) ohne Störungen abgebildet. Auf dem Smartphone kam es zum horizontalen Scroll-Fehler und Datenverlusten.",
+          "solution": "Ein vollständiger Neuaufbau der Komponente: Kompakte Karten auf mobilen Endgeräten, detaillierte Tabelle weiterhin am Desktop. Reines CSS mittels Media Queries (völlig ohne JavaScript-Logiken).",
+          "meta": {
+            "0": {
+              "label": "Bildschirm-Responsivität",
+              "description": "Hochkomplexe Layoutänderungen fließend und völlig autark ohne JS-Berechnungen"
+            },
+            "1": {
+              "label": "Keine Fremdbibliotheken",
+              "description": "Ausschließlich mit hochperformantem puristischem Front-End-CSS"
+            },
+            "2": {
+              "label": "2024",
+              "description": "Ausgabe als Teil eines Kundenprojekts für ein echtes lokales Unternehmen"
+            }
+          },
+          "metrics": {
+            "0": {
+              "label": "KOMPATIBEL BIS ZU",
+              "value": "320px Displaybreite"
+            },
+            "1": {
+              "label": "JS-ZEILEN FÜR GESTALTUNG",
+              "value": "0 Programmzeilen"
+            }
+          }
+        },
+        "07": {
+          "title": "Agressive Seitenladezeit-Optimierungen",
+          "task": "Eine sehr ineffiziente Seite voll mit drückend schweren Bausteinen. Unerträglicher LCP zögerte Systemantworten bis über 4 Sekunden hinaus: Fürchertlich für Endnutzer sowie SEO-Performance.",
+          "solution": "Agressive Verwendung von Lazy Loading und automatisiertem Code-Splitting, tiefgreifende Bilddaten-Zusammenschlüsse durch `next/image` in Next.js. Absolute Verhinderung von Start-Blockaden.",
+          "meta": {
+            "0": {
+              "label": "Leistungstuning",
+              "description": "Detaillierter und gezielter Eingriff in Googles Core Web Vitals (LCP, CLS, FID)"
+            },
+            "1": {
+              "label": "Next.js Performance",
+              "description": "Exzellente Ausreizung sämtlicher integrierter Framework-Erleichterungen"
+            },
+            "2": {
+              "label": "2025",
+              "description": "Steigerung technischer Benutzer- und reinfassender SEO-Erlebniswelt"
+            }
+          },
+          "metrics": {
+            "0": {
+              "label": "LCP-DIAGNOSEZEIT",
+              "value": "4.1s → 1.3s"
+            },
+            "1": {
+              "label": "LIGHTHOUSE-ERGEBNIS",
+              "value": "61 → 97 Gesamt."
+            }
+          }
+        },
+        "08": {
+          "title": "Authentifizierung und massiver Routen-Schutz",
+          "task": "Sicherheitssystem fehlte. Ein Benutzerverwaltungsprogramm bar jeder Zugangskontrolle ließ zu, dass buchstäblich unbefugte Dritte sensible Routen auslesen konnten. Schutzmaßnahmen wurden oberste Priorität.",
+          "solution": "Ausrollung robuster JSON Web Tokens (JWT) kombiniert mit intelligenten Refresh-Tokens. Geschützte Anwendungsrouten mittels Next.js Middleware ohne Angriffsflächen in Client-Codebasis.",
+          "meta": {
+            "0": {
+              "label": "Hohe Softwaresicherheit",
+              "description": "JWT-Mechanik und intelligente Refresh-Token-Lebenszyklen"
+            },
+            "1": {
+              "label": "Architektur-Isolation",
+              "description": "Authentifizierungsströme getrennt von bloß angreifbarem UI-Präsentationsschicht"
+            },
+            "2": {
+              "label": "2025",
+              "description": "Entwickelt während eines tiefgreifenden Freelance-Systemsicherheitsauftrags"
+            }
+          },
+          "metrics": {
+            "0": {
+              "label": "UNGEPANZERTE ROUTEN",
+              "value": "12 → 0"
+            },
+            "1": {
+              "label": "SICHERHEITSERGÄNZUNGEN",
+              "value": "Erfolgt mit 3 Lagen"
+            }
+          }
+        },
+        "09": {
+          "title": "Umfassende Mehrsprachigkeitsunterstützung (i18n)",
+          "task": "Expansionspläne in weitgehend neue Überseemärkte. Alle Zeichenketten waren jedoch restlos fest einkodiert (Hardcoding) – die Implementation der Zweit-Kultur (Marktsprache) wäre ohne Vollumbau utopisch.",
+          "solution": "Alle Hardcoded-Textbausteine isoliert, exakte Extrahierung in verständliche JSON-Dateiformate unter massiver Verstrickung mit next-intl umgesetzt. Nicht-Techniker können dies nun ebenso pflegen.",
+          "meta": {
+            "0": {
+              "label": "Marktlokalisierung",
+              "description": "Eine voll funktionsfähige Mehrmarktunterstützung implementiert durch next-intl"
+            },
+            "1": {
+              "label": "Intelligenter Datenbau",
+              "description": "Alle Übersetzungsinformationen strikt durch definierte Namespaces geschützt"
+            },
+            "2": {
+              "label": "2025",
+              "description": "Abwicklung eines der anspruchsvollsten externen Betreuungsverträge"
+            }
+          },
+          "metrics": {
+            "0": {
+              "label": "LIVE-SPRACHSUPPORT",
+              "value": "Voll 3x fähig"
+            },
+            "1": {
+              "label": "STARRE CODEZEILEN (HARTE)",
+              "value": "200+ → Komplett 0"
+            }
+          }
+        }
+      }
+    }
+  },
+  "shared": {
+    "nav": {
+      "cases": "Fallstudien",
+      "about": "Über mich",
+      "processes": "Der Ablauf",
+      "stack": "Technologien",
+      "contact": "Anfragen"
+    }
+  }
+}

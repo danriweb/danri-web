@@ -131,6 +131,10 @@
   html {
     @apply font-sans;
   }
+  html:lang(ko) {
+    word-break: keep-all;
+    overflow-wrap: break-word;
+  }
 }
 
 /* ==========================================================================
@@ -142,6 +146,8 @@
   --foreground: oklch(100% 0 0);
   --card: oklch(15.94% 0.0157 266.6);
   --card-foreground: oklch(100% 0 0);
+  --popover: oklch(15.94% 0.0157 266.6);
+  --popover-foreground: oklch(100% 0 0);
   --primary: oklch(72.77% 0.161 237.8);
   --primary-gradient: linear-gradient(90deg, #4bd1ff 0%, #0073ff 100%);
   --primary-foreground: oklch(15.94% 0.0157 266.6);

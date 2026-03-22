@@ -1,3 +1,5 @@
+import { LanguageSwitcher } from "@features/language-switcher";
+
 import { HeaderNavProps } from "./HeaderNav";
 import { Logo } from "./Logo";
 import { MobileNavBox } from "./MobileNavBox";
@@ -13,11 +15,16 @@ export const Header = () => {
           <Logo />
         </div>
 
-        {/* Мобильная навигация (клиентская шторка) */}
-        <MobileNavBox />
+        <div className="flex items-center gap-2 md:gap-4">
+          {/* Десктопная навигация (клиентская) */}
+          <HeaderNavProps className="hidden md:flex" />
 
-        {/* Десктопная навигация (клиентская) */}
-        <HeaderNavProps className="hidden md:flex" />
+          {/* Переключатель языка */}
+          <LanguageSwitcher />
+
+          {/* Мобильная навигация (клиентская шторка) */}
+          <MobileNavBox />
+        </div>
       </div>
     </header>
   );

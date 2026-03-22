@@ -1,4 +1,5 @@
 import { ArrowRight } from "lucide-react";
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 
 import { ScrollButton } from "@custom-ui";
@@ -6,6 +7,8 @@ import { Metric, MotionWrapper } from "@custom-ui";
 import { Badge, Button } from "@shadcn";
 
 export const Hero = () => {
+  const t = useTranslations("widgets.hero");
+
   return (
     <section
       id="hero"
@@ -20,51 +23,48 @@ export const Hero = () => {
       >
         {/*Заголовок*/}
         <div className="flex flex-col items-center gap-10">
-          <div className="flex flex-col items-center gap-6 text-center">
+          <div className="flex w-full flex-col items-center gap-6 px-4 text-center sm:px-6">
             <Badge
               aria-hidden="true"
               variant="outline"
               className="px-6 py-3 font-bold tracking-[4px] uppercase backdrop-blur-md"
             >
               <span className="bg-primary mr-3 h-1.5 w-1.5 rounded-full" />
-              Frontend Developer
+              {t("badge")}
             </Badge>
 
             <h1
               id="hero-title"
-              className="xs:text-5xl text-[40px] leading-[1.05] font-extrabold tracking-tighter text-balance text-white uppercase sm:text-6xl md:text-8xl"
+              className="xs:text-5xl text-[40px] leading-[1.05] font-extrabold tracking-tighter text-balance text-white uppercase sm:text-6xl md:text-7xl lg:text-8xl wrap-break-word hyphens-auto w-full"
             >
-              Платите за <i className="text-primary">результат</i>, а не за обещания
+              {t.rich("title", { result: (chunks) => <span className="text-primary">{chunks}</span> })}
             </h1>
 
             <p className="text-muted-foreground max-w-2xl text-sm leading-relaxed tracking-wide sm:text-base">
-              Тот самый разработчик, которому не всё равно. Фокус на бизнесе и качестве кода: поддерживаемые решения и
-              предсказуемая архитектура.
+              {t("description")}
             </p>
           </div>
 
           {/*Кнопки*/}
           <div className="flex flex-wrap items-center justify-center gap-4">
-            {/* Server: обычная ссылка, JS не нужен */}
             <Button
               size="lg"
               asChild
               className="group bg-primary-gradient h-14 px-10 text-base font-bold hover:text-white"
             >
               <Link href="/contact">
-                Обсудить проект
+                {t("discussProject")}
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
             </Button>
 
-            {/* Client island: только эта кнопка требует JS */}
             <ScrollButton
               targetId="cases"
               size="lg"
               variant="outline"
               className="hover:bg-card text-foreground h-14 px-10 text-base font-bold backdrop-blur-sm"
             >
-              Читать кейсы
+              {t("readCases")}
             </ScrollButton>
           </div>
         </div>
@@ -72,13 +72,13 @@ export const Hero = () => {
         {/*Метрики*/}
         <ul className="border-border/30 flex w-full flex-wrap items-center justify-center gap-12 border-t md:gap-24">
           <li className="flex flex-col items-center">
-            <Metric unit="3+" label="ГОДА ОПЫТА" />
+            <Metric unit="3+" label={t("metrics.years")} />
           </li>
           <li className="flex flex-col items-center">
-            <Metric unit="20+" label="ПРОЕКТОВ" />
+            <Metric unit="20+" label={t("metrics.projects")} />
           </li>
           <li className="flex flex-col items-center">
-            <Metric unit="100%" label="БИЗНЕС-ФОКУС" highlight />
+            <Metric unit="100%" label={t("metrics.businessFocus")} highlight />
           </li>
         </ul>
       </MotionWrapper>

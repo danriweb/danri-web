@@ -1,16 +1,24 @@
 import { ArrowLeft } from "lucide-react";
-import type { Metadata } from "next";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import Link from "next/link";
 
 import { CaseCard, cases } from "@entities/case";
 
-export const metadata: Metadata = {
-  title: "Кейсы",
-  description:
-    "Все проекты DanriWeb - реальные задачи, архитектурные решения и измеримые результаты. Frontend-разработка на React и Next.js.",
-};
+export async function generateMetadata(props: { params: Promise<{ locale: string }> }) {
+  const { locale } = await props.params;
+  const t = await getTranslations({ locale, namespace: "app.cases.metadata" });
+  return {
+    title: t("title"),
+    description: t("description"),
+  };
+}
 
-export default function CasesPage() {
+export default async function CasesPage(props: { params: Promise<{ locale: string }> }) {
+  const { locale } = await props.params;
+  setRequestLocale(locale);
+
+  const t = await getTranslations("app.cases");
+
   return (
     <div className="mx-auto flex max-w-7xl flex-col gap-12 px-4 py-10 md:gap-20 md:px-6 md:py-15">
       {/* Навигация назад */}
@@ -19,17 +27,17 @@ export default function CasesPage() {
         className="text-muted-foreground hover:text-foreground inline-flex items-center gap-2 text-sm transition-colors"
       >
         <ArrowLeft className="size-4" />
-        На главную
+        {t("backToHome")}
       </Link>
 
       {/* Заголовок страницы */}
       <div className="flex flex-col gap-4">
-        <span className="text-primary text-xs font-bold tracking-[3px] uppercase">Кейсы</span>
+        <span className="text-primary text-xs font-bold tracking-[3px] uppercase">{t("tag")}</span>
         <h1 className="font-funnel-display text-foreground text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl">
-          Инженерный подход в деле
+          {t("title")}
         </h1>
         <p className="text-muted-foreground max-w-2xl text-base leading-relaxed md:text-lg">
-          Реальные задачи - не учебные. Каждый кейс: конкретная проблема, принятые решения и измеримый результат.
+          {t("description")}
         </p>
       </div>
 
