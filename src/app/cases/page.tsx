@@ -15,7 +15,7 @@ export default function CasesPage() {
     <div className="mx-auto flex max-w-7xl flex-col gap-12 px-4 py-10 md:gap-20 md:px-6 md:py-15">
       {/* Навигация назад */}
       <Link
-        href="/"
+        href="/#cases"
         className="text-muted-foreground hover:text-foreground inline-flex items-center gap-2 text-sm transition-colors"
       >
         <ArrowLeft className="size-4" />

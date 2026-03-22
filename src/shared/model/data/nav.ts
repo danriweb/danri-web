@@ -14,9 +14,9 @@ export interface NavItem {
 }
 
 export const navItems: NavItem[] = [
-  { href: "#processes", label: "Процессы", icon: Activity },
   { href: "#cases", label: "Кейсы", icon: Briefcase },
-  { href: "#stack", label: "Стек", icon: Binary },
   { href: "#about", label: "Обо мне", icon: User },
+  { href: "#processes", label: "Процессы", icon: Activity },
+  { href: "#stack", label: "Стек", icon: Binary },
   { href: "/contact", label: "Контакты", isAccent: true, icon: Mail },
 ];

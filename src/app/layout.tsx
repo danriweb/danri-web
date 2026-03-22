@@ -3,11 +3,11 @@ import { Funnel_Display, Inter } from "next/font/google";
 import Script from "next/script";
 import "react-loading-skeleton/dist/skeleton.css";
 
-import { BackgroundGrid, HeroGlow } from "@custom-ui";
+import { BackgroundGrid, HeroGlow, ScrollRestoration } from "@custom-ui";
 
 import { ContactModal } from "@/features/contact";
-import { Header } from "@/widgets/header";
 import { Footer } from "@/widgets/footer";
+import { Header } from "@/widgets/header";
 
 import "./globals.css";
 import { Providers } from "./providers";
@@ -29,6 +29,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://danri-web.ru"),
   title: {
     template: "%s | DanriWeb",
     default: "DanriWeb | Frontend-разработчик",
@@ -59,6 +60,28 @@ export const metadata: Metadata = {
   authors: [{ name: "DanriWeb" }],
   creator: "DanriWeb",
   manifest: "/manifest.json",
+  openGraph: {
+    type: "website",
+    locale: "ru_RU",
+    url: "https://danri-web.ru",
+    siteName: "DanriWeb",
+    title: "DanriWeb | Frontend-разработчик",
+    description: "Официальный сайт DanriWeb — Frontend-разработчика. Платите за результат, а не за обещания.",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "DanriWeb — Frontend Developer",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "DanriWeb | Frontend-разработчик",
+    description: "Платите за результат, а не за обещания.",
+    images: ["/og-image.png"],
+  },
   icons: {
     icon: [
       { url: "/favicon.svg", type: "image/svg+xml" },
@@ -87,6 +110,7 @@ export default function RootLayout({
       </head>
       <body className="bg-background text-foreground relative min-w-80 antialiased">
         <Providers>
+          <ScrollRestoration />
           <Header />
           <main className="relative">
             <div className="mx-auto max-w-300 px-4 sm:px-6 md:px-8 lg:px-12">{children}</div>

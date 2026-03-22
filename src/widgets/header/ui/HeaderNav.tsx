@@ -75,7 +75,7 @@ const NavItem = ({
         className={cn(
           "group relative flex items-center gap-4 rounded-xl px-4 py-4 transition-all duration-300",
           isAccent
-            ? "bg-primary/10 text-primary border-primary/20 hover:bg-primary/20 border"
+            ? "text-primary hover:bg-primary/5 hover:text-white"
             : "text-muted-foreground hover:bg-white/5 hover:text-white",
           className,
         )}

@@ -1,7 +1,9 @@
 "use client";
 
-import { m, useInView } from "framer-motion";
+import { useInView } from "framer-motion";
 import { ReactNode, useEffect, useRef, useState } from "react";
+
+import { MotionWrapper } from "./MotionWrapper";
 
 interface SectionRevealerProps {
   children: ReactNode;
@@ -12,7 +14,10 @@ interface SectionRevealerProps {
 /**
  * SEO-FRIENDLY Оркестратор рендера.
  * На сервере рендерит всё сразу (для SEO).
- * На клиенте управляет "тяжестью" гидратации.
+ * На клиенте управляет анимацией появления секций.
+ *
+ * ВАЖНО: контент всегда находится в DOM — это обеспечивает корректную
+ * высоту страницы и позволяет браузеру правильно восстанавливать позицию скролла.
  */
 export const SectionRevealer = ({ children, index = 0, rootMargin = "200px 0px" }: SectionRevealerProps) => {
   const ref = useRef(null);
@@ -26,41 +31,28 @@ export const SectionRevealer = ({ children, index = 0, rootMargin = "200px 0px" 
   });
 
   useEffect(() => {
-    // Асинхронно помечаем, что мы на клиенте, чтобы не блокировать основной поток
-    setTimeout(() => {
-      setIsMounted(true);
-    }, 0);
+    setTimeout(() => setIsMounted(true), 0);
 
-    // Постепенная активация логики/анимаций в фоне
-    const timer = setTimeout(() => {
-      setIsRevealed(true);
-    }, index * 400);
-
+    const timer = setTimeout(() => setIsRevealed(true), index * 400);
     return () => clearTimeout(timer);
   }, [index]);
 
   const isActive = isInView || isRevealed;
 
   return (
-    <div
-      ref={ref}
-      className="w-full"
-      style={{
-        contentVisibility: isActive ? "visible" : "auto",
-        containIntrinsicSize: "0 500px",
-      }}
-    >
-      {/* 
-        Мы рендерим контент ВСЕГДА, если мы на сервере (!isMounted), 
-        либо если секция активирована. Так Google увидит всё.
+    <div ref={ref} className="w-full">
+      {/*
+        Контент ВСЕГДА в DOM — браузер знает реальную высоту страницы.
+        Анимация только через opacity: до активации секция прозрачна,
+        после — плавно появляется.
       */}
-      {!isMounted || isActive ? (
-        <m.div initial={isMounted ? { opacity: 0 } : false} animate={{ opacity: 1 }} transition={{ duration: 0.8 }}>
-          {children}
-        </m.div>
-      ) : (
-        <div className="h-50" /> // Заглушка только для клиента на время ожидания очереди
-      )}
+      <MotionWrapper
+        initial={isMounted ? { opacity: 0 } : false}
+        animate={{ opacity: isActive ? 1 : 0 }}
+        transition={{ duration: 0.8 }}
+      >
+        {children}
+      </MotionWrapper>
     </div>
   );
 };

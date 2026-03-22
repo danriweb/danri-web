@@ -4,6 +4,7 @@ export * from "./HeroGlow";
 export * from "./Metric";
 export * from "./MotionWrapper";
 export * from "./ScrollButton";
+export * from "./ScrollRestoration";
 export * from "./SectionHeader";
 export * from "./SectionRevealer";
 export * from "./SectionTag";
