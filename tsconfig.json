@@ -36,8 +36,8 @@
       "@styles/*": ["./src/shared/lib/styles/*"],
       "@styles": ["./src/shared/lib/styles"],
 
-      "@data/*": ["./src/shared/model/data/*"],
-      "@data": ["./src/shared/model/data"],
+      "@data/*": ["./src/shared/model/*"],
+      "@data": ["./src/shared/model"],
 
       "@shadcn/*": ["./src/shared/ui/shadcn/*"],
       "@shadcn": ["./src/shared/ui/shadcn"],
