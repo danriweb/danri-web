@@ -9,7 +9,7 @@ const KEY = "scroll-y";
  */
 export const ScrollRestoration = () => {
   useEffect(() => {
-    // Отключаем браузерное восстановление — Next.js всё равно обнуляет его
+    // Отключаем браузерное восстановление - Next.js всё равно обнуляет его
     if ("scrollRestoration" in history) {
       history.scrollRestoration = "manual";
     }

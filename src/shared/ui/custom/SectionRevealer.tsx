@@ -16,7 +16,7 @@ interface SectionRevealerProps {
  * На сервере рендерит всё сразу (для SEO).
  * На клиенте управляет анимацией появления секций.
  *
- * ВАЖНО: контент всегда находится в DOM — это обеспечивает корректную
+ * ВАЖНО: контент всегда находится в DOM - это обеспечивает корректную
  * высоту страницы и позволяет браузеру правильно восстанавливать позицию скролла.
  */
 export const SectionRevealer = ({ children, index = 0, rootMargin = "200px 0px" }: SectionRevealerProps) => {
@@ -42,9 +42,9 @@ export const SectionRevealer = ({ children, index = 0, rootMargin = "200px 0px" 
   return (
     <div ref={ref} className="w-full">
       {/*
-        Контент ВСЕГДА в DOM — браузер знает реальную высоту страницы.
+        Контент ВСЕГДА в DOM - браузер знает реальную высоту страницы.
         Анимация только через opacity: до активации секция прозрачна,
-        после — плавно появляется.
+        после - плавно появляется.
       */}
       <MotionWrapper
         initial={isMounted ? { opacity: 0 } : false}

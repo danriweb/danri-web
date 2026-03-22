@@ -2,7 +2,7 @@ import { Activity, Binary, Briefcase, Mail, User } from "lucide-react";
 import { LucideIcon } from "lucide-react";
 
 /**
- * Единый реестр навигации — shared/config.
+ * Единый реестр навигации - shared/config.
  * Используется Header, Footer и любыми другими виджетами.
  * FSD: shared не имеет ограничений на импорт.
  */

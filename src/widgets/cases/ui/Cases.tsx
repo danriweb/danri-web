@@ -32,7 +32,7 @@ export const Cases = () => {
       {/* Список кейсов */}
       <div className="flex w-full flex-col gap-10 px-0 md:px-6">
         <ol className="flex flex-col gap-8 md:gap-12">
-          {cases.map((project, index) => (
+          {cases.slice(0, 2).map((project, index) => (
             <li key={project.id} className="contents">
               <CaseCard project={project} index={index} />
             </li>

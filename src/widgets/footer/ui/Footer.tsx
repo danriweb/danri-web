@@ -11,7 +11,7 @@ export const Footer = () => {
         {/* Верхняя строка: логотип + навигация */}
         <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
           {/* Логотип */}
-          <Link href="/" className="flex items-center gap-3" aria-label="DanriWeb — на главную">
+          <Link href="/" className="flex items-center gap-3" aria-label="DanriWeb - на главную">
             <Image
               src="/favicon.svg"
               alt=""
