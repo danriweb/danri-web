@@ -24,6 +24,5 @@ jobs:
             cd /home/deploy/apps/danri-web
             git pull
 
-            docker compose down
             docker compose up -d --build
           EOF
