@@ -1,10 +1,10 @@
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 import { SectionTitle } from "@custom-ui";
 import { Button } from "@shadcn";
 
-import { cases } from "../model/cases";
-import { CaseCard } from "./CaseCard";
+import { cases, CaseCard } from "@entities/case";
 
 export const Cases = () => {
   return (
@@ -41,13 +41,15 @@ export const Cases = () => {
 
         {/* Кнопка "Смотреть все" */}
         <div className="flex justify-center pt-8">
-          <Button
-            variant="outline"
-            className="group hover:bg-card h-14 border-white/10 px-12 text-base font-bold text-white uppercase backdrop-blur-sm transition-all hover:border-white/30"
-          >
-            Смотреть все кейсы
-            <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-          </Button>
+          <Link href="/cases">
+            <Button
+              variant="outline"
+              className="group hover:bg-card h-14 border-white/10 px-12 text-base font-bold text-white uppercase backdrop-blur-sm transition-all hover:border-white/30"
+            >
+              Смотреть все кейсы
+              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

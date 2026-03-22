@@ -4,7 +4,7 @@ import { StandardTooltip } from "@constructors";
 import { GlowCard } from "@custom-ui";
 import { cn } from "@styles";
 
-import { Case } from "../model/cases";
+import { Case } from "../model";
 
 interface CaseCardProps {
   project: Case;
