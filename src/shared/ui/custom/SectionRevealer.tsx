@@ -46,10 +46,8 @@ export const SectionRevealer = ({ children, index = 0, rootMargin = "200px 0px" 
       ref={ref}
       className="w-full"
       style={{
-        //content-visibility позволяет браузеру пропустить рендер невидимых блоков,
-        //даже если они есть в DOM. Это ПИК производительности для SEO-сайтов.
         contentVisibility: isActive ? "visible" : "auto",
-        containIntrinsicSize: "0 500px", // Резервируем примерную высоту, чтобы не прыгал скролл
+        containIntrinsicSize: "0 500px",
       }}
     >
       {/* 

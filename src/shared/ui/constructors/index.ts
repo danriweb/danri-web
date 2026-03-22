@@ -1,5 +1,3 @@
-export * from "./SectionRevealer";
-export * from "./SectionTitle";
 export * from "./StandardField";
 export * from "./StandardAdaptiveOverlay";
 export * from "./StandardSheet";

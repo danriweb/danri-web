@@ -13,7 +13,6 @@ interface SectionTitleProps {
 
 /**
  * Составной компонент заголовка секции.
- * Соединяет SectionTag и SectionHeader.
  */
 export const SectionTitle = ({ tag, title, description, className, id }: SectionTitleProps) => {
   return (

@@ -1,12 +1,8 @@
-import { SectionTitle } from "@constructors";
+import { SectionTitle } from "@custom-ui";
 
 import { stackCategories } from "../model/stack";
 import { StackCategoryCard } from "./StackCard";
 
-/**
- * Секция Стек — теперь Server Component!
- * Google видит все технологии сразу, а клиент не грузит лишний JS.
- */
 export const Stack = () => {
   return (
     <section

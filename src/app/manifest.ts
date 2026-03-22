@@ -9,7 +9,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: "DanriWeb | Frontend разработчик",
     short_name: "DanriWeb",
     description:
-      "Официальный сайт-визитка DanriWeb — Frontend-рразработчика, специализирующегося на создании современных и эстетичных интерфейсов.",
+      "Официальный сайт-визитка DanriWeb - Frontend-рразработчика, специализирующегося на создании современных и эстетичных интерфейсов.",
     start_url: "/",
     display: "standalone",
     background_color: "#000000",

@@ -1,11 +1,11 @@
 "use client";
 
-import { m } from "framer-motion";
 import { Activity, Binary, Briefcase, Mail, User } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { FaGithub, FaTelegram } from "react-icons/fa";
 
+import { MotionWrapper } from "@custom-ui";
 import { cn } from "@styles";
 import { useSmoothScroll } from "@viewport";
 
@@ -71,7 +71,7 @@ const NavItem = ({
 
   // --- Мобильная версия (с иконкой и анимацией) ---
   return (
-    <m.div
+    <MotionWrapper
       initial={{ opacity: 0, x: -20 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ delay: index * 0.1, duration: 0.4 }}
@@ -107,14 +107,14 @@ const NavItem = ({
         <span className="font-funnel text-lg font-medium tracking-[2px] uppercase">{label}</span>
 
         {!isAccent && (
-          <m.div
+          <MotionWrapper
             className="bg-primary absolute right-4 size-1.5 rounded-full opacity-0"
             initial={false}
             whileHover={{ opacity: 1, scale: 1.2 }}
           />
         )}
       </Link>
-    </m.div>
+    </MotionWrapper>
   );
 };
 
@@ -160,7 +160,7 @@ export const Navigation = ({ className, itemClassName, onItemClick, isMobile }: 
 
       {/* Футер для мобильной навигации */}
       {isMobile && (
-        <m.div
+        <MotionWrapper
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.6 }}
@@ -188,7 +188,7 @@ export const Navigation = ({ className, itemClassName, onItemClick, isMobile }: 
           <p className="text-muted-foreground/40 text-center text-[10px] tracking-[3px] uppercase">
             © 2026 DanriWeb • Frontend
           </p>
-        </m.div>
+        </MotionWrapper>
       )}
     </nav>
   );

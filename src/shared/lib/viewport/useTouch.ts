@@ -3,9 +3,9 @@
 import * as React from "react";
 
 /*
-  Хук для определения поддержки сенсорного ввода (Touch Devices).
-  Включает смартфоны, планшеты и тач-панели.
-  Использует медиа-запрос (pointer: coarse) для проверки "грубого" (пальцевого) ввода.
+  Хук для определения поддержки сенсорного ввода (Touch Devices)
+  Включает смартфоны, планшеты и тач-панели
+  Использует медиа-запрос (pointer: coarse) для проверки "грубого" (пальцевого) ввода
 */
 export function useIsTouch() {
   const [isTouch, setIsTouch] = React.useState<boolean | undefined>(undefined);

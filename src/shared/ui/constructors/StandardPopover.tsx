@@ -15,8 +15,7 @@ interface StandardPopoverProps {
 }
 
 /**
- * Стандартный компонент Popover для проекта.
- * Используется для более сложных меню или контента, открывающегося по клику.
+ * Стандартный компонент Popover для проекта
  */
 export const StandardPopover = ({
   trigger,

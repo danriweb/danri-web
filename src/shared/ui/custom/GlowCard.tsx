@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 
 import { cn } from "@styles";
 
-import { MotionCardWrapper } from "./MotionCardWrapper";
+import { MotionWrapper } from "./MotionWrapper";
 
 interface GlowCardProps extends React.HTMLAttributes<HTMLDivElement> {
   children: ReactNode;
@@ -12,20 +12,16 @@ interface GlowCardProps extends React.HTMLAttributes<HTMLDivElement> {
   maxWidth?: string;
 }
 
-/**
- * Универсальная карточка — Server Component.
- * Использует MotionCardWrapper для анимации.
- */
 export const GlowCard = ({ children, index, className, wrapperClassName, maxWidth, ...props }: GlowCardProps) => {
   return (
-    <MotionCardWrapper
+    <MotionWrapper
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
       className={cn("group relative overflow-clip rounded-[20px] bg-white/5 p-0.5", wrapperClassName, maxWidth)}
     >
-      {/* Анимированный градиент бордера — CSS анимация на ховере */}
+      {/* Анимированный градиент бордера - CSS анимация на ховере */}
       <div className="absolute inset-x-0 inset-y-0 overflow-hidden rounded-[20px]">
         <div
           style={{
@@ -55,6 +51,6 @@ export const GlowCard = ({ children, index, className, wrapperClassName, maxWidt
         {/* Свечение при наведении (в углу) */}
         <div className="bg-primary/10 pointer-events-none absolute -right-20 -bottom-20 size-40 rounded-full opacity-0 blur-[60px] transition-opacity duration-500 group-hover:opacity-100" />
       </div>
-    </MotionCardWrapper>
+    </MotionWrapper>
   );
 };

@@ -15,8 +15,7 @@ interface StandardFieldProps {
 }
 
 /**
- * Стандартный конструктор поля ввода.
- * Объединяет Field, FieldLabel и FieldError в одну структуру.
+ * Стандартный конструктор поля ввода
  */
 export const StandardField = ({ label, error, errors, children, className, id }: StandardFieldProps) => {
   // Нормализуем ошибки (одна ошибка или массив)

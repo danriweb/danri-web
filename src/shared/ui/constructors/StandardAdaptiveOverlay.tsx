@@ -22,8 +22,8 @@ interface StandardAdaptiveOverlayProps {
 }
 
 /**
- * Адаптивный конструктор оверлея.
- * Автоматически переключается между Dialog и Drawer на основе ширины и высоты экрана.
+ * Адаптивный конструктор оверлея
+ * Автоматически переключается между Dialog и Drawer на основе ширины и высоты экрана
  */
 export const StandardAdaptiveOverlay = ({
   expectedHeight = 700,

@@ -4,18 +4,18 @@ import { StandardTooltip } from "@constructors";
 import { GlowCard } from "@custom-ui";
 import { cn } from "@styles";
 
-import { Project } from "../model/projects";
+import { Case } from "../model/cases";
 
-interface ProjectCardProps {
-  project: Project;
+interface CaseCardProps {
+  project: Case;
   index: number;
 }
 
-export const ProjectCard = ({ project, index }: ProjectCardProps) => {
+export const CaseCard = ({ project, index }: CaseCardProps) => {
   return (
-    <GlowCard index={index} className="px-5 py-8 sm:px-8 md:px-12 md:py-14">
+    <GlowCard index={index} className="px-5 py-6 sm:px-8 sm:py-8 md:px-12 md:py-14">
       {/* Шапка карточки */}
-      <div className="flex flex-col items-start justify-between gap-6 border-b border-white/5 pb-6 md:pb-10 lg:flex-row lg:items-start">
+      <div className="flex flex-col items-start justify-between gap-4 border-b border-white/5 pb-5 sm:gap-6 md:pb-10 lg:flex-row lg:items-start">
         <h3 className="text-xl leading-tight font-bold text-white uppercase sm:text-2xl md:text-3xl">
           {project.title}
         </h3>
@@ -47,16 +47,16 @@ export const ProjectCard = ({ project, index }: ProjectCardProps) => {
       </div>
 
       {/* Тело карточки */}
-      <div className="grid grid-cols-1 gap-8 pt-8 md:gap-14 md:pt-14 lg:grid-cols-2 lg:gap-20">
+      <div className="grid grid-cols-1 gap-6 pt-5 sm:gap-8 sm:pt-8 md:gap-14 md:pt-14 lg:grid-cols-2 lg:gap-20">
         {/* Левая колонка: Задача + Метрики */}
-        <div className="flex flex-col gap-8 md:gap-12">
+        <div className="flex flex-col gap-5 md:gap-12">
           <div className="flex flex-col gap-4">
             <span className="text-primary text-xs font-bold tracking-[3px] uppercase">Задача</span>
-            <p className="text-card-foreground leading-relaxed md:text-lg">{project.task}</p>
+            <p className="text-card-foreground text-sm leading-relaxed md:text-lg">{project.task}</p>
           </div>
 
-          {/* Метрики проекта */}
-          <dl className="grid grid-cols-1 gap-x-12 gap-y-8 pt-4 sm:grid-cols-2">
+          {/* Метрики кейса */}
+          <dl className="grid grid-cols-2 gap-x-8 gap-y-6 pt-3 sm:gap-x-12 sm:gap-y-8 sm:pt-4">
             {project.metrics.map((metric) => {
               const parts = metric.value.split("→").map((s) => s.trim());
               const isTransition = parts.length === 2;
@@ -87,7 +87,7 @@ export const ProjectCard = ({ project, index }: ProjectCardProps) => {
         {/* Правая колонка: Решение */}
         <div className="flex flex-col gap-4 lg:border-l lg:border-white/5 lg:pl-10">
           <span className="text-muted-foreground/50 text-xs font-bold tracking-[3px] uppercase">Решение</span>
-          <p className="text-muted-foreground text-base leading-relaxed md:text-lg">{project.solution}</p>
+          <p className="text-muted-foreground text-sm leading-relaxed md:text-base">{project.solution}</p>
         </div>
       </div>
     </GlowCard>

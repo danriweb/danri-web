@@ -1,26 +1,22 @@
 import { ArrowRight } from "lucide-react";
 
-import { SectionTitle } from "@constructors";
+import { SectionTitle } from "@custom-ui";
 import { Button } from "@shadcn";
 
-import { projects } from "../model/projects";
-import { ProjectCard } from "./ProjectCard";
+import { cases } from "../model/cases";
+import { CaseCard } from "./CaseCard";
 
-/**
- * Секция с проектами (портфолио).
- * Теперь является Server Component, отдавая чистый HTML.
- */
-export const Projects = () => {
+export const Cases = () => {
   return (
     <section
       id="cases"
-      aria-labelledby="projects-title"
+      aria-labelledby="cases-title"
       className="flex flex-col items-center gap-12 py-16 md:gap-24 md:py-32"
     >
       {/* Заголовок секции */}
       <div className="w-full px-4 md:px-6">
         <SectionTitle
-          id="projects-title"
+          id="cases-title"
           tag="Кейсы"
           title="Инженерный подход в деле"
           description={
@@ -33,17 +29,17 @@ export const Projects = () => {
         />
       </div>
 
-      {/* Список проектов */}
+      {/* Список кейсов */}
       <div className="flex w-full flex-col gap-10 px-0 md:px-6">
         <ol className="flex flex-col gap-8 md:gap-12">
-          {projects.map((project, index) => (
+          {cases.map((project, index) => (
             <li key={project.id} className="contents">
-              <ProjectCard project={project} index={index} />
+              <CaseCard project={project} index={index} />
             </li>
           ))}
         </ol>
 
-        {/* Кнопка "Смотреть все" (клиентский интерактив) */}
+        {/* Кнопка "Смотреть все" */}
         <div className="flex justify-center pt-8">
           <Button
             variant="outline"

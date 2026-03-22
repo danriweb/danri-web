@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+
 import { Tooltip, TooltipContent, TooltipTrigger } from "@shadcn";
 import { cn } from "@styles";
 
@@ -17,8 +18,8 @@ interface StandardTooltipProps {
 }
 
 /**
- * Стандартный компонент для текстовых подсказок (тултипов).
- * Оптимизирован для мобилок: рендерит тяжелый Popover только при первом клике.
+ * Стандартный компонент для текстовых подсказок (тултипов)
+ * Оптимизирован для мобилок: рендерит тяжелый Popover только при первом клике
  */
 export const StandardTooltip = ({
   trigger,
@@ -46,13 +47,13 @@ export const StandardTooltip = ({
     }
 
     return (
-      <StandardPopover 
-        open={true} 
-        onOpenChange={(val: boolean) => !val && setHasInteracted(false)} 
-        trigger={trigger} 
-        side={side} 
-        align={align} 
-        className={contentClassName} 
+      <StandardPopover
+        open={true}
+        onOpenChange={(val: boolean) => !val && setHasInteracted(false)}
+        trigger={trigger}
+        side={side}
+        align={align}
+        className={contentClassName}
         sideOffset={8}
       >
         {children}
@@ -70,4 +71,3 @@ export const StandardTooltip = ({
     </Tooltip>
   );
 };
-

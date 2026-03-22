@@ -12,9 +12,6 @@ interface BackgroundGridProps {
   index?: number;
 }
 
-/**
- * Оптимизированный компонент фоновой сетки
- */
 export const BackgroundGrid = memo(({ className, index = 0 }: BackgroundGridProps) => {
   return (
     <div

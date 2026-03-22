@@ -14,7 +14,7 @@ interface StandardDrawerProps {
 }
 
 /**
- * Стандартный компонент Drawer (шторка снизу) для проекта.
+ * Стандартный компонент Drawer (шторка снизу) для проекта
  */
 export const StandardDrawer = ({
   trigger,
@@ -28,7 +28,7 @@ export const StandardDrawer = ({
   return (
     <Drawer open={open} onOpenChange={onOpenChange}>
       {trigger && <DrawerTrigger asChild>{trigger}</DrawerTrigger>}
-      <DrawerContent className={cn("bg-card border-border px-4 pb-8 has-focus:pb-0 backdrop-blur-2xl", className)}>
+      <DrawerContent className={cn("bg-card border-border px-4 pb-8 backdrop-blur-2xl has-focus:pb-0", className)}>
         {(title || description) && (
           <DrawerHeader className={cn(!title && !description && "sr-only")}>
             {title && (

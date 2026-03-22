@@ -14,7 +14,7 @@ interface StandardDialogProps {
 }
 
 /**
- * Стандартный компонент Dialog (модальное окно) для проекта.
+ * Стандартный компонент Dialog (модальное окно) для проекта
  */
 export const StandardDialog = ({
   trigger,

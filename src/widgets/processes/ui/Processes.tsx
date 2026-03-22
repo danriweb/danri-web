@@ -1,12 +1,8 @@
-import { SectionTitle } from "@constructors";
+import { SectionTitle } from "@custom-ui";
 
 import { processes } from "../model/processes";
 import { ProcessCard } from "./ProcessCard";
 
-/**
- * Секция Процессы — теперь Server Component!
- * Google видит весь шаблон сразу, а браузер тратит 0ms на JS для этого блока.
- */
 export const Processes = () => {
   return (
     <section
@@ -14,7 +10,7 @@ export const Processes = () => {
       aria-labelledby="processes-title"
       className="flex flex-col items-center gap-16 md:gap-24 md:py-32"
     >
-      {/* Заголовок секции (рендер на сервере) */}
+      {/* Заголовок секции */}
       <div className="flex flex-col items-center gap-6">
         <SectionTitle
           tag="Процессы"
@@ -30,7 +26,7 @@ export const Processes = () => {
         />
       </div>
 
-      {/* Список карточек — здесь у нас "клиентские острова" GlowCard внутри серверного списка */}
+      {/* Список карточек */}
       <ol className="grid w-full grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {processes.map((process, index) => (
           <li key={process.id} className="contents">

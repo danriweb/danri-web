@@ -1,23 +1,18 @@
-"use client";
-
-import Link from "next/link";
-import { m } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
-import { Metric } from "@custom-ui";
+import { ScrollButton } from "@custom-ui";
+import { Metric, MotionWrapper } from "@custom-ui";
 import { Badge, Button } from "@shadcn";
-import { useSmoothScroll } from "@viewport";
 
 export const Hero = () => {
-  const scrollTo = useSmoothScroll();
-
   return (
     <section
       id="hero"
       aria-labelledby="hero-title"
       className="relative flex flex-col items-center justify-center overflow-hidden pt-12 pb-20 md:pt-20 md:pb-32"
     >
-      <m.div
+      <MotionWrapper
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
@@ -50,6 +45,7 @@ export const Hero = () => {
 
           {/*Кнопки*/}
           <div className="flex flex-wrap items-center justify-center gap-4">
+            {/* Server: обычная ссылка, JS не нужен */}
             <Button
               size="lg"
               asChild
@@ -61,14 +57,15 @@ export const Hero = () => {
               </Link>
             </Button>
 
-            <Button
+            {/* Client island: только эта кнопка требует JS */}
+            <ScrollButton
+              targetId="cases"
               size="lg"
               variant="outline"
-              onClick={scrollTo("cases")}
               className="hover:bg-card text-foreground h-14 px-10 text-base font-bold backdrop-blur-sm"
             >
               Читать кейсы
-            </Button>
+            </ScrollButton>
           </div>
         </div>
 
@@ -84,7 +81,7 @@ export const Hero = () => {
             <Metric unit="100%" label="БИЗНЕС-ФОКУС" highlight />
           </li>
         </ul>
-      </m.div>
+      </MotionWrapper>
     </section>
   );
 };

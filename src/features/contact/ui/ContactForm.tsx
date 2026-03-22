@@ -1,7 +1,6 @@
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
-import { m } from "framer-motion";
 import { useForm } from "react-hook-form";
 import { FaTelegramPlane } from "react-icons/fa";
 import { HiMail } from "react-icons/hi";
@@ -9,21 +8,21 @@ import { RiSendPlaneFill } from "react-icons/ri";
 import { toast } from "sonner";
 
 import { StandardField } from "@constructors";
+import { MotionWrapper } from "@custom-ui";
 import { Button, FieldSeparator, Input, Textarea } from "@shadcn";
 
 import { useContactModal } from "../model/contactModal";
 import { type ContactFormValues, contactFormSchema } from "../model/contactSchema";
 
-// Упрощаем: убираем сложные variants для большей стабильности в LazyMotion
-const fadeInProps = (delay: number) => ({
+const fadeIn = (delay: number) => ({
   initial: { opacity: 0, y: 15 },
   animate: { opacity: 1, y: 0 },
   transition: {
-    delay: delay,
-    type: "spring",
+    delay,
+    type: "spring" as const,
     stiffness: 260,
     damping: 25,
-  } as const,
+  },
 });
 
 export const ContactForm = () => {
@@ -50,7 +49,7 @@ export const ContactForm = () => {
   return (
     <div className="flex flex-col gap-5 py-2 sm:gap-8 sm:py-4">
       {/* Быстрые контакты */}
-      <m.div {...fadeInProps(0.1)} className="grid grid-cols-2 gap-4 px-1 pb-2">
+      <MotionWrapper {...fadeIn(0.1)} className="grid grid-cols-2 gap-4 px-1 pb-2">
         <a
           href="https://t.me/danriweb_online"
           target="_blank"
@@ -78,17 +77,17 @@ export const ContactForm = () => {
             Email
           </span>
         </a>
-      </m.div>
+      </MotionWrapper>
 
-      <m.div {...fadeInProps(0.2)} className="relative">
+      <MotionWrapper {...fadeIn(0.2)} className="relative">
         <FieldSeparator className="text-muted-foreground text-[10px] font-bold tracking-[3px] uppercase">
           Или напишите здесь
         </FieldSeparator>
-      </m.div>
+      </MotionWrapper>
 
       {/* Форма */}
       <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4 sm:gap-5">
-        <m.div {...fadeInProps(0.3)}>
+        <MotionWrapper {...fadeIn(0.3)}>
           <StandardField label="Как вас зовут?" error={errors.name} id="name">
             <Input
               id="name"
@@ -97,9 +96,9 @@ export const ContactForm = () => {
               {...register("name")}
             />
           </StandardField>
-        </m.div>
+        </MotionWrapper>
 
-        <m.div {...fadeInProps(0.4)}>
+        <MotionWrapper {...fadeIn(0.4)}>
           <StandardField label="Ваша почта для связи" error={errors.email} id="email">
             <Input
               id="email"
@@ -109,9 +108,9 @@ export const ContactForm = () => {
               {...register("email")}
             />
           </StandardField>
-        </m.div>
+        </MotionWrapper>
 
-        <m.div {...fadeInProps(0.5)}>
+        <MotionWrapper {...fadeIn(0.5)}>
           <StandardField label="О чем проект?" error={errors.message} id="message">
             <Textarea
               id="message"
@@ -120,9 +119,9 @@ export const ContactForm = () => {
               {...register("message")}
             />
           </StandardField>
-        </m.div>
+        </MotionWrapper>
 
-        <m.div {...fadeInProps(0.6)}>
+        <MotionWrapper {...fadeIn(0.6)}>
           <Button
             type="submit"
             disabled={isSubmitting}
@@ -131,7 +130,7 @@ export const ContactForm = () => {
             {isSubmitting ? "Отправка..." : "Отправить запрос"}
             {!isSubmitting && <RiSendPlaneFill className="ml-2 size-4" />}
           </Button>
-        </m.div>
+        </MotionWrapper>
       </form>
     </div>
   );
