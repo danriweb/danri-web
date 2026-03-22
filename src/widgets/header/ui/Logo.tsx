@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -16,16 +17,9 @@ export const Logo = () => {
   };
 
   return (
-    <Link
-      href="/"
-      onClick={handleLogoClick}
-      className="flex items-center gap-2"
-      aria-label="Danri Web - на главную"
-    >
-      <span aria-hidden="true" className="font-funnel text-primary text-xl font-bold tracking-[2px]">
-        {"</>"}
-      </span>
-      <span className="font-funnel text-foreground text-xl font-extrabold tracking-[4px]">DANRIWEB</span>
+    <Link href="/" onClick={handleLogoClick} className="flex items-center gap-3" aria-label="Danri Web - на главную">
+      <Image src="/favicon.svg" alt="" width={28} height={28} aria-hidden="true" className="h-7 w-7 object-contain" />
+      <span className="font-inter text-foreground text-xl font-extrabold">DANRIWEB</span>
     </Link>
   );
 };
