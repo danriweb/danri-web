@@ -1,6 +1,6 @@
+import { HeaderNavProps } from "./HeaderNav";
 import { Logo } from "./Logo";
 import { MobileNavBox } from "./MobileNavBox";
-import { Navigation } from "./Navigation";
 
 /**
  * Серверный компонент шапки. Основной каркас и композиция.
@@ -17,7 +17,7 @@ export const Header = () => {
         <MobileNavBox />
 
         {/* Десктопная навигация (клиентская) */}
-        <Navigation className="hidden md:flex" />
+        <HeaderNavProps className="hidden md:flex" />
       </div>
     </header>
   );

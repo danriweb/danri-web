@@ -36,12 +36,17 @@
       "@styles/*": ["./src/shared/lib/styles/*"],
       "@styles": ["./src/shared/lib/styles"],
 
+      "@data/*": ["./src/shared/model/data/*"],
+      "@data": ["./src/shared/model/data"],
+
       "@shadcn/*": ["./src/shared/ui/shadcn/*"],
       "@shadcn": ["./src/shared/ui/shadcn"],
       "@constructors/*": ["./src/shared/ui/constructors/*"],
       "@constructors": ["./src/shared/ui/constructors"],
       "@custom-ui/*": ["./src/shared/ui/custom/*"],
-      "@custom-ui": ["./src/shared/ui/custom"]
+      "@custom-ui": ["./src/shared/ui/custom"],
+      "@config/*": ["./src/shared/config/*"],
+      "@config": ["./src/shared/config"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", ".next/dev/types/**/*.ts", "**/*.mts"],

@@ -1,6 +1,6 @@
 "use client";
 
-import { Activity, Binary, Briefcase, Mail, User } from "lucide-react";
+import { navItems } from "@data";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { FaGithub, FaTelegram } from "react-icons/fa";
@@ -8,17 +8,6 @@ import { FaGithub, FaTelegram } from "react-icons/fa";
 import { MotionWrapper } from "@custom-ui";
 import { cn } from "@styles";
 import { useSmoothScroll } from "@viewport";
-
-/**
- * Основные пункты навигации
- */
-export const navItems = [
-  { href: "#processes", label: "Процессы", icon: Activity },
-  { href: "#cases", label: "Кейсы", icon: Briefcase },
-  { href: "#stack", label: "Стек", icon: Binary },
-  { href: "#about", label: "Обо мне", icon: User },
-  { href: "/contact", label: "Контакты", isAccent: true, icon: Mail },
-];
 
 interface NavItemProps {
   href: string;
@@ -118,7 +107,7 @@ const NavItem = ({
   );
 };
 
-interface NavigationProps {
+interface HeaderNavProps {
   className?: string;
   itemClassName?: string;
   onItemClick?: () => void;
@@ -128,7 +117,7 @@ interface NavigationProps {
 /**
  * Общий компонент навигации для хедера и мобильного меню
  */
-export const Navigation = ({ className, itemClassName, onItemClick, isMobile }: NavigationProps) => {
+export const HeaderNavProps = ({ className, itemClassName, onItemClick, isMobile }: HeaderNavProps) => {
   const scrollTo = useSmoothScroll();
   const pathname = usePathname();
 
@@ -138,25 +127,22 @@ export const Navigation = ({ className, itemClassName, onItemClick, isMobile }: 
       aria-label="Основное меню"
     >
       {/* Список ссылок */}
-      {navItems.map(
-        (item, index) =>
-          (!isMobile || item.href !== "/dummy") && (
-            <NavItem
-              key={item.href}
-              {...item}
-              index={index}
-              isMobile={isMobile}
-              className={itemClassName}
-              onClick={(e) => {
-                // Если мы на главной, используем плавный скролл
-                if (item.href.startsWith("#") && pathname === "/") {
-                  scrollTo(item.href)(e);
-                }
-              }}
-              onItemClick={onItemClick}
-            />
-          ),
-      )}
+      {navItems.map((item, index) => (
+        <NavItem
+          key={item.href}
+          {...item}
+          index={index}
+          isMobile={isMobile}
+          className={itemClassName}
+          onClick={(e) => {
+            // Если мы на главной, используем плавный скролл
+            if (item.href.startsWith("#") && pathname === "/") {
+              scrollTo(item.href)(e);
+            }
+          }}
+          onItemClick={onItemClick}
+        />
+      ))}
 
       {/* Футер для мобильной навигации */}
       {isMobile && (

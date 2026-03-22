@@ -7,6 +7,7 @@ import { BackgroundGrid, HeroGlow } from "@custom-ui";
 
 import { ContactModal } from "@/features/contact";
 import { Header } from "@/widgets/header";
+import { Footer } from "@/widgets/footer";
 
 import "./globals.css";
 import { Providers } from "./providers";
@@ -91,6 +92,7 @@ export default function RootLayout({
             <div className="mx-auto max-w-300 px-4 sm:px-6 md:px-8 lg:px-12">{children}</div>
             <BackgroundGrid />
           </main>
+          <Footer />
           <HeroGlow />
           <ContactModal />
         </Providers>

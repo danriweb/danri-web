@@ -1,7 +1,7 @@
 "use client";
 
+import { HeaderNavProps } from "./HeaderNav";
 import { MobileMenu } from "./MobileMenu";
-import { Navigation } from "./Navigation";
 
 /**
  * Обертка для мобильной навигации.
@@ -12,7 +12,7 @@ export const MobileNavBox = () => {
     <MobileMenu>
       {({ close }) => (
         <div className="flex h-full flex-col">
-          <Navigation className="mt-12 flex-1" isMobile onItemClick={close} />
+          <HeaderNavProps className="mt-12 flex-1" isMobile onItemClick={close} />
         </div>
       )}
     </MobileMenu>
