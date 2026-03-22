@@ -7,10 +7,15 @@ import type { MetadataRoute } from "next";
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: "https://danriweb.ru",
+      url: "https://danri-web.ru",
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 1,
+    },
+    {
+      url: "https://danri-web.ru/contact",
+      lastModified: new Date(),
+      priority: 0.8,
     },
   ];
 }

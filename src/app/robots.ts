@@ -10,6 +10,7 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://danriweb.ru/sitemap.xml",
+    sitemap: "https://danri-web.ru/sitemap.xml",
+    host: "https://danri-web.ru",
   };
 }
