@@ -18,7 +18,7 @@ export const Footer = () => {
           {/* Логотип */}
           <Link href="/" className="flex items-center gap-3" aria-label={tAria("home")}>
             <Image
-              src="/favicon.svg"
+              src="/logo.svg"
               alt=""
               width={28}
               height={28}

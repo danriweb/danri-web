@@ -21,7 +21,7 @@ export const Logo = () => {
 
   return (
     <Link href="/" onClick={handleLogoClick} className="flex items-center gap-3" aria-label={t("logo")}>
-      <Image src="/favicon.svg" alt="" width={28} height={28} aria-hidden="true" className="h-7 w-7 object-contain" />
+      <Image src="/logo.svg" alt="" width={28} height={28} aria-hidden="true" className="h-7 w-7 object-contain" />
       <span className="font-inter text-foreground text-xl font-extrabold">DANRIWEB</span>
     </Link>
   );
