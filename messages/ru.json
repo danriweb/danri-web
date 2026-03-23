@@ -296,6 +296,8 @@
     "contact": {
       "form": {
         "success": "Сообщение успешно отправлено! Я свяжусь с вами в ближайшее время.",
+        "formNotWorking": "Отправка пока недоступна",
+        "formNotWorkingDescription": "Сервис писем ещё в разработке 👨‍💻 Пожалуйста, напишите мне напрямую через Telegram или Email выше!",
         "telegram": "Telegram",
         "email": "Email",
         "separator": "Или напишите здесь",

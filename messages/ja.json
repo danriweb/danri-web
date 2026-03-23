@@ -295,6 +295,8 @@
     "contact": {
       "form": {
         "success": "メッセージが正常に送信されました！すぐにご連絡いたします。",
+        "formNotWorking": "送信機能は現在利用できません",
+        "formNotWorkingDescription": "メールサーバーは現在開発中です👨‍💻 お手数ですが、上のTelegramまたはEmailから直接ご連絡ください！",
         "telegram": "Telegram",
         "email": "Email",
         "separator": "または、こちらからメッセージ",

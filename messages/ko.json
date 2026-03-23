@@ -295,6 +295,8 @@
     "contact": {
       "form": {
         "success": "메시지 전송이 성공적으로 완료되었습니다! 곧 연락드리겠습니다.",
+        "formNotWorking": "현재 양식 제출이 불가능합니다",
+        "formNotWorkingDescription": "이메일 서비스가 개발 중입니다 👨‍💻 번거로우시겠지만 위의 텔레그램이나 이메일로 직접 연락해 주세요!",
         "telegram": "Telegram",
         "email": "Email",
         "separator": "또는 여기에 메시지 남기기",

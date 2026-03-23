@@ -38,7 +38,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
           */}
           <LazyMotion features={loadFeatures} strict>
             {children}
-            <Toaster />
+            <Toaster position="top-center" />
           </LazyMotion>
         </TooltipProvider>
       </ThemeProvider>

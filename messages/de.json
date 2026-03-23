@@ -295,6 +295,8 @@
     "contact": {
       "form": {
         "success": "Nachricht erfolgreich gesendet! Ich werde mich in Kürze bei Ihnen melden.",
+        "formNotWorking": "Versand derzeit nicht verfügbar",
+        "formNotWorkingDescription": "Der E-Mail-Dienst befindet sich noch in Entwicklung 👨‍💻 Bitte kontaktieren Sie mich direkt über Telegram oder die oben stehende E-Mail!",
         "telegram": "Telegram",
         "email": "E-Mail",
         "separator": "Oder schreiben Sie mir hier direkt",

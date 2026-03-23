@@ -1,7 +1,7 @@
 "use client";
 
-import { useTranslations } from "next-intl";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useTranslations } from "next-intl";
 import { useForm } from "react-hook-form";
 import { FaTelegramPlane } from "react-icons/fa";
 import { HiMail } from "react-icons/hi";
@@ -12,7 +12,6 @@ import { StandardField } from "@constructors";
 import { MotionWrapper } from "@custom-ui";
 import { Button, FieldSeparator, Input, Textarea } from "@shadcn";
 
-import { useContactModal } from "../model/contactModal";
 import { type ContactFormValues, contactFormSchema } from "../model/contactSchema";
 
 const fadeIn = (delay: number) => ({
@@ -27,25 +26,21 @@ const fadeIn = (delay: number) => ({
 });
 
 export const ContactForm = () => {
-  const { close } = useContactModal();
   const t = useTranslations("features.contact.form");
 
   const {
     register,
-    handleSubmit,
-    reset,
-    formState: { errors, isSubmitting },
+    formState: { errors },
   } = useForm<ContactFormValues>({
     resolver: zodResolver(contactFormSchema),
   });
 
-  const onSubmit = async (data: ContactFormValues) => {
-    // Имитация отправки
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-    console.log("Contact form data:", data);
-    toast.success(t("success"));
-    reset();
-    close();
+  const onBlockedSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    toast.error(t("formNotWorking"), {
+      description: t("formNotWorkingDescription"),
+      duration: 6000,
+    });
   };
 
   return (
@@ -88,13 +83,14 @@ export const ContactForm = () => {
       </MotionWrapper>
 
       {/* Форма */}
-      <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4 sm:gap-5">
+      <form onSubmit={onBlockedSubmit} className="flex flex-col gap-4 sm:gap-5">
         <MotionWrapper {...fadeIn(0.3)}>
           <StandardField label={t("nameLabel")} error={errors.name} id="name">
             <Input
               id="name"
+              disabled
               placeholder={t("namePlaceholder")}
-              className="focus:border-primary/50 h-11 border-white/10 bg-white/5 transition-colors focus:bg-white/10"
+              className="focus:border-primary/50 h-11 border-white/10 bg-white/5 transition-colors focus:bg-white/10 disabled:cursor-not-allowed disabled:opacity-50"
               {...register("name")}
             />
           </StandardField>
@@ -105,8 +101,9 @@ export const ContactForm = () => {
             <Input
               id="email"
               type="email"
+              disabled
               placeholder={t("emailPlaceholder")}
-              className="focus:border-primary/50 h-11 border-white/10 bg-white/5 transition-colors focus:bg-white/10"
+              className="focus:border-primary/50 h-11 border-white/10 bg-white/5 transition-colors focus:bg-white/10 disabled:cursor-not-allowed disabled:opacity-50"
               {...register("email")}
             />
           </StandardField>
@@ -116,8 +113,9 @@ export const ContactForm = () => {
           <StandardField label={t("messageLabel")} error={errors.message} id="message">
             <Textarea
               id="message"
+              disabled
               placeholder={t("messagePlaceholder")}
-              className="focus:border-primary/50 min-h-25 resize-none border-white/10 bg-white/5 transition-colors focus:bg-white/10"
+              className="focus:border-primary/50 min-h-25 resize-none border-white/10 bg-white/5 transition-colors focus:bg-white/10 disabled:cursor-not-allowed disabled:opacity-50"
               {...register("message")}
             />
           </StandardField>
@@ -126,11 +124,10 @@ export const ContactForm = () => {
         <MotionWrapper {...fadeIn(0.6)}>
           <Button
             type="submit"
-            disabled={isSubmitting}
             className="bg-primary-gradient mt-2 h-12 w-full text-sm font-bold tracking-widest uppercase transition-transform hover:text-white active:scale-95"
           >
-            {isSubmitting ? t("submitting") : t("submit")}
-            {!isSubmitting && <RiSendPlaneFill className="ml-2 size-4" />}
+            {t("submit")}
+            <RiSendPlaneFill className="ml-2 size-4" />
           </Button>
         </MotionWrapper>
       </form>

@@ -295,6 +295,8 @@
     "contact": {
       "form": {
         "success": "Message sent successfully! I will contact you shortly.",
+        "formNotWorking": "Submission currently unavailable",
+        "formNotWorkingDescription": "The email service is still under development 👨‍💻 Please contact me directly via Telegram or Email above!",
         "telegram": "Telegram",
         "email": "Email",
         "separator": "Or text me here",
