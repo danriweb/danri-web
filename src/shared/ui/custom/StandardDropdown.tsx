@@ -46,6 +46,7 @@ export const StandardDropdown = ({
             <span>{label}</span>
             {badge && (
               <span
+                aria-hidden="true"
                 className={`rounded-md px-1.5 py-0.5 text-[10px] font-bold tracking-wider ${
                   isActive ? "bg-primary/20 text-primary" : "text-muted-foreground bg-white/10"
                 }`}
