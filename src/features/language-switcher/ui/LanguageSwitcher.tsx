@@ -43,10 +43,10 @@ export const LanguageSwitcher = () => {
     <Button
       variant="ghost"
       size="icon"
-      className="hover:text-foreground! text-foreground inline-flex h-10 w-10 shrink-0 items-center justify-center p-0 hover:bg-white/5"
+      className="hover:text-foreground! text-foreground inline-flex shrink-0 items-center justify-center p-0 hover:bg-white/5"
       aria-label="Change language"
     >
-      <Languages className="size-8 py-1 md:py-1.5" />
+      <Languages className="size-5.5 md:size-5" />
     </Button>
   );
 

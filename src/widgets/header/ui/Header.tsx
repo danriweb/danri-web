@@ -15,7 +15,7 @@ export const Header = () => {
           <Logo />
         </div>
 
-        <div className="flex items-center gap-2 md:gap-4">
+        <div className="flex items-center gap-5 md:gap-4">
           {/* Десктопная навигация (клиентская) */}
           <HeaderNavProps className="hidden md:flex" />
 
