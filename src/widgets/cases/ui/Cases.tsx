@@ -1,11 +1,12 @@
 import { ArrowRight } from "lucide-react";
 import { useTranslations } from "next-intl";
-import Link from "next/link";
 
 import { CaseCard, cases } from "@entities/case";
 
 import { SectionTitle } from "@custom-ui";
 import { Button } from "@shadcn";
+
+import { Link } from "@/i18n/routing";
 
 export const Cases = () => {
   const t = useTranslations("widgets.cases");

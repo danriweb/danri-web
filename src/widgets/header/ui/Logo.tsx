@@ -1,10 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
 
 import { useSmoothScroll } from "@viewport";
+
+import { usePathname } from "@/i18n/routing";
+import { Link } from "@/i18n/routing";
 
 export const Logo = () => {
   const pathname = usePathname();

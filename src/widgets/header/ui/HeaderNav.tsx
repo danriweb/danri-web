@@ -1,14 +1,15 @@
 "use client";
 
-import { useTranslations } from "next-intl";
 import { navItems } from "@data";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { useTranslations } from "next-intl";
 import { FaGithub, FaTelegram } from "react-icons/fa";
 
 import { MotionWrapper } from "@custom-ui";
 import { cn } from "@styles";
 import { useSmoothScroll } from "@viewport";
+
+import { usePathname } from "@/i18n/routing";
+import { Link } from "@/i18n/routing";
 
 interface NavItemProps {
   href: string;

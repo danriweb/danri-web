@@ -1,7 +1,8 @@
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-import Link from "next/link";
 import { FaGithub, FaTelegram } from "react-icons/fa";
+
+import { Link } from "@/i18n/routing";
 
 import { FooterNav } from "./FooterNav";
 
@@ -31,9 +32,7 @@ export const Footer = () => {
 
         {/* Нижняя строка: копирайт + соцсети */}
         <div className="border-border/20 flex flex-col-reverse items-start gap-4 border-t pt-8 sm:flex-row sm:items-center sm:justify-between">
-          <p className="text-muted-foreground/50 text-[11px] tracking-[2px] uppercase">
-            {t("copyright")}
-          </p>
+          <p className="text-muted-foreground/50 text-[11px] tracking-[2px] uppercase">{t("copyright")}</p>
 
           <div className="flex items-center gap-4">
             <Link

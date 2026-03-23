@@ -1,10 +1,11 @@
 import { ArrowRight } from "lucide-react";
 import { useTranslations } from "next-intl";
-import Link from "next/link";
 
 import { ScrollButton } from "@custom-ui";
 import { Metric, MotionWrapper } from "@custom-ui";
 import { Badge, Button } from "@shadcn";
+
+import { Link } from "@/i18n/routing";
 
 export const Hero = () => {
   const t = useTranslations("widgets.hero");
@@ -35,7 +36,7 @@ export const Hero = () => {
 
             <h1
               id="hero-title"
-              className="xs:text-5xl text-[40px] leading-[1.05] font-extrabold tracking-tighter text-balance text-white uppercase sm:text-6xl md:text-7xl lg:text-8xl wrap-break-word hyphens-auto w-full"
+              className="xs:text-5xl w-full text-[40px] leading-[1.05] font-extrabold tracking-tighter text-balance wrap-break-word hyphens-auto text-white uppercase sm:text-6xl md:text-7xl lg:text-8xl"
             >
               {t.rich("title", { result: (chunks) => <span className="text-primary">{chunks}</span> })}
             </h1>
