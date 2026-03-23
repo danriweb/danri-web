@@ -284,6 +284,9 @@
       ]
     },
     "header": {
+      "logo": "Danri Web - Zur Startseite",
+      "mainMenu": "Hauptmenü",
+      "sourceCode": "Quellcode ansehen",
       "mobileMenu": "Menü öffnen",
       "copyright": "© 2026 DanriWeb • Frontend"
     },
@@ -292,6 +295,9 @@
     }
   },
   "features": {
+    "languageSwitcher": {
+      "ariaLabel": "Sprache ändern"
+    },
     "contact": {
       "form": {
         "success": "Nachricht erfolgreich gesendet! Ich werde mich in Kürze bei Ihnen melden.",
@@ -619,6 +625,15 @@
     }
   },
   "shared": {
+    "aria": {
+      "github": "GitHub-Profil",
+      "telegram": "Telegram-Kontakt",
+      "home": "Danri Web - Zur Startseite",
+      "footerNav": "Seitennavigation"
+    },
+    "sidebar": {
+      "toggle": "Seitenleiste umschalten"
+    },
     "nav": {
       "cases": "Fallstudien",
       "about": "Über mich",

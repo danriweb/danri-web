@@ -154,6 +154,7 @@
       "tag": "MY STACK",
       "title": "Technical arsenal",
       "description": "Tools and technologies I use to build robust and performant web applications.",
+      "itemsListAria": "List of tools in the {category} category",
       "categories": [
         {
           "title": "Base & Core",
@@ -284,6 +285,9 @@
       ]
     },
     "header": {
+      "logo": "Danri Web - Go to homepage",
+      "mainMenu": "Main menu",
+      "sourceCode": "View Source Code",
       "mobileMenu": "Open menu",
       "copyright": "© 2026 DanriWeb • Frontend"
     },
@@ -292,6 +296,9 @@
     }
   },
   "features": {
+    "languageSwitcher": {
+      "ariaLabel": "Change language"
+    },
     "contact": {
       "form": {
         "success": "Message sent successfully! I will contact you shortly.",
@@ -619,6 +626,15 @@
     }
   },
   "shared": {
+    "aria": {
+      "github": "GitHub profile",
+      "telegram": "Telegram contact",
+      "home": "Danri Web - Go to homepage",
+      "footerNav": "Site navigation"
+    },
+    "sidebar": {
+      "toggle": "Toggle Sidebar"
+    },
     "nav": {
       "cases": "Cases",
       "about": "About",

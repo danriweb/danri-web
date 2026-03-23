@@ -284,6 +284,9 @@
       ]
     },
     "header": {
+      "logo": "Danri Web - 홈페이지로 가기",
+      "mainMenu": "메인 메뉴",
+      "sourceCode": "소스 코드 보기",
       "mobileMenu": "메뉴 아이콘 표시",
       "copyright": "© 2026 DanriWeb • Frontend"
     },
@@ -292,6 +295,9 @@
     }
   },
   "features": {
+    "languageSwitcher": {
+      "ariaLabel": "언어 변경"
+    },
     "contact": {
       "form": {
         "success": "메시지 전송이 성공적으로 완료되었습니다! 곧 연락드리겠습니다.",
@@ -619,6 +625,15 @@
     }
   },
   "shared": {
+    "aria": {
+      "github": "GitHub 프로필",
+      "telegram": "Telegram 연락처",
+      "home": "Danri Web - 홈페이지로 가기",
+      "footerNav": "사이트 내비게이션"
+    },
+    "sidebar": {
+      "toggle": "사이드바 토글"
+    },
     "nav": {
       "cases": "케이스",
       "about": "자기소개",

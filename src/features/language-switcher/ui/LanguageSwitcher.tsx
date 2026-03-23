@@ -1,7 +1,7 @@
 "use client";
 
 import { Languages } from "lucide-react";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { useTransition } from "react";
 
 import { StandardDropdown } from "@custom-ui";
@@ -21,6 +21,7 @@ const LANGUAGES = [
 export const LanguageSwitcher = () => {
   const [isPending, startTransition] = useTransition();
   const locale = useLocale();
+  const t = useTranslations("features.languageSwitcher");
   const router = useRouter();
   const pathname = usePathname();
 
@@ -44,7 +45,7 @@ export const LanguageSwitcher = () => {
       variant="ghost"
       size="icon"
       className="hover:text-foreground! text-foreground inline-flex shrink-0 items-center justify-center p-0 hover:bg-white/5"
-      aria-label="Change language"
+      aria-label={t("ariaLabel")}
     >
       <Languages className="size-5.5 md:size-5" />
     </Button>

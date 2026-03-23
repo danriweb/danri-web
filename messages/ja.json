@@ -154,6 +154,7 @@
       "tag": "マイ スタック",
       "title": "技術アーセナル",
       "description": "堅牢でパフォーマンスの高いウェブアプリケーションを構築するために用いるツールや技術のリストです。",
+      "itemsListAria": "{category} カテゴリのツールリスト",
       "categories": [
         {
           "title": "Base & Core",
@@ -284,6 +285,9 @@
       ]
     },
     "header": {
+      "logo": "Danri Web - ホームへ戻る",
+      "mainMenu": "メインメニュー",
+      "sourceCode": "ソースコードを見る",
       "mobileMenu": "メニューを開く",
       "copyright": "© 2026 DanriWeb • Frontend"
     },
@@ -292,6 +296,9 @@
     }
   },
   "features": {
+    "languageSwitcher": {
+      "ariaLabel": "言語を変更"
+    },
     "contact": {
       "form": {
         "success": "メッセージが正常に送信されました！すぐにご連絡いたします。",
@@ -619,6 +626,15 @@
     }
   },
   "shared": {
+    "aria": {
+      "github": "GitHubプロフィール",
+      "telegram": "Telegramへの連絡",
+      "home": "Danri Web - ホームへ戻る",
+      "footerNav": "サイトナビゲーション"
+    },
+    "sidebar": {
+      "toggle": "サイドバーの切り替え"
+    },
     "nav": {
       "cases": "ケース",
       "about": "自己紹介",

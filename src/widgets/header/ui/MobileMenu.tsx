@@ -18,6 +18,7 @@ const BurgerButton = forwardRef<HTMLButtonElement, React.ComponentProps<typeof B
       variant="ghost"
       size="icon"
       className={cn("text-foreground py-1 md:hidden", props.className)}
+      aria-label={t("mobileMenu")}
       {...props}
       ref={ref}
     >

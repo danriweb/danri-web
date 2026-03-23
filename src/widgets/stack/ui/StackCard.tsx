@@ -1,4 +1,5 @@
 import { useTranslations } from "next-intl";
+
 import { GlowCard } from "@custom-ui";
 
 import { StackCategory } from "../model/stack";
@@ -13,6 +14,7 @@ interface StackCategoryCardProps {
  */
 export const StackCategoryCard = ({ category, index }: StackCategoryCardProps) => {
   const t = useTranslations(`widgets.stack.categories.${index}`);
+  const tStack = useTranslations("widgets.stack");
   const titleId = `category-title-${category.id}`;
 
   return (
@@ -38,11 +40,7 @@ export const StackCategoryCard = ({ category, index }: StackCategoryCardProps) =
         </div>
 
         {/* Список элементов в категории */}
-        <ul
-          className="flex flex-col gap-6"
-          role="list"
-          aria-label={`Список инструментов в категории ${t("title")}`}
-        >
+        <ul className="flex flex-col gap-6" role="list" aria-label={tStack("itemsListAria", { category: t("title") })}>
           {category.items.map((item) => (
             <li key={item.id} role="listitem">
               <div className="group flex items-center gap-5 transition-all">

@@ -130,7 +130,7 @@ export const HeaderNavProps = ({ className, itemClassName, onItemClick, isMobile
   return (
     <nav
       className={cn(isMobile ? "flex flex-col gap-2" : "flex items-center gap-8", className)}
-      aria-label="Основное меню"
+      aria-label={tHeader("mainMenu")}
     >
       {/* Список ссылок */}
       {navItems.map((item, index) => (

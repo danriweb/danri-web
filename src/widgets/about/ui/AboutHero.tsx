@@ -14,6 +14,7 @@ import { TimelineCard } from "./TimelineCard";
 export const AboutHero = () => {
   const t = useTranslations("widgets.about.hero");
   const tRoot = useTranslations("widgets.about");
+  const tAria = useTranslations("shared.aria");
 
   return (
     <div className="grid w-full grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-20">
@@ -81,7 +82,7 @@ export const AboutHero = () => {
               href="https://github.com/danriweb"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="GitHub DanriWeb"
+              aria-label={tAria("github")}
               className="text-muted-foreground hover:text-primary border-border flex size-10 items-center justify-center rounded-xl border bg-white/5 transition-colors hover:bg-white/10"
             >
               <FaGithub className="size-5" />
@@ -90,7 +91,7 @@ export const AboutHero = () => {
               href="https://t.me/danriweb_online"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Telegram DanriWeb"
+              aria-label={tAria("telegram")}
               className="text-muted-foreground hover:text-primary border-border flex size-10 items-center justify-center rounded-xl border bg-white/5 transition-colors hover:bg-white/10"
             >
               <FaTelegram className="size-5" />

@@ -7,9 +7,10 @@ const navItemKeys = ["cases", "about", "processes", "stack", "contact"] as const
 
 export const FooterNav = () => {
   const tNav = useTranslations("shared.nav");
+  const tAria = useTranslations("shared.aria");
 
   return (
-    <nav aria-label="Навигация по сайту">
+    <nav aria-label={tAria("footerNav")}>
       <ul className="flex flex-wrap gap-x-8 gap-y-3">
         {navItems.map((item: NavItem, index) => (
           <li key={item.href}>

@@ -155,6 +155,7 @@
       "tag": "МОЙ СТЕК",
       "title": "Технический арсенал",
       "description": "Инструменты и технологии, которые я использую для создания надежных и производительных веб-приложений.",
+      "itemsListAria": "Список инструментов в категории {category}",
       "categories": [
         {
           "title": "Base & Core",
@@ -285,6 +286,9 @@
       ]
     },
     "header": {
+      "logo": "Danri Web - на главную",
+      "mainMenu": "Основное меню",
+      "sourceCode": "Посмотреть исходный код",
       "mobileMenu": "Открыть меню",
       "copyright": "© 2026 DanriWeb • Frontend"
     },
@@ -293,6 +297,9 @@
     }
   },
   "features": {
+    "languageSwitcher": {
+      "ariaLabel": "Сменить язык"
+    },
     "contact": {
       "form": {
         "success": "Сообщение успешно отправлено! Я свяжусь с вами в ближайшее время.",
@@ -620,6 +627,15 @@
     }
   },
   "shared": {
+    "aria": {
+      "github": "Профиль GitHub",
+      "telegram": "Контакт в Telegram",
+      "home": "Danri Web - на главную",
+      "footerNav": "Навигация по сайту"
+    },
+    "sidebar": {
+      "toggle": "Переключить боковую панель"
+    },
     "nav": {
       "cases": "Кейсы",
       "about": "Обо мне",

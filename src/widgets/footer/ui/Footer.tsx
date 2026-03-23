@@ -8,6 +8,7 @@ import { FooterNav } from "./FooterNav";
 
 export const Footer = () => {
   const t = useTranslations("widgets.footer");
+  const tAria = useTranslations("shared.aria");
 
   return (
     <footer className="border-border/30 border-t">
@@ -15,7 +16,7 @@ export const Footer = () => {
         {/* Верхняя строка: логотип + навигация */}
         <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
           {/* Логотип */}
-          <Link href="/" className="flex items-center gap-3" aria-label="DanriWeb - на главную">
+          <Link href="/" className="flex items-center gap-3" aria-label={tAria("home")}>
             <Image
               src="/favicon.svg"
               alt=""
@@ -39,7 +40,7 @@ export const Footer = () => {
               href="https://github.com/danriweb"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="GitHub"
+              aria-label={tAria("github")}
               className="text-muted-foreground hover:text-foreground transition-colors"
             >
               <FaGithub className="size-5" />
@@ -48,7 +49,7 @@ export const Footer = () => {
               href="https://t.me/danriweb_online"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Telegram"
+              aria-label={tAria("telegram")}
               className="text-muted-foreground hover:text-foreground transition-colors"
             >
               <FaTelegram className="size-5" />
