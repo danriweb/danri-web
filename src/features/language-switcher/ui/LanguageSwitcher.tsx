@@ -26,7 +26,7 @@ export const LanguageSwitcher = () => {
 
   const handleLanguageChange = (nextLocale: string) => {
     startTransition(() => {
-      router.replace(pathname, { locale: nextLocale });
+      router.replace(pathname, { locale: nextLocale, scroll: false });
     });
   };
 
