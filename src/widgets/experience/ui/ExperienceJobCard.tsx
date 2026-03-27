@@ -69,13 +69,16 @@ export const ExperienceJobCard = ({ job, index }: ExperienceJobCardProps) => {
       >
         {/* Кастомный баннер-превью */}
         {bgImage && (
-          <div aria-hidden="true" className="relative aspect-16/10 w-full shrink-0 overflow-hidden rounded-xl border border-white/10">
+          <div
+            aria-hidden="true"
+            className="relative aspect-16/10 w-full shrink-0 overflow-hidden rounded-xl border border-white/10"
+          >
             <Image
               src={bgImage}
               alt=""
               sizes="100vw"
               fill
-              className="object-cover object-top opacity-60 transition-all duration-700 hover:scale-105 hover:opacity-100"
+              className="object-cover object-top lg:opacity-60 lg:transition-all lg:duration-700 lg:hover:scale-105 lg:hover:opacity-100"
               placeholder="blur"
             />
             {/* Легкая маска для стилистики */}
@@ -146,7 +149,7 @@ export const ExperienceJobCard = ({ job, index }: ExperienceJobCardProps) => {
         {/* Архитектура */}
         <div className="flex items-center gap-2">
           <Code2 aria-hidden="true" className="text-muted-foreground/40 size-3.5 shrink-0" />
-          <span 
+          <span
             className="text-muted-foreground/60 text-xs"
             aria-label={`${t("architectureLabel")}: ${job.architecture}`}
           >
