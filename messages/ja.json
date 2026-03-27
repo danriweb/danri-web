@@ -52,6 +52,12 @@
         "title": "プロジェクトのご相談",
         "description": "ご連絡先を残していただければ、あなたのアイデアを実現いたします。フロントエンド開発者 DanriWeb。"
       }
+    },
+    "experience": {
+      "metadata": {
+        "title": "職務経歴",
+        "description": "DanriWebのFrontend開発商務経験: E-Commerce, EdTech, Logistics, FinTech。2023年からの契約フリーランス開発。"
+      }
     }
   },
   "widgets": {
@@ -61,6 +67,7 @@
       "description": "真摯に取り組む開発者です。コードの品質とビジネス目標に焦点を当て、予測可能なアーキテクチャと保守性の高いソリューションを構築します。",
       "discussProject": "プロジェクトを相談する",
       "readCases": "実績を見る",
+      "getResume": "履歴書をダウンロード",
       "metrics": {
         "years": "年の経験",
         "projects": "のプロジェクト",
@@ -293,6 +300,70 @@
     },
     "footer": {
       "copyright": "© 2026 DanriWeb · フロントエンド開発者 · カザフスタン"
+    },
+    "experience": {
+      "backToHome": "ホームに戻る",
+      "tag": "職務経歴",
+      "title": "商務プロジェクト",
+      "description": "2023年1月からの契約フリーランス。E-Commerce, EdTech, Logistics, FinTech — 主にチーム作業。",
+      "period": "2023年1月 — 現在",
+      "currentlyActive": "進行中",
+      "viewAll": "経歴をすべて見る",
+      "teamLabel": "チーム",
+      "soloLabel": "ソロ",
+      "achievementsLabel": "主な成果",
+      "architectureLabel": "アーキテクチャ",
+      "stackLabel": "技術スタック",
+      "ndaLabel": "現在のプロジェクト",
+      "ndaTitle": "Travel / Booking — NDA",
+      "ndaDescription": "現在NDAプロジェクトをメンテナンス中。契約条件により詳細を公開できません。",
+      "jobs": {
+        "e-commerce": {
+          "projectTitle": "ブランド服ショップ + プロモランディングページ",
+          "description": "ブランド服のオンラインショップとプロモページの開発。モバイルファースト。",
+          "achievements": {
+            "mobileFirst": "モバイルファーストレイアウト、UX改善を提案・実装。",
+            "uxReduction": "購入パスを7ステップから3ステップに短縮。",
+            "documented": "ソースコードを完全ドキュメント化してクライアントに引き渡し。"
+          }
+        },
+        "edtech": {
+          "projectTitle": "オンライン学習プラットフォーム。学生ダッシュボード",
+          "description": "EdTechプラットフォームの学生ダッシュボードをチームで開発。",
+          "achievements": {
+            "progressModules": "コース進捗、スケジュール、通知モジュールを実装。",
+            "decomposed23": "23個のレガシーコンポーネントをデザインシステムに分離し3000~4500行削減。",
+            "a11y": "主要ユーザーシナリオにA11yサポートを保証。"
+          }
+        },
+        "logistics": {
+          "projectTitle": "貨物輸送管理プラットフォーム",
+          "description": "貨物輸送管理インターフェースの開発。",
+          "achievements": {
+            "orderTracking": "注文追跡とルート管理画面を実装。",
+            "virtualization": "大量データ対応の仮想化テーブル。",
+            "tanstackMigration": "TanStack Tableへの移行を主導し拡張性向上。"
+          }
+        },
+        "fintech": {
+          "projectTitle": "個人資産管理プラットフォーム (PFM)",
+          "description": "PFMプラットフォームのダッシュボードをチームで開発。",
+          "achievements": {
+            "dashboard": "ダッシュボード実装: 収支グラフ、支出分類、取引履歴。",
+            "rerenderOpt": "useMemo、React.memo、debounceで再レンダリングを最適化。",
+            "lazyFramer": "カスタムラッパーでFramer Motionをレイジーロード。"
+          }
+        },
+        "e-commerce-2": {
+          "projectTitle": "ローカルビジネス向けオンラインショップ",
+          "description": "ローカルビジネス向けのショッピングサイトをゼロから開発。",
+          "achievements": {
+            "fullCycle": "全購入サイクル実装: 検索/フィルター → カタログ → カート → チェックアウト → 確認。",
+            "restApi": "REST APIダイナミックデータ。モバイルファースト。",
+            "robokassa": "Robokassa決済システム連携済みのPHPコールバック処理。"
+          }
+        }
+      }
     }
   },
   "features": {
@@ -352,7 +423,7 @@
           },
           "metrics": {
             "0": {
-              "label": "アクセスビリティエラー",
+              "label": "アクセシビリティエラー",
               "value": "34 → 2"
             },
             "1": {
@@ -636,11 +707,12 @@
       "toggle": "サイドバーの切り替え"
     },
     "nav": {
-      "cases": "ケース",
       "about": "自己紹介",
+      "experience": "経歴",
+      "cases": "ケース",
+      "stack": "スタック",
       "processes": "プロセス",
-      "stack": "技術スタック",
-      "contact": "お問合せ"
+      "contact": "連絡先"
     }
   }
 }

@@ -116,7 +116,7 @@ interface HeaderNavProps {
   isMobile?: boolean;
 }
 
-const navItemKeys = ["cases", "about", "processes", "stack", "contact"] as const;
+const navItemKeys = ["about", "experience", "cases", "stack", "processes", "contact"] as const;
 
 /**
  * Общий компонент навигации для хедера и мобильного меню

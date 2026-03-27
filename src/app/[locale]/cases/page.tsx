@@ -3,6 +3,8 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 
 import { CaseCard, cases } from "@entities/case";
 
+import { SectionTitle } from "@custom-ui";
+
 import { Link } from "@/i18n/routing";
 
 export async function generateMetadata(props: { params: Promise<{ locale: string }> }) {
@@ -32,13 +34,13 @@ export default async function CasesPage(props: { params: Promise<{ locale: strin
       </Link>
 
       {/* Заголовок страницы */}
-      <div className="flex flex-col gap-4">
-        <span className="text-primary text-xs font-bold tracking-[3px] uppercase">{t("tag")}</span>
-        <h1 className="font-funnel-display text-foreground text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl">
-          {t("title")}
-        </h1>
-        <p className="text-muted-foreground max-w-2xl text-base leading-relaxed md:text-lg">{t("description")}</p>
-      </div>
+      <SectionTitle
+        as="h1"
+        tag={t("tag")}
+        title={t("title")}
+        description={t("description")}
+        className="self-start md:self-center md:items-center [&_div]:text-left md:[&_div]:text-center"
+      />
 
       {/* Список всех кейсов */}
       <ol className="flex flex-col gap-8 md:gap-12">

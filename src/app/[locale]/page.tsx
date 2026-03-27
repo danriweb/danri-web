@@ -6,7 +6,10 @@ import { Hero } from "@widgets/hero";
 import { SectionRevealer } from "@custom-ui";
 
 // Ленивая загрузка тяжелых секций
-const Processes = dynamic(() => import("@widgets/processes").then((mod) => mod.Processes), {
+const About = dynamic(() => import("@widgets/about").then((mod) => mod.About), {
+  ssr: true,
+});
+const ExperienceTeaser = dynamic(() => import("@widgets/experience").then((mod) => mod.ExperienceTeaser), {
   ssr: true,
 });
 const Projects = dynamic(() => import("@/widgets/cases").then((mod) => mod.Cases), {
@@ -15,9 +18,10 @@ const Projects = dynamic(() => import("@/widgets/cases").then((mod) => mod.Cases
 const Stack = dynamic(() => import("@widgets/stack").then((mod) => mod.Stack), {
   ssr: true,
 });
-const About = dynamic(() => import("@widgets/about").then((mod) => mod.About), {
+const Processes = dynamic(() => import("@widgets/processes").then((mod) => mod.Processes), {
   ssr: true,
 });
+
 export async function generateMetadata(props: { params: Promise<{ locale: string }> }) {
   const { locale } = await props.params;
   const t = await getTranslations({ locale, namespace: "app.home.metadata" });
@@ -32,23 +36,33 @@ export default async function Home(props: { params: Promise<{ locale: string }> 
   setRequestLocale(locale);
 
   return (
-    <div className="flex flex-col gap-15 overflow-x-hidden">
+    <div className="flex flex-col gap-15">
+      {/* 1. Hero — первый экран */}
       <Hero />
 
-      <SectionRevealer index={2} rootMargin="300px 0px">
-        <Projects />
-      </SectionRevealer>
-
-      <SectionRevealer index={4} rootMargin="400px 0px">
+      {/* 2. About — сначала покупают человека */}
+      <SectionRevealer index={1} rootMargin="300px 0px">
         <About />
       </SectionRevealer>
 
-      <SectionRevealer index={1} rootMargin="300px 0px">
-        <Processes />
+      {/* 3. Experience Teaser — коммерческий контекст */}
+      <SectionRevealer index={2} rootMargin="300px 0px">
+        <ExperienceTeaser />
       </SectionRevealer>
 
-      <SectionRevealer index={3} rootMargin="400px 0px">
+      {/* 4. Cases — глубина инженерного мышления */}
+      <SectionRevealer index={3} rootMargin="300px 0px">
+        <Projects />
+      </SectionRevealer>
+
+      {/* 5. Stack — чем именно работаю */}
+      <SectionRevealer index={4} rootMargin="400px 0px">
         <Stack />
+      </SectionRevealer>
+
+      {/* 6. Processes — финальный аргумент перед CTA */}
+      <SectionRevealer index={5} rootMargin="300px 0px">
+        <Processes />
       </SectionRevealer>
     </div>
   );

@@ -1,4 +1,4 @@
-import { Activity, Binary, Briefcase, Mail, User } from "lucide-react";
+import { Activity, Binary, Briefcase, Layers, Mail, User } from "lucide-react";
 import { LucideIcon } from "lucide-react";
 
 /**
@@ -14,9 +14,10 @@ export interface NavItem {
 }
 
 export const navItems: NavItem[] = [
-  { href: "#cases", label: "Кейсы", icon: Briefcase },
   { href: "#about", label: "Обо мне", icon: User },
-  { href: "#processes", label: "Процессы", icon: Activity },
+  { href: "/experience", label: "Опыт", icon: Briefcase },
+  { href: "/cases", label: "Кейсы", icon: Layers },
   { href: "#stack", label: "Стек", icon: Binary },
+  { href: "#processes", label: "Процессы", icon: Activity },
   { href: "/contact", label: "Контакты", isAccent: true, icon: Mail },
 ];

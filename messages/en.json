@@ -52,6 +52,12 @@
         "title": "Discuss a project",
         "description": "Leave your contacts, and we will bring your ideas to life. Frontend developer DanriWeb."
       }
+    },
+    "experience": {
+      "metadata": {
+        "title": "Work Experience",
+        "description": "DanriWeb's commercial experience in Frontend development: E-Commerce, EdTech, Logistics, FinTech. Contract freelance development since 2023."
+      }
     }
   },
   "widgets": {
@@ -61,6 +67,7 @@
       "description": "The developer who actually cares. Business-focused with code quality in mind: maintainable solutions and predictable architecture.",
       "discussProject": "Discuss project",
       "readCases": "Read cases",
+      "getResume": "Download Resume",
       "metrics": {
         "years": "YEARS EXPERIENCE",
         "projects": "PROJECTS",
@@ -293,6 +300,70 @@
     },
     "footer": {
       "copyright": "© 2026 DanriWeb · Frontend Developer · Kazakhstan"
+    },
+    "experience": {
+      "backToHome": "Back to Home",
+      "tag": "WORK EXPERIENCE",
+      "title": "Commercial Projects",
+      "description": "Contract freelance development since January 2023. E-Commerce, EdTech, Logistics, FinTech — primarily team-based work.",
+      "period": "January 2023 — present",
+      "currentlyActive": "Active",
+      "viewAll": "View full experience",
+      "teamLabel": "Team",
+      "soloLabel": "Solo",
+      "achievementsLabel": "Key Results",
+      "architectureLabel": "Architecture",
+      "stackLabel": "Tech Stack",
+      "ndaLabel": "Current Project",
+      "ndaTitle": "Travel / Booking — NDA",
+      "ndaDescription": "Currently maintaining a project under NDA. Details cannot be disclosed due to agreement terms.",
+      "jobs": {
+        "e-commerce": {
+          "projectTitle": "Branded clothing store + promo landing page",
+          "description": "Development of an online store and promo landing page for a clothing brand. Mobile-first layout based on client mockups.",
+          "achievements": {
+            "mobileFirst": "Mobile-first layout per client mockups, proposed and implemented UX improvements.",
+            "uxReduction": "Reduced the purchase path from 7 to 3 steps: landing → product card → checkout/payment.",
+            "documented": "Fully documented the source code and handed over the project to the client."
+          }
+        },
+        "edtech": {
+          "projectTitle": "Online learning platform. Student personal account",
+          "description": "Development of a student dashboard for an EdTech platform as part of a team.",
+          "achievements": {
+            "progressModules": "Implemented course progress, scheduling, and notification modules.",
+            "decomposed23": "Decomposed 23 components from legacy into a design system, reduced ~3000–4500 lines of code.",
+            "a11y": "Ensured A11y (accessibility) support for key user scenarios."
+          }
+        },
+        "logistics": {
+          "projectTitle": "Freight management platform",
+          "description": "Development of a freight management interface: order tracking, route management.",
+          "achievements": {
+            "orderTracking": "Implemented order tracking interface and route management.",
+            "virtualization": "Tables with virtualization for large data volumes and filtering.",
+            "tanstackMigration": "Initiated migration from custom table logic to TanStack Table for scalability."
+          }
+        },
+        "fintech": {
+          "projectTitle": "Personal Finance Management Platform (PFM)",
+          "description": "Development of a dashboard for a personal finance management platform as part of a team.",
+          "achievements": {
+            "dashboard": "Implemented dashboard: expense/income charts, expense categorization, transaction history.",
+            "rerenderOpt": "Optimized re-renders: useMemo, React.memo, debounce — reduced unnecessary computations.",
+            "lazyFramer": "Lazy-loaded Framer Motion via a custom wrapper to reduce bundle size."
+          }
+        },
+        "e-commerce-2": {
+          "projectTitle": "Online store for a local business",
+          "description": "Built an e-commerce store for a local business from scratch: full purchase cycle from search to order confirmation.",
+          "achievements": {
+            "fullCycle": "Implemented the full purchase cycle: search/filter → catalog → cart → checkout → confirmation.",
+            "restApi": "Dynamic data via REST API. Mobile-first layout.",
+            "robokassa": "Integration with Robokassa payment system, callback handling in PHP."
+          }
+        }
+      }
     }
   },
   "features": {
@@ -636,10 +707,11 @@
       "toggle": "Toggle Sidebar"
     },
     "nav": {
-      "cases": "Cases",
       "about": "About",
-      "processes": "Workflow",
+      "experience": "Experience",
+      "cases": "Cases",
       "stack": "Stack",
+      "processes": "Processes",
       "contact": "Contact"
     }
   }

@@ -52,6 +52,12 @@
         "title": "Projekt besprechen",
         "description": "Hinterlassen Sie Ihre Kontaktdaten, und wir setzen Ihre Ideen in die Tat um. Frontend-Entwickler DanriWeb."
       }
+    },
+    "experience": {
+      "metadata": {
+        "title": "Berufserfahrung",
+        "description": "Kommerzielle Erfahrung von DanriWeb in der Frontend-Entwicklung: E-Commerce, EdTech, Logistics, FinTech. Vertragsbasierte Freelance-Entwicklung seit 2023."
+      }
     }
   },
   "widgets": {
@@ -61,6 +67,7 @@
       "description": "Ein Entwickler, der sich wirklich kümmert. Geschäftsorientierung steht an erster Stelle, kombiniert mit Code-Qualität: wartbare Lösungen und eine berechenbare Architektur.",
       "discussProject": "Projekt besprechen",
       "readCases": "Fallstudien lesen",
+      "getResume": "Lebenslauf herunterladen",
       "metrics": {
         "years": "JAHRE ERFAHRUNG",
         "projects": "PROJEKTE",
@@ -154,6 +161,7 @@
       "tag": "MEIN STACK",
       "title": "Technisches Arsenal",
       "description": "Werkzeuge und moderne Technologien, die ich einsetze, um absolut robuste und extrem leistungsstarke Webanwendungen zu erstellen.",
+      "itemsListAria": "Liste der Tools in der Kategorie {category}",
       "categories": [
         {
           "title": "Basis & Kernkomponenten",
@@ -292,6 +300,70 @@
     },
     "footer": {
       "copyright": "© 2026 DanriWeb · Frontend-Entwickler · Kasachstan"
+    },
+    "experience": {
+      "backToHome": "Zurück zur Startseite",
+      "tag": "BERUFSERFAHRUNG",
+      "title": "Kommerzielle Projekte",
+      "description": "Vertragsbasierte Freelance-Entwicklung seit Januar 2023. E-Commerce, EdTech, Logistics, FinTech — überwiegend Teamarbeit.",
+      "period": "Januar 2023 — heute",
+      "currentlyActive": "Aktiv",
+      "viewAll": "Gesamte Erfahrung ansehen",
+      "teamLabel": "Team",
+      "soloLabel": "Solo",
+      "achievementsLabel": "Kernergebnisse",
+      "architectureLabel": "Architektur",
+      "stackLabel": "Tech-Stack",
+      "ndaLabel": "Aktuelles Projekt",
+      "ndaTitle": "Travel / Booking — NDA",
+      "ndaDescription": "Derzeit betreue ich ein Projekt unter NDA. Details können gemäß Vereinbarung nicht offengelegt werden.",
+      "jobs": {
+        "e-commerce": {
+          "projectTitle": "Markenbekleidungsshop + Promo-Landingpage",
+          "description": "Entwicklung eines Online-Shops und einer Promopage für eine Modemarke. Mobile-first nach Kundenmockup.",
+          "achievements": {
+            "mobileFirst": "Mobile-first Layout nach Kundenmockup, UX-Verbesserungen vorgeschlagen und implementiert.",
+            "uxReduction": "Kaufpfad von 7 auf 3 Schritte reduziert: Landing → Produktkarte → Checkout/Zahlung.",
+            "documented": "Quellcode vollständig dokumentiert und an den Kunden übergeben."
+          }
+        },
+        "edtech": {
+          "projectTitle": "Online-Lernplattform. Studentenbereich",
+          "description": "Entwicklung des Studentenbereichs für eine EdTech-Plattform im Team.",
+          "achievements": {
+            "progressModules": "Kursfortschritt, Stundenplan und Benachrichtigungsmodule implementiert.",
+            "decomposed23": "23 Legacy-Komponenten in ein Designsystem überführt, ~3000–4500 Codezeilen reduziert.",
+            "a11y": "A11y-Unterstützung (Barrierefreiheit) für wichtige Nutzerszenarien sichergestellt."
+          }
+        },
+        "logistics": {
+          "projectTitle": "Frachtmanagement-Plattform",
+          "description": "Entwicklung einer Oberfläche für das Frachtmanagement: Sendungsverfolgung, Routenverwaltung.",
+          "achievements": {
+            "orderTracking": "Sendungsverfolgung und Routenverwaltungsoberfläche implementiert.",
+            "virtualization": "Tabellen mit Virtualisierung für große Datemengen und Filterung.",
+            "tanstackMigration": "Migration von eigener Tabellenlogik auf TanStack Table für Skalierbarkeit initiiert."
+          }
+        },
+        "fintech": {
+          "projectTitle": "Personal Finance Management Plattform (PFM)",
+          "description": "Dashboard-Entwicklung für eine PFM-Plattform im Team.",
+          "achievements": {
+            "dashboard": "Dashboard implementiert: Ausgaben-/Einnahmendiagramme, Kategorisierung, Transaktionshistorie.",
+            "rerenderOpt": "Re-Renders optimiert: useMemo, React.memo, debounce — unnötige Berechnungen reduziert.",
+            "lazyFramer": "Framer Motion per Custom-Wrapper lazy geladen für geringere Bundle-Größe."
+          }
+        },
+        "e-commerce-2": {
+          "projectTitle": "Online-Shop für ein lokales Unternehmen",
+          "description": "E-Commerce-Shop von Grund auf für ein lokales Unternehmen entwickelt: voller Kaufzyklus.",
+          "achievements": {
+            "fullCycle": "Vollständiger Kaufzyklus implementiert: Suche/Filter → Katalog → Warenkorb → Checkout → Bestätigung.",
+            "restApi": "Dynamische Daten über REST API. Mobile-first Layout.",
+            "robokassa": "Integration mit Robokassa-Zahlungssystem, Callback-Verarbeitung in PHP."
+          }
+        }
+      }
     }
   },
   "features": {
@@ -351,7 +423,7 @@
           },
           "metrics": {
             "0": {
-              "label": "A11Y FEHLERBEBUNG",
+              "label": "A11Y FEHLERBEHEBUNG",
               "value": "34 → 2"
             },
             "1": {
@@ -535,9 +607,9 @@
           }
         },
         "07": {
-          "title": "Agressive Seitenladezeit-Optimierungen",
-          "task": "Eine sehr ineffiziente Seite voll mit drückend schweren Bausteinen. Unerträglicher LCP zögerte Systemantworten bis über 4 Sekunden hinaus: Fürchertlich für Endnutzer sowie SEO-Performance.",
-          "solution": "Agressive Verwendung von Lazy Loading und automatisiertem Code-Splitting, tiefgreifende Bilddaten-Zusammenschlüsse durch `next/image` in Next.js. Absolute Verhinderung von Start-Blockaden.",
+          "title": "Aggressive Seitenladezeit-Optimierungen",
+          "task": "Eine sehr ineffiziente Seite voll mit drückend schweren Bausteinen. Unerträglicher LCP zögerte Systemantworten bis über 4 Sekunden hinaus: Fürchterlich für Endnutzer sowie SEO-Performance.",
+          "solution": "Aggressive Verwendung von Lazy Loading und automatisiertem Code-Splitting, tiefgreifende Bilddaten-Zusammenschlüsse durch `next/image` in Next.js. Absolute Verhinderung von Start-Blockaden.",
           "meta": {
             "0": {
               "label": "Leistungstuning",
@@ -549,7 +621,7 @@
             },
             "2": {
               "label": "2025",
-              "description": "Steigerung technischer Benutzer- und reinfassender SEO-Erlebniswelt"
+              "description": "Steigerung der technischen Benutzer- und umfassenden SEO-Erlebnisqualität"
             }
           },
           "metrics": {
@@ -635,11 +707,12 @@
       "toggle": "Seitenleiste umschalten"
     },
     "nav": {
-      "cases": "Fallstudien",
       "about": "Über mich",
-      "processes": "Der Ablauf",
-      "stack": "Technologien",
-      "contact": "Anfragen"
+      "experience": "Erfahrung",
+      "cases": "Fallstudien",
+      "stack": "Stack",
+      "processes": "Prozesse",
+      "contact": "Kontakt"
     }
   }
 }

@@ -3,7 +3,7 @@ import { useTranslations } from "next-intl";
 
 import { Link } from "@/i18n/routing";
 
-const navItemKeys = ["cases", "about", "processes", "stack", "contact"] as const;
+const navItemKeys = ["about", "experience", "cases", "stack", "processes", "contact"] as const;
 
 export const FooterNav = () => {
   const tNav = useTranslations("shared.nav");

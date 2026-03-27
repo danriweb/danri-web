@@ -46,7 +46,10 @@
       "@custom-ui/*": ["./src/shared/ui/custom/*"],
       "@custom-ui": ["./src/shared/ui/custom"],
       "@config/*": ["./src/shared/config/*"],
-      "@config": ["./src/shared/config"]
+      "@config": ["./src/shared/config"],
+
+      "@assets/*": ["./src/shared/assets/*"],
+      "@assets": ["./src/shared/assets"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", ".next/dev/types/**/*.ts", "**/*.mts"],

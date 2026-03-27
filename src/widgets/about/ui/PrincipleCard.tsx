@@ -1,4 +1,5 @@
 import { ElementType } from "react";
+
 import { GlowCard } from "@custom-ui";
 import { cn } from "@styles";
 
@@ -19,8 +20,8 @@ export const PrincipleCard = ({ icon: Icon, title, description, index, className
         </div>
 
         <div className="flex flex-col gap-2">
-          <h3 className="text-lg font-bold tracking-tight text-white uppercase">{title}</h3>
-          <p className="text-muted-foreground text-sm leading-relaxed">{description}</p>
+          <h3 className="text-sm font-bold tracking-tight text-white uppercase sm:text-base md:text-lg">{title}</h3>
+          <p className="text-muted-foreground text-xs leading-relaxed sm:text-sm">{description}</p>
         </div>
       </div>
     </GlowCard>

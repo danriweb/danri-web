@@ -7,18 +7,19 @@ interface SectionHeaderProps {
   description?: ReactNode;
   className?: string;
   id?: string;
+  as?: "h1" | "h2" | "h3";
 }
 
 /**
  * Заголовок секции с заголовком и подзаголовком (описанием).
  */
-export const SectionHeader = ({ title, description, className, id }: SectionHeaderProps) => {
+export const SectionHeader = ({ title, description, className, id, as: Tag = "h2" }: SectionHeaderProps) => {
   return (
     <div className={cn("flex flex-col items-center gap-4 text-center", className)}>
-      <h2 id={id} className="text-4xl font-extrabold text-white sm:text-5xl md:text-6xl">
+      <Tag id={id} className="text-4xl font-extrabold text-white sm:text-5xl md:text-6xl">
         {title}
-      </h2>
-      {description && <div className="text-muted-foreground max-w-2xl text-base md:text-lg">{description}</div>}
+      </Tag>
+      {description && <p className="text-muted-foreground max-w-2xl text-base md:text-lg">{description}</p>}
     </div>
   );
 };

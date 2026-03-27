@@ -52,6 +52,12 @@
         "title": "프로젝트 문의",
         "description": "연락처를 남겨주시면 귀하의 아이디어를 실현시켜 드리겠습니다. 프론트엔드 개발자 DanriWeb."
       }
+    },
+    "experience": {
+      "metadata": {
+        "title": "경력 사항",
+        "description": "DanriWeb의 Frontend 개발 상업 경험: E-Commerce, EdTech, Logistics, FinTech. 2023년부터 계약 프리랜서 개발."
+      }
     }
   },
   "widgets": {
@@ -61,6 +67,7 @@
       "description": "진심을 다하는 개발자입니다. 코드 품질과 비즈니스에 집중하며 예측 가능한 아키텍처와 유지보수 가능한 솔루션을 만듭니다.",
       "discussProject": "프로젝트 논의",
       "readCases": "케이스 보기",
+      "getResume": "이력서 다운로드",
       "metrics": {
         "years": "년의 경험",
         "projects": "진행 프로젝트",
@@ -154,6 +161,7 @@
       "tag": "나의 스택",
       "title": "기술 아스날",
       "description": "견고하고 강력한 성능의 웹 애플리케이션을 구축하기 위한 툴 및 기술 모음입니다.",
+      "itemsListAria": "{category} 카테고리의 도구 목록",
       "categories": [
         {
           "title": "Base & Core",
@@ -292,6 +300,70 @@
     },
     "footer": {
       "copyright": "© 2026 DanriWeb · 프론트엔드 개발자 · 카자흐스탄"
+    },
+    "experience": {
+      "backToHome": "홈으로",
+      "tag": "경력 사항",
+      "title": "상업 프로젝트",
+      "description": "2023년 1월부터 계약 프리랜스. E-Commerce, EdTech, Logistics, FinTech — 주로 팀 작업.",
+      "period": "2023년 1월 — 현재",
+      "currentlyActive": "진행 중",
+      "viewAll": "전체 경력 보기",
+      "teamLabel": "팀",
+      "soloLabel": "솔로",
+      "achievementsLabel": "주요 성과",
+      "architectureLabel": "아키텍처",
+      "stackLabel": "기술 스택",
+      "ndaLabel": "현재 프로젝트",
+      "ndaTitle": "Travel / Booking — NDA",
+      "ndaDescription": "현재 NDA 프로젝트를 유지보수 중입니다. 계약 조건에 따라 세부 사항을 공개할 수 없습니다.",
+      "jobs": {
+        "e-commerce": {
+          "projectTitle": "브랜드 의류 쇼핑몰 + 프로모 랜딩페이지",
+          "description": "의류 브랜드 온라인 쇼핑몰 및 프로모 페이지 개발. 모바일 퍼스트.",
+          "achievements": {
+            "mobileFirst": "Mobile-first 레이아웃, UX 개선 제안 및 구현.",
+            "uxReduction": "구매 경로를 7단계에서 3단계로 단축: 랜딩 → 상품 카드 → 결제.",
+            "documented": "소스 코드 전체 문서화 후 고객에게 인도."
+          }
+        },
+        "edtech": {
+          "projectTitle": "온라인 학습 플랫폼. 학생 마이페이지",
+          "description": "EdTech 플랫폼 학생 대시보드 팀 개발.",
+          "achievements": {
+            "progressModules": "코스 진도, 일정, 알림 모듈 구현.",
+            "decomposed23": "레거시 컴포넌트 23개를 디자인 시스템으로 분리, 약 3000~4500줄 코드 감소.",
+            "a11y": "주요 사용자 시나리오에 A11y 접근성 지원 보장."
+          }
+        },
+        "logistics": {
+          "projectTitle": "화물 운송 관리 플랫폼",
+          "description": "화물 운송 관리 인터페이스 개발: 주문 추적, 루트 관리.",
+          "achievements": {
+            "orderTracking": "주문 추적 및 루트 관리 인터페이스 구현.",
+            "virtualization": "대용량 데이터처리를 위한 가상화 테이블.",
+            "tanstackMigration": "확장성을 위해 TanStack Table로 마이그레이션 주도."
+          }
+        },
+        "fintech": {
+          "projectTitle": "개인 재무 관리 플랫폼 (PFM)",
+          "description": "PFM 플랫폼 대시보드 팀 개발.",
+          "achievements": {
+            "dashboard": "대시보드 구현: 지출/수입 차트, 지출 분류, 거래 내역.",
+            "rerenderOpt": "리렌더 최적화: useMemo, React.memo, debounce.",
+            "lazyFramer": "커스텀 래퍼를 통한 Framer Motion 레이지 로드."
+          }
+        },
+        "e-commerce-2": {
+          "projectTitle": "로컬 비즈니스 온라인 쇼핑몰",
+          "description": "로컬 비즈니스를 위한 쇼핑몰을 처음부터 개발.",
+          "achievements": {
+            "fullCycle": "전체 구매 흐름 구현: 검색/필터 → 카탈로그 → 장바구니 → 결제 → 주문 확인.",
+            "restApi": "REST API로 동적 데이터 연동. Mobile-first 마크업.",
+            "robokassa": "Robokassa 결제 시스템 연동, PHP callback 처리."
+          }
+        }
+      }
     }
   },
   "features": {
@@ -391,7 +463,7 @@
         },
         "02": {
           "title": "브랜드 유저 멤버십 웹 시스템 구축",
-          "task": "맨-바닥 상태의 시스템 속에서 단 2일이라는 마감 시간 동안 실제 호환되는 로그인 페이지, 정보 데시보드를 출시할 것을 요구받음.",
+          "task": "맨-바닥 상태의 시스템 속에서 단 2일이라는 마감 시간 동안 실제 호환되는 로그인 페이지, 정보 대시보드를 출시할 것을 요구받음.",
           "solution": "개발 도구인 shadcn/ui 활용. Zod 검증으로 인하여 상태 오류 축소 확인. 시간 부족 상황에서도 최종 시간까지 실시간 정보 통보 구현에 총력을 다함.",
           "meta": {
             "0": {
@@ -471,8 +543,8 @@
               "value": "98 점수 기록"
             },
             "1": {
-              "label": "서버 개발 착시 기간",
-              "value": "단 3일 달성"
+              "label": "개발 소요 기간",
+              "value": "단 3일 소요"
             }
           }
         },
@@ -570,7 +642,7 @@
           "meta": {
             "0": {
               "label": "사용자 정보 보호 영역",
-              "description": "보안 레이지. 리프레시 로직. 외부 접근 접근 제어 차단"
+              "description": "보안 레이어. 리프레시 로직. 외부 접근 제어 차단"
             },
             "1": {
               "label": "솔루션 아키텍처",
@@ -635,10 +707,11 @@
       "toggle": "사이드바 토글"
     },
     "nav": {
-      "cases": "케이스",
       "about": "자기소개",
+      "experience": "경력",
+      "cases": "케이스",
+      "stack": "스택",
       "processes": "프로세스",
-      "stack": "도구 스택",
       "contact": "연락처"
     }
   }

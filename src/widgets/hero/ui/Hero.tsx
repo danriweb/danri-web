@@ -1,7 +1,6 @@
-import { ArrowRight } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { ArrowRight, Download } from "lucide-react";
+import { useLocale, useTranslations } from "next-intl";
 
-import { ScrollButton } from "@custom-ui";
 import { Metric, MotionWrapper } from "@custom-ui";
 import { Badge, Button } from "@shadcn";
 
@@ -9,6 +8,14 @@ import { Link } from "@/i18n/routing";
 
 export const Hero = () => {
   const t = useTranslations("widgets.hero");
+  const locale = useLocale();
+
+  const SUPPORTED_RESUME_LOCALES = ["ru", "en", "de", "ko", "ja"] as const;
+  const resumeLocale = SUPPORTED_RESUME_LOCALES.includes(locale as (typeof SUPPORTED_RESUME_LOCALES)[number])
+    ? locale
+    : "en";
+  const resumeUrl = `/documents/danriweb_${resumeLocale}.pdf`;
+  const resumeFilename = `danriweb_${resumeLocale}.pdf`;
 
   return (
     <section
@@ -59,14 +66,17 @@ export const Hero = () => {
               </Link>
             </Button>
 
-            <ScrollButton
-              targetId="cases"
+            <Button
               size="lg"
               variant="outline"
               className="hover:bg-card text-foreground h-14 px-10 text-base font-bold backdrop-blur-sm"
+              asChild
             >
-              {t("readCases")}
-            </ScrollButton>
+              <a href={resumeUrl} download={resumeFilename}>
+                <Download className="mr-2 h-4 w-4" />
+                {t("getResume")}
+              </a>
+            </Button>
           </div>
         </div>
 

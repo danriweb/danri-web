@@ -17,10 +17,10 @@ export const CaseCard = ({ project, index }: CaseCardProps) => {
   const tProject = useTranslations(`entities.case.list.${project.id}`);
 
   return (
-    <GlowCard index={index} className="px-5 py-6 sm:px-8 sm:py-8 md:px-12 md:py-14">
+    <GlowCard index={index} className="p-6 sm:p-8 md:p-10">
       {/* Шапка карточки */}
-      <div className="flex flex-col items-start justify-between gap-4 border-b border-white/5 pb-5 sm:gap-6 md:pb-10 lg:flex-row lg:items-start">
-        <h3 className="text-xl leading-tight font-bold text-white uppercase sm:text-2xl md:text-3xl">
+      <div className="flex flex-col items-start justify-between gap-4 border-b border-white/5 pb-5 md:pb-8 lg:flex-row">
+        <h3 className="text-lg leading-snug font-bold text-white uppercase sm:text-xl md:text-2xl">
           {tProject("title")}
         </h3>
 
@@ -52,16 +52,16 @@ export const CaseCard = ({ project, index }: CaseCardProps) => {
       </div>
 
       {/* Тело карточки */}
-      <div className="grid grid-cols-1 gap-6 pt-5 sm:gap-8 sm:pt-8 md:gap-14 md:pt-14 lg:grid-cols-2 lg:gap-20">
+      <div className="grid grid-cols-1 gap-8 pt-6 md:pt-8 lg:grid-cols-2 lg:gap-12">
         {/* Левая колонка: Задача + Метрики */}
-        <div className="flex flex-col gap-5 md:gap-12">
-          <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-8 md:gap-10">
+          <div className="flex flex-col gap-3">
             <span className="text-primary text-xs font-bold tracking-[3px] uppercase">{tCard("task")}</span>
-            <p className="text-card-foreground text-sm leading-relaxed md:text-lg">{tProject("task")}</p>
+            <p className="text-card-foreground text-sm leading-relaxed md:text-base">{tProject("task")}</p>
           </div>
 
           {/* Метрики кейса */}
-          <dl className="grid grid-cols-2 gap-x-8 gap-y-6 pt-3 sm:gap-x-12 sm:gap-y-8 sm:pt-4">
+          <dl className="grid grid-cols-2 gap-x-8 gap-y-6 pt-2 sm:gap-x-10 sm:pt-4">
             {project.metrics.map((metric, i) => {
               const val = tProject(`metrics.${i}.value`);
               const parts = val.split("→").map((s) => s.trim());
@@ -92,7 +92,7 @@ export const CaseCard = ({ project, index }: CaseCardProps) => {
         </div>
 
         {/* Правая колонка: Решение */}
-        <div className="flex flex-col gap-4 lg:border-l lg:border-white/5 lg:pl-10">
+        <div className="flex flex-col gap-3 lg:border-l lg:border-white/5 lg:pl-10">
           <span className="text-muted-foreground/50 text-xs font-bold tracking-[3px] uppercase">{tCard("solution")}</span>
           <p className="text-muted-foreground text-sm leading-relaxed md:text-base">{tProject("solution")}</p>
         </div>
