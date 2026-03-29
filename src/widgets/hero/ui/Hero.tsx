@@ -1,7 +1,7 @@
 import { ArrowRight, Download } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 
-import { Metric, MotionWrapper } from "@custom-ui";
+import { Metric } from "@custom-ui";
 import { Badge, Button } from "@shadcn";
 
 import { Link } from "@/i18n/routing";
@@ -23,12 +23,7 @@ export const Hero = () => {
       aria-labelledby="hero-title"
       className="relative flex flex-col items-center justify-center overflow-hidden pt-12 pb-20 md:pt-20 md:pb-32"
     >
-      <MotionWrapper
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        className="flex flex-col items-center gap-20 text-center"
-      >
+      <div className="flex flex-col items-center gap-20 text-center">
         {/*Заголовок*/}
         <div className="flex flex-col items-center gap-10">
           <div className="flex w-full flex-col items-center gap-6 px-4 text-center sm:px-6">
@@ -92,7 +87,7 @@ export const Hero = () => {
             <Metric unit="100%" label={t("metrics.businessFocus")} highlight />
           </li>
         </ul>
-      </MotionWrapper>
+      </div>
     </section>
   );
 };
