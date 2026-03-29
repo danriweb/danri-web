@@ -1,5 +1,3 @@
-"use client";
-
 import { ArrowLeft, Briefcase, Calendar } from "lucide-react";
 import { useTranslations } from "next-intl";
 
@@ -34,11 +32,7 @@ export const ExperiencePage = () => {
         transition={{ duration: 0.5, delay: 0.1 }}
         className="flex flex-col items-center gap-6"
       >
-        <SectionTitle
-          tag={t("tag")}
-          title={t("title")}
-          description={t("description")}
-        />
+        <SectionTitle tag={t("tag")} title={t("title")} description={t("description")} />
 
         {/* Мета: период + статус */}
         <div className="flex flex-wrap items-center justify-center gap-3">
@@ -108,7 +102,7 @@ export const ExperiencePage = () => {
                 ].map((tech) => (
                   <li
                     key={tech}
-                    className="inline-flex items-center rounded-md border border-primary/20 bg-primary/8 px-2 py-0.5 text-[11px] font-medium tracking-wide text-primary/70 transition-colors hover:bg-primary/15"
+                    className="border-primary/20 bg-primary/8 text-primary/70 hover:bg-primary/15 inline-flex items-center rounded-md border px-2 py-0.5 text-[11px] font-medium tracking-wide transition-colors"
                   >
                     {tech}
                   </li>

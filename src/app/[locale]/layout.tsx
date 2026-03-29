@@ -29,6 +29,7 @@ const notoSansJP = Noto_Sans_JP({
   subsets: ["latin"],
   variable: "--font-inter",
   display: "swap",
+  preload: false,
 });
 
 const notoSansKR = Noto_Sans_KR({
@@ -36,6 +37,7 @@ const notoSansKR = Noto_Sans_KR({
   subsets: ["latin"],
   variable: "--font-inter",
   display: "swap",
+  preload: false,
 });
 
 const funnelDisplay = Funnel_Display({
