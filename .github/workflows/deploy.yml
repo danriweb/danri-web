@@ -5,7 +5,32 @@ on:
     branches: ["main"]
 
 jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Typecheck
+        run: npm run typecheck
+
+      - name: Steiger (FSD architecture)
+        run: npm run steiger
+
   build-and-push:
+    needs: check
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -40,20 +65,16 @@ jobs:
       - name: Deploy to VPS
         run: |
           ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} << 'EOF'
-            # Авторизуемся в GHCR на сервере, чтобы он мог скачивать приватные образы
             echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
-            
-            # Обновляем код (docker-compose.yml)
+
             cd /home/deploy/apps/danri-web || git clone git@github.com:danriweb/danri-web.git /home/deploy/apps/danri-web
             cd /home/deploy/apps/danri-web
             git fetch origin main
             git reset --hard origin/main
             git clean -fd
 
-            # Скачиваем образ и запускаем контейнер
             docker compose pull
             docker compose up -d
-            
-            # Чистим старые кэши, чтобы не забить диск
+
             docker system prune -f
           EOF
