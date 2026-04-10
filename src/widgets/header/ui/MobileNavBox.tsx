@@ -11,8 +11,8 @@ export const MobileNavBox = () => {
   return (
     <MobileMenu>
       {({ close }) => (
-        <div className="flex h-full flex-col">
-          <HeaderNavProps className="mt-12 flex-1" isMobile onItemClick={close} />
+        <div className="flex h-full flex-col overflow-y-auto px-6 py-6">
+          <HeaderNavProps className="mt-6 flex-1" isMobile onItemClick={close} />
         </div>
       )}
     </MobileMenu>
