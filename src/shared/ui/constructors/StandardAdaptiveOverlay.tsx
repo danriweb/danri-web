@@ -2,9 +2,8 @@
 
 import * as React from "react";
 
+import { useMounted } from "@dom";
 import { useAdaptiveOverlay } from "@viewport";
-
-import { useMounted } from "@/shared/lib";
 
 import { StandardDialog } from "./StandardDialog";
 import { StandardDrawer } from "./StandardDrawer";

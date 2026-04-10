@@ -1,6 +1,6 @@
 "use client";
 
-import { usePathname } from "@/i18n/routing";
+import { usePathname } from "@i18n";
 
 export const HeroGlow = () => {
   const pathname = usePathname();

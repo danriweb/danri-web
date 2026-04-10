@@ -1,10 +1,9 @@
 "use client";
 
+import gridSvg from "@assets/svg/grid.svg";
 import { memo } from "react";
 
 import { cn } from "@styles";
-
-import gridSvg from "@/shared/assets/svg/grid.svg";
 
 interface BackgroundGridProps {
   className?: string;

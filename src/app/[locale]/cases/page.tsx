@@ -1,11 +1,10 @@
+import { Link } from "@i18n";
 import { ArrowLeft } from "lucide-react";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
 import { CaseCard, cases } from "@entities/case";
 
 import { SectionTitle } from "@custom-ui";
-
-import { Link } from "@/i18n/routing";
 
 export async function generateMetadata(props: { params: Promise<{ locale: string }> }) {
   const { locale } = await props.params;
@@ -39,7 +38,7 @@ export default async function CasesPage(props: { params: Promise<{ locale: strin
         tag={t("tag")}
         title={t("title")}
         description={t("description")}
-        className="self-start md:self-center md:items-center [&_div]:text-left md:[&_div]:text-center"
+        className="self-start md:items-center md:self-center [&_div]:text-left md:[&_div]:text-center"
       />
 
       {/* Список всех кейсов */}

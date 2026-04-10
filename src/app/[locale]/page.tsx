@@ -12,7 +12,7 @@ const About = dynamic(() => import("@widgets/about").then((mod) => mod.About), {
 const ExperienceTeaser = dynamic(() => import("@widgets/experience").then((mod) => mod.ExperienceTeaser), {
   ssr: true,
 });
-const Projects = dynamic(() => import("@/widgets/cases").then((mod) => mod.Cases), {
+const Projects = dynamic(() => import("@widgets/cases").then((mod) => mod.Cases), {
   ssr: true,
 });
 const Stack = dynamic(() => import("@widgets/stack").then((mod) => mod.Stack), {

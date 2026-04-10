@@ -4,8 +4,7 @@ import { useState } from "react";
 
 import { Tooltip, TooltipContent, TooltipTrigger } from "@shadcn";
 import { cn } from "@styles";
-
-import { useIsTouch } from "@/shared/lib/viewport/useTouch";
+import { useIsTouch } from "@viewport";
 
 import { StandardPopover } from "./StandardPopover";
 

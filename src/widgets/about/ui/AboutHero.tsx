@@ -1,12 +1,11 @@
+import avatar from "@assets/brand-png/icon-quad-hh.png";
+import { Link } from "@i18n";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { FaGithub, FaTelegram } from "react-icons/fa";
 
 import { MotionWrapper } from "@custom-ui";
 import { Badge, Button } from "@shadcn";
-
-import { Link } from "@/i18n/routing";
-import avatar from "@/shared/assets/brand-png/icon-quad-hh.png";
 
 import { timeline } from "../model/about";
 import { TimelineCard } from "./TimelineCard";

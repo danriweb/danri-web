@@ -1,10 +1,9 @@
+import { Link } from "@i18n";
 import { ArrowLeft, Briefcase, Calendar } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 import { GlowCard, MotionWrapper, SectionTitle } from "@custom-ui";
 import { Badge } from "@shadcn";
-
-import { Link } from "@/i18n/routing";
 
 import { jobs } from "../model/experience";
 import { ExperienceJobCard } from "./ExperienceJobCard";

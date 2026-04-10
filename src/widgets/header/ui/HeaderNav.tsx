@@ -1,15 +1,14 @@
 "use client";
 
 import { navItems } from "@data";
+import { usePathname } from "@i18n";
+import { Link } from "@i18n";
 import { useTranslations } from "next-intl";
 import { FaGithub, FaTelegram } from "react-icons/fa";
 
 import { MotionWrapper } from "@custom-ui";
 import { cn } from "@styles";
 import { useSmoothScroll } from "@viewport";
-
-import { usePathname } from "@/i18n/routing";
-import { Link } from "@/i18n/routing";
 
 interface NavItemProps {
   href: string;

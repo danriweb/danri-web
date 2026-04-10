@@ -1,7 +1,6 @@
 import { type NavItem, navItems } from "@data";
+import { Link } from "@i18n";
 import { useTranslations } from "next-intl";
-
-import { Link } from "@/i18n/routing";
 
 const navItemKeys = ["about", "experience", "cases", "stack", "processes", "contact"] as const;
 

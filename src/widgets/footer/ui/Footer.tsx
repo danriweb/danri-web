@@ -1,8 +1,7 @@
+import { Link } from "@i18n";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { FaGithub, FaTelegram } from "react-icons/fa";
-
-import { Link } from "@/i18n/routing";
 
 import { FooterNav } from "./FooterNav";
 

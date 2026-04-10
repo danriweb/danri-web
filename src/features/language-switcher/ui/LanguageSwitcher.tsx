@@ -1,13 +1,12 @@
 "use client";
 
+import { usePathname, useRouter } from "@i18n";
 import { Languages } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 import { useTransition } from "react";
 
 import { StandardDropdown } from "@custom-ui";
 import { Button } from "@shadcn";
-
-import { usePathname, useRouter } from "@/i18n/routing";
 
 // Языки в порядке отображения в дропдауне
 const LANGUAGES = [

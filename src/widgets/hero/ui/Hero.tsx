@@ -1,10 +1,9 @@
+import { Link } from "@i18n";
 import { ArrowRight, Download } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 
 import { Metric } from "@custom-ui";
 import { Badge, Button } from "@shadcn";
-
-import { Link } from "@/i18n/routing";
 
 export const Hero = () => {
   const t = useTranslations("widgets.hero");

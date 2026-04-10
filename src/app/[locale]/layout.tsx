@@ -1,3 +1,4 @@
+import { routing } from "@i18n";
 import type { Viewport } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
@@ -12,8 +13,6 @@ import { Header } from "@widgets/header";
 import { ContactModal } from "@features/contact";
 
 import { BackgroundGrid, HeroGlow, ScrollRestoration } from "@custom-ui";
-
-import { routing } from "@/i18n/routing";
 
 import "../globals.css";
 import { Providers } from "./providers";
