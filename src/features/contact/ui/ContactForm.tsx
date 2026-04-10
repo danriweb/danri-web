@@ -12,7 +12,7 @@ import { StandardField } from "@constructors";
 import { MotionWrapper } from "@custom-ui";
 import { Button, FieldSeparator, Input, Textarea } from "@shadcn";
 
-import { type ContactFormValues, contactFormSchema } from "../model/schema";
+import { type ContactFormValues, contactFormSchema } from "../model/contact-form.schema";
 
 const fadeIn = (delay: number) => ({
   initial: { opacity: 0, y: 15 },

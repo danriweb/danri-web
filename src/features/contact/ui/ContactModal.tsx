@@ -4,7 +4,7 @@ import { useTranslations } from "next-intl";
 
 import { StandardAdaptiveOverlay } from "@constructors";
 
-import { useIsOpenContactModal, useSetIsOpenContactModal } from "../model/store";
+import { useIsOpenContactModal, useSetIsOpenContactModal } from "../model/contact-modal.store";
 import { ContactForm } from "./ContactForm";
 
 export const ContactModal = () => {

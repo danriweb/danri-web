@@ -1,25 +1,37 @@
-# DanriWeb | Next-Gen Personal Portfolio
+# DanriWeb | Современное персональное портфолио
+
+🇷🇺 **Русский** | [🇺🇸 English](README.en.md)
 
 ![DanriWeb Portfolio Demo](.github/assets/readme-demo.png)
 
-**Live:** [https://danri-web.ru/en](https://danri-web.ru/en)
+**Live:** [https://danri-web.ru/ru](https://danri-web.ru/ru)
 
-This is my personal portfolio website, built to showcase not just my projects, but my approach to modern frontend development. The primary goal was to create a highly optimized, fully accessible, and production-ready application rather than just a simple static page.
+Это мое персональное веб-портфолио, созданное для демонстрации не только проектов, но и моего комплексного подхода к современной frontend-разработке. Главной целью было создать высокооптимизированное, доступное (a11y) и production-ready приложение, а не просто красивую статичную визитку.
 
-## Highlights
+## Ключевые особенности
 
-- **Deep Accessibility (a11y):** Fully semantic HTML, full keyboard navigation support, focus-traps where necessary, and screen-reader optimizations (e.g., hiding decorative language badges via `aria-hidden`).
-- **Robust i18n (5 Languages):** Full support for English, Russian, German, Japanese, and Korean. Includes locale-specific typography optimizations (dynamically loading `Noto Sans JP` and `Noto Sans KR`) and tailored line-breaking strategies (`keep-all` for Korean, hyphenation for German).
-- **Performance First:** Render-optimized sections with lazy-loading for heavy content and micro-animations. Retains a predominantly static footprint (SSG) for lightning-fast loads, while utilizing Next.js Middleware for dynamic locale routing.
-- **Scalable Architecture:** Codebase structured following the **Feature-Sliced Design (FSD)** methodology, ensuring strict boundaries, high maintainability, and ease of future scaling.
-- **CI/CD Pipeline:** Fully dockerized deployment, automated via GitHub Actions to build and push images via GHCR, keeping the production VPS lightweight.
+- **Глубокая доступность (a11y):** Строгая семантическая HTML-разметка, полная поддержка навигации с клавиатуры, удержание фокуса (focus-traps) в модалках и оптимизация для скринридеров (включая скрытие декоративных бейджей через `aria-hidden`).
+- **Продвинутая i18n (5 языков):** Поддержка русского, английского, немецкого, японского и корейского языков. Включает адаптивную подгрузку специфичных шрифтов (например, `Noto Sans JP` и `KR`) и локализованные правила переноса строк.
+- **Фокус на производительности:** Гибридный рендеринг (SSG) для молниеносной первоначальной загрузки, lazy-loading тяжелого контента и использование Next.js Middleware для мгновенной маршрутизации локалей.
+- **Масштабируемая архитектура:** Кодовая база строго следует методологии **Feature-Sliced Design (FSD)**, что гарантирует изолированность слоев, чистоту кода и простоту поддержки.
+- **Свой CI/CD Pipeline:** Приложение полностью докеризовано. Автодеплой на VPS автоматизирован через GitHub Actions с выгрузкой готовых образов в GHCR.
 
-## Tech Stack
+## Внутренняя документация
 
-- **Core:** Next.js 15 (App Router), React 19, TypeScript
-- **Styling:** Tailwind CSS v4, shadcn/ui
-- **Animations:** Framer Motion
-- **i18n:** next-intl
-- **State Management:** Zustand (lightweight client-state)
-- **Validation:** react-hook-form + Zod
-- **Deployment:** Docker, GitHub Actions, GHCR
+Чтобы поддержать масштабируемость и строгие стандарты кода, я вынес описание всех соглашений в отдельную документацию. Она также помогает лучше понять мой технический стиль:
+
+- [🔗 Архитектура и слои FSD](./docs/architecture.md)
+- [🔗 Стандарты кода и нейминг](./docs/conventions.md)
+- [🔗 Правила React-компонентов и UI](./docs/components.md)
+- [🔗 Управление состоянием (Zustand)](./docs/state-management.md)
+
+## Технологический стек
+
+- **Core:** Next.js 16 (App Router), React 19, TypeScript (`strict: true`)
+- **Стилизация:** Tailwind CSS v4, Shadcn UI
+- **Анимации:** Framer Motion
+- **Локализация:** next-intl
+- **Стейт-менеджмент:** Zustand
+- **Формы и валидация:** React Hook Form + Zod
+- **Качество кода:** ESLint, Prettier, Steiger (линтер архитектуры FSD)
+- **Деплой:** Docker, GitHub Actions, GHCR
