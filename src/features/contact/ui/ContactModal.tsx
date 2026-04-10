@@ -4,14 +4,15 @@ import { useTranslations } from "next-intl";
 
 import { StandardAdaptiveOverlay } from "@constructors";
 
-import { useIsOpenContactModal } from "../model/store";
+import { useIsOpenContactModal, useSetIsOpenContactModal } from "../model/store";
 import { ContactForm } from "./ContactForm";
 
 export const ContactModal = () => {
   const isOpen = useIsOpenContactModal();
+  const setIsOpen = useSetIsOpenContactModal();
   const t = useTranslations("features.contact.modal");
 
-  const onOpenChange = (open: boolean) => !open && close();
+  const onOpenChange = (open: boolean) => setIsOpen(open);
 
   return (
     <StandardAdaptiveOverlay
