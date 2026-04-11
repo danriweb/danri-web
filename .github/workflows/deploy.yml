@@ -29,6 +29,9 @@ jobs:
       - name: Steiger (FSD architecture)
         run: npm run steiger
 
+      - name: Test
+        run: npm run test
+
   build-and-push:
     needs: check
     runs-on: ubuntu-latest
