@@ -2,3 +2,4 @@ export NO_COLOR=1
 npx lint-staged
 npm run steiger
 npm run typecheck
+npm run test
